@@ -17,31 +17,38 @@
 #logo{
     position: absolute;
     top: 20px;
-    left: 1300px;
+    left: 1320px;
 }
 form{
     position: absolute;
     top: -200px;
-    left: 50px;
+    left: 3px;
     position: relative;
-     width  :400px;
-    height : 300px;
-     margin : 350px;
+     width  :415px;
+    height : 342px;
+     margin : 354px;
      background-color: rgb(255, 248, 148);
      border-radius: 30px;
+     border-bottom: 0cm;
+     
 }
 #user{
-width  :400px;
-    height : 1px;
-     margin : 58px;
+    width  :60px;
+    height : 100px;
+    margin-left: 123px;
+    margin-top: 36px;
 }
 #contraseña{
-    width  :20px;
-    height : 10px;
-     margin : 58px;
+    width  :60px;
+    height : 100px;
+    margin-left: 123px;
+    margin-top: -29px;
 }
-.button{
-    width  :10px;
-    height : 0px;
-     margin : 10px;
+#button{
+    width  :60px;
+    height : 100px;
+    margin-left: 186px;
+    margin-top: -8px;
+    border-radius: 50px;
+
 }
