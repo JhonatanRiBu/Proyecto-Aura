@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
+    <script src="../../JS/jquery-3.6.0.js"></script>
+    <script src="../../JS/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/javascript" href="../../JS/Crear_pedido.js">
     <link rel="stylesheet" type="text/javascript" href="../../JS/bootstrap.bundle.min.js">
-    <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-3.6.0.js">
     <link rel="stylesheet" type="text/css" href="../css/Style_crear_pedido.css">
     <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-ui.min.js">
-    <link rel="stylesheet" type="text/javascript" href="../../JS/Crear_pedido.js">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     
     <title>Crear pedido</title>
 </head>
@@ -77,7 +78,7 @@
         <div class="grid">
             <div class="grid1">
                 <div style="background: gray;">
-                <h3 style="position: relative; bottom: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif;" >Asignar Cliente</h3>
+                    <h3 style="position: relative; bottom: 13px;font-family: Verdana, Geneva, Tahoma, sans-serif;" >Asignar Cliente</h3>
                 </div>  
                 <div>
                    <img src="../../imagenes/logo/logo.jpg" alt="logo">
@@ -92,13 +93,104 @@
                 
             </div> 
                 <div class= "grid2">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, molestiae.
+                    <div style="background: gray;">
+                        <h3 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar Productos</h3>
+                    </div>
+                    <div>
+                        <div><input type="search" placeholder="Buscar por código" id="search"
+                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
+                        <button type="submit" id="Boton_Busqueda"
+                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
+                        <div><input type="search" placeholder="Buscar por Nombre" id="search"
+                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
+                        <button type="submit" id="Boton_Busqueda"
+                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
+                        <div><input type="search" placeholder="Buscar por Tipo" id="search"
+                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
+                        <button type="submit" id="Boton_Busqueda"
+                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
+                        <div><input type="search" placeholder="Buscar por precio" id="search"
+                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
+                        <button type="submit" id="Boton_Busqueda"
+                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
+                        <div><input type="search" placeholder="Buscar por disponibilidad" id="search"
+                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 260px;">
+                        <button type="submit" id="Boton_Busqueda"
+                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 115px;">Buscar</button></div>
+                    </div>    
                 </div>
                 <div class="grid3">
-                <div>
-                   
-                </div>
-                <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, numquam!</div>      
+                    <div class="unico2" style="background: gray;">
+                        <h3 style="position: relative; bottom:10px">Lista de productos seleccionados</h3>
+                    </div>
+                    <div>
+                        <div class="unico"> 
+                           <table id="productos" class="table-stripped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Producto</th>
+                                        <th>Tipo Prod.</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                           </table>
+                        </div>
+                        <div class="unico">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, non!</div>
+                    </div>
+                           
              
                 </div>
                
@@ -119,5 +211,5 @@
     </script>
 
 </body>
-
+    
 </html>

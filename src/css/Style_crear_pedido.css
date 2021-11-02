@@ -229,6 +229,7 @@
     font-size: 26px;
     font-weight: 600;
 }
+/*Grillas*/
 .grid{
     display: grid;
     grid-template-rows: 20% 25% 65%;
@@ -238,18 +239,19 @@
 .grid1{
     display: grid;
     grid-template-columns: 90% 10% ;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 25% 75%;
     
 }
 .grid2{
     display: grid;
     grid-template-columns: 100% ;
-    grid-template-rows: 100% auto;
+    grid-template-rows: 20% 80% ;
     
 }
 .grid3{
     display: grid;
-    grid-template-columns: 90% auto 10% ;
+    grid-template-columns: 100% ;
+    grid-template-rows: 8% 92% ;
 }
 .grid div{
     background: #ecf0f1;
@@ -257,15 +259,31 @@
 }
 
 .grid1 div img{
-    height: 80px;
-    width:125px;
+    height: 44px;
+    width:140px;
     position: relative;
     right: 16px;
-    bottom: 15px;
+    bottom: 16px;
     border: 1px solid rgb(225, 236, 162);
 }
 .grid .grid1 div{
     display: grid;
     grid-template-columns: 40% 40% 20%;
 }
-
+.grid2 div{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+}
+.grid3 div .unico{
+    display: grid;
+    grid-template-columns: 100%;
+}
+.grid3 div{
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+.grid3 .unico2{
+    display: grid;
+    grid-template-columns: 100%;
+}
