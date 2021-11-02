@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#contenedor{
+    width: 1300px;
+    height: 800px;
+    margin: 0.5em auto;
+    background-color: gray;
+    padding: 0.5em;  
+}
+#asignar{
+    height: 20%;
+    background: green;
+    border-radius: 1em;
+}
+#busqueda{
+    height: 10%;
+    background: greenyellow;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+#crear{
+    height: 67%;
+    background: hotpink;
+    border-radius: 1em;
+    margin-top: 1em;
+}
+#datos_cliente{
+    height: 100%;
+    width: 80%;
+    background: indigo;
+    border-radius: 1em;
+    float: left;
+}
+#logo{
+    height: 100%;
+    width: 18%;
+    background: khaki;
+    border-radius: 1em;
+    float: right;
+}
+#barra{
+    height: 100%;
+    width: 80%;
+    border-radius: 1em;
+    background: royalblue;
+    float: left;
+}
+#N°_Pedido{
+      height: 100%;
+    width: 18%;
+    background: khaki;
+    border-radius: 1em;
+    float: right;
+}
+#tabla{
+    height: 100%;
+    width: 80%;
+    border-radius: 1em;
+    background: royalblue;
+    float: left;
+}
+#botones{
+     height: 100%;
+    width: 18%;
+    background: khaki;
+    border-radius: 1em;
+    float: right;
+}
