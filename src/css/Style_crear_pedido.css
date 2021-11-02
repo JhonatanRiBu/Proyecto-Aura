@@ -238,7 +238,7 @@
 .grid1{
     display: grid;
     grid-template-columns: 90% 10% ;
-    grid-template-rows: 10% 90%;
+    grid-template-rows: 20% 80%;
     
 }
 .grid2{
@@ -257,13 +257,15 @@
 }
 
 .grid1 div img{
-    height: 60px;
-    width:80px;
+    height: 80px;
+    width:125px;
     position: relative;
-    right: 20px;
+    right: 16px;
     bottom: 15px;
+    border: 1px solid rgb(225, 236, 162);
 }
 .grid .grid1 div{
     display: grid;
     grid-template-columns: 40% 40% 20%;
 }
+
