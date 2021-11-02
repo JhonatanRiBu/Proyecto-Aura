@@ -1,29 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Pedido</title>
     <link rel="stylesheet" type="text/css" href="../css/Style_crear_pedido.css">
-    <link rel="stylesheet" type="text/css"href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/javascript"href="../css/bootstrap.bundle.min.js">
+    
+    <link rel="stylesheet" type="text/javascript" href="../../JS/bootstrap.bundle.min.js">
+    <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-3.6.0.js">
+    <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-ui.min.js">
+    <link rel="stylesheet" type="text/javascript" href="../../JS/Crear_pedido.js">
+    
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Crear pedido</title>
 </head>
+
 <body>
-    <div id="contenedor">
-        <div id="asignar">
-            <div id="datos_cliente"></div>
-            <div id="logo"></div>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-sketch'></i>
+            <span class="logo_name">Joyería Aura</span>
         </div>
-        <div id="busqueda">
-            <div id="barra"></div>
-            <div id="N°_Pedido"></div>
-        </div>
-        <div id="crear">
-            <div id="tabla"></div>
-            <div id="botones"></div>
-        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-box'></i>
+                    <span class="link_name">Inventarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Inventarios</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link_name">Ventas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="profile.png" alt="profile">
+                    </div>
+
+                    <div class="name-job">
+                        <div class="profile_name">Jesus P.</div>
+                        <div class="job">Asist. Comercial</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
     </div>
-    <button class="">gaa</button>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'>
+                <span class="text">Aura</span>
+            </i>
+        </div>
+        <div class="grid">
+            <div class="grid1">
+                <div>
+                <h3 style="position: relative; bottom: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif; background: rgb(206, 196, 196);" >Asignar Cliente</h3>
+                </div>  
+                <div>
+                   <img src="../../imagenes/logo/logo.jpg" alt="logo">
+                </div>
+                <div>
+                    <div><input type="search" placeholder="Buscar cliente" id="search" style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
+                    <button type="submit" id="Boton_Busqueda" style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 46px;">Buscar</button></div>
+                    <div><label for="cliente" style="font-family: monospace; position: relative;right: 110px;">Cliente: </label>
+                    <input type="text" name="Cliente" style="font-size: 1em; height:20px; position: relative; left: -200px; width: 300px;"></div>
+                    <div><button type="submit" id="Agregar_Cliente" style="font-size: 15px;height:20px;width: 190px;; font-family: monospace;position: relative; left: -75px;">Agregar Cliente</button></div>       
+                </div>
+                
+            </div> 
+                <div class= "grid2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error pariatur eum asperiores atque aliquam, accusantium rem minus optio id, consequuntur, quidem provident quo culpa nemo quod qui repellendus obcaecati rerum.,Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sequi fugit est tempora vero consequatur ab recusandae quo quod quasi pariatur, error culpa nulla impedit mollitia architecto quam illo, maiores fugiat omnis accusantium excepturi? Nobis, autem culpa excepturi rerum natus sunt impedit, odio ipsam numquam ullam fuga earum porro blanditiis?</div>
+            <div class="grid3">
+                <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, optio?</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, repellendus.</div>
+            </div>
+        </div>
+           
+                
+            
+    </section>
+
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
 </body>
+
 </html>
