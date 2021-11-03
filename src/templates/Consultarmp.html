@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/consultarmp.css" type="text/css">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Materia Prima</title>
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-sketch'></i>
+            <span class="logo_name">Joyería Aura</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="InicioInventarios.html">
+                    <i class='bx bxs-box'></i>
+                    <span class="link_name">Inventarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="InicioInventarios.html">Inventarios</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link_name">Ventas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog' ></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+        <li>
+        <div class="profile-details">
+            <div class="profile-content">
+                <img src="profile.png" alt="profile">
+            </div>
+            
+            <div class="name-job">
+                <div class="profile_name">Jesus P.</div>
+                <div class="job">Asist. Comercial</div>
+            </div>
+            <i class='bx bx-log-out'></i>
+        </div>
+        </li>
+    </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'>
+                <span class="text">Materia Prima</span>
+            </i>
+        </div>
+
+        <div class="buscar">
+            <div class="contenedor-buscar">
+                <form class="form">
+                    <div class="primera-fila">
+                        <label>Código:</label>
+                        <input type="text" placeholder="Ingrese código de la materia prima">
+                    
+                        <label class="s-column">Nombre:</label>
+                        <input type="text" placeholder="Ingrese nombre de la materia prima">
+                    </div>
+                    <div class="segunda-fila">
+                        <label>Tipo de materia prima:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione tipo</option>
+                            <option value="">Metal precioso</option>
+                            <option value="">Metal</option>
+                            <option value="">Piedra</option>
+                        </select>
+                    
+                        <label class="s-column">Unidad de medida:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione tipo</option>
+                            <option value="">Metal precioso</option>
+                            <option value="">Metal</option>
+                            <option value="">Piedra</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>
