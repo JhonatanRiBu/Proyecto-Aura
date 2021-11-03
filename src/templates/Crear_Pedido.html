@@ -72,61 +72,54 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'>
-                <span class="text">Aura</span>
+                <span class="text">Crear Pedido</span>
             </i>
         </div>
         <div class="grid">
             <div class="grid1">
-                <div style="background: gray;">
-                    <h3 style="position: relative; bottom: 13px;font-family: Verdana, Geneva, Tahoma, sans-serif;" >Asignar Cliente</h3>
-                </div>  
                 <div>
-                   <img src="../../imagenes/logo/logo.jpg" alt="logo">
-                </div>
-                <div>
-                    <div><input type="search" placeholder="Buscar cliente" id="search" style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
-                    <button type="submit" id="Boton_Busqueda" style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 46px;">Buscar</button></div>
-                    <div><label for="cliente" style="font-family: monospace; position: relative;right: 110px;">Cliente: </label>
-                    <input type="text" name="Cliente" style="font-size: 1em; height:20px; position: relative; left: -200px; width: 300px;"></div>
-                    <div><button type="submit" id="Agregar_Cliente" style="font-size: 15px;height:20px;width: 190px;; font-family: monospace;position: relative; left: -75px;">Agregar Cliente</button></div>       
+                    <h1 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Asignar cliente</h1>
+                    <div class="contenedor_boton_neon" style="background: rgb(128, 61, 128);">
+                        <a href="#" class="btn-neon" id="boton_agregar_cliente">
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            AGREGAR CLIENTE
+                        </a>
+                        <a href="#" class="btn-neon" id="boton_buscar">
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            BUSCAR
+                        </a>
+                    </div>
                 </div>
                 
             </div> 
-                <div class= "grid2">
-                    <div style="background: gray;">
-                        <h3 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar Productos</h3>
+            <div class= "grid2"> 
+                <div>
+                    <h1 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar Productos</h1>
+                    <div class="contenedor_boton_neon" style="background: rgb(128, 61, 128);">
+                        <a href="#" class="btn-neon" id="boton_buscar_pd">
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            BUSCAR
+                        </a>
                     </div>
-                    <div>
-                        <div><input type="search" placeholder="Buscar por código" id="search"
-                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
-                        <button type="submit" id="Boton_Busqueda"
-                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
-                        <div><input type="search" placeholder="Buscar por Nombre" id="search"
-                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
-                        <button type="submit" id="Boton_Busqueda"
-                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
-                        <div><input type="search" placeholder="Buscar por Tipo" id="search"
-                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
-                        <button type="submit" id="Boton_Busqueda"
-                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
-                        <div><input type="search" placeholder="Buscar por precio" id="search"
-                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 240px;">
-                        <button type="submit" id="Boton_Busqueda"
-                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 52px;">Buscar</button></div>
-                        <div><input type="search" placeholder="Buscar por disponibilidad" id="search"
-                            style="padding: 0.5em;font-size: 15px;font-family: monospace;height:20px;width: 260px;">
-                        <button type="submit" id="Boton_Busqueda"
-                            style="font-size: 15px; font-family: monospace;height:20px;width: 70px;position: relative; left: 115px;">Buscar</button></div>
-                    </div>    
                 </div>
-                <div class="grid3">
-                    <div class="unico2" style="background: gray;">
-                        <h3 style="position: relative; bottom:10px">Lista de productos seleccionados</h3>
-                        <br>
-                    </div>
-                    <div>
-                        <div class="unico"> 
-                           <table id="productos" class="table-stripped" style="position: relative;top: 40px;">
+                
+            </div>
+            <div class="grid3">
+                <div>
+                    <h1 style="position: relative; bottom: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Lista de productos
+                        seleccionados</h1>
+                    <div style="background: rgb(128, 61, 128);">
+                        <div class="main_conteiner"style="background: rgb(128, 61, 128);"  >
+                            <table id="tabla_prod_seleccionados" class="table" style="position: relative;top: 40px;">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -136,78 +129,72 @@
                                         <th>Precio</th>
                                         <th></th>
                                     </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
-                                        <th>4</th>
-                                        <th>5</th>
-                                        <th></th>
-                                    </tr>
                                 </thead>
                                 <tbody>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <th>123</th>
+                                        <th>aro</th>
+                                        <th>anillo</th>
+                                        <th>12</th>
+                                        <th>123$</th>
+                                        <th></th>
+                                    </tr>
                                 </tbody>
-                           </table>
+                            </table>
                         </div>
-                        <div class="unico">
-                            <button type="submit" name="Agregar pedido" style="height: 70px; width: 150px; position:relative; top: 70px;right: -40px;">Agregar Pedido</button>
-                            
-                            <button type="submit" name="Cancelar" style="height: 70px; width: 150px;position:relative;
-    right: -40px;">Cancelar</button>
+                        <div class="contenedor_boton_neon" style="background: rgb(128, 61, 128);">
+                            <a href="#" class="btn-neon">
+                                <span id="span1"></span>
+                                <span id="span2"></span>
+                                <span id="span3"></span>
+                                <span id="span4"></span>
+                                AGREGAR PEDIDO
+                            </a>
+                            <a href="#" class="btn-neon">
+                                <span id="span1"></span>
+                                <span id="span2"></span>
+                                <span id="span3"></span>
+                                <span id="span4"></span>
+                                CANCELAR
+                            </a>
                         </div>
                     </div>
-                           
-             
+                    </div>
                 </div>
-               
+                    
+            </div>
         </div>
            
                 
