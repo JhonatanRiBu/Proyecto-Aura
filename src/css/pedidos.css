@@ -231,39 +231,97 @@
 }
 .grid{
     display: grid;
-    grid-template-rows: 200px 400px 50px;
+    grid-template-rows: 200px 380px 50px;
 }
 .grid .boton{
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    position: relative;
+    right:-100px;
 }
 .boton .Crear_Pedido{
-width: 300px;
-height: 300px;
-border: 2px solid #2a345e;
-margin: 20px auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #141414 ;
+    width: 300px;
+    height: 100%;
+    margin: -50px auto;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
+.boton .Crear_Pedido:hover{
+    background: #ccc;
+}
+
+.boton .Crear_Pedido span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
 .boton .Listar_Pedidos{
-width: 300px;
-height: 300px;
-border: 2px solid #2a345e;
-margin: 20px auto;
+display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #141414 ;
+    width: 300px;
+    height: 100%;
+    margin: -50px auto;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.boton .Listar_Pedidos:hover{
+    background: #ccc;
+}
+
+.boton .Listar_Pedidos span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
 }
 .boton .Cotizacion{
-width: 300px;
-height: 300px;
-border: 2px solid #2a345e;
-margin: 20px auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #141414 ;
+    width: 300px;
+    height: 100%;
+    margin: -50px auto;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
-.boton .Crear_Pedido h1{
-    margin: 90px;
-    text-align: center;
+.boton .Cotizacion:hover{
+    background: #ccc;
 }
-.boton .Cotizacion h1{
-    margin: 90px;
-    text-align: center;
+
+.boton .Cotizacion span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
 }
-.boton .Listar_Pedidos h1{
-    margin: 90px;
-    text-align: center;
-}
+
