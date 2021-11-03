@@ -202,7 +202,7 @@
 .home-section{
     position: relative;
     background: #E4E9F7;
-    height: 113vh;
+    height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
@@ -229,69 +229,41 @@
     font-size: 26px;
     font-weight: 600;
 }
-/*Grillas*/
 .grid{
     display: grid;
-    grid-template-rows: 20% 25% 55%;
-    gap: 1em;
-    
+    grid-template-rows: 200px 400px 50px;
 }
-.grid1{
-    display: grid;
-    grid-template-columns: 90% 10% ;
-    grid-template-rows: 25% 75%;
-    
-}
-.grid2{
-    display: grid;
-    grid-template-columns: 100% ;
-    grid-template-rows: 20% 80% ;
-    
-}
-.grid3{
-    display: grid;
-    grid-template-columns: 100% ;
-    grid-template-rows: 8% 92% ;
-}
-.grid div{
-    background: #ecf0f1;
-	padding: 1em;
-}
-
-.grid1 div img{
-    height: 33px;
-    width:143px;
-    position: relative;
-    right: 16px;
-    bottom: 16px;
-    border: 1px solid rgb(225, 236, 162);
-}
-.grid .grid1 div{
-    display: grid;
-    grid-template-columns: 40% 40% 20%;
-}
-.grid2 div{
+.grid .boton{
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 50% 50%;
 }
-.grid3 div .unico{
-    display: grid;
-    grid-template-columns: 100%;
+.boton .Crear_Pedido{
+width: 300px;
+height: 300px;
+border: 2px solid #2a345e;
+margin: 20px auto;
 }
-.grid3 div{
-    display: grid;
-    grid-template-columns: 80% 20%;
+.boton .Listar_Pedidos{
+width: 300px;
+height: 300px;
+border: 2px solid #2a345e;
+margin: 20px auto;
 }
-.grid3 .unico2{
-    display: grid;
-    grid-template-columns: 100%;
+.boton .Cotizacion{
+width: 300px;
+height: 300px;
+border: 2px solid #2a345e;
+margin: 20px auto;
 }
-div .table-stripped::-webkit-scrollbar {
-	width: 10px;
+.boton .Crear_Pedido h1{
+    margin: 90px;
+    text-align: center;
 }
-
-div .table-stripped::-webkit-scrollbar-thumb {
-	background: #ff9d00;
-	border-radius: 5px;
+.boton .Cotizacion h1{
+    margin: 90px;
+    text-align: center;
+}
+.boton .Listar_Pedidos h1{
+    margin: 90px;
+    text-align: center;
 }
