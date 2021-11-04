@@ -79,21 +79,43 @@
             <div class="grid1">
                 <div>
                     <h1 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Asignar cliente</h1>
-                    <div class="contenedor_boton_neon" style="background: rgb(128, 61, 128);">
-                        <a href="#" class="btn-neon" id="boton_agregar_cliente">
-                            <span id="span1"></span>
-                            <span id="span2"></span>
-                            <span id="span3"></span>
-                            <span id="span4"></span>
-                            AGREGAR CLIENTE
-                        </a>
-                        <a href="#" class="btn-neon" id="boton_buscar">
-                            <span id="span1"></span>
-                            <span id="span2"></span>
-                            <span id="span3"></span>
-                            <span id="span4"></span>
-                            BUSCAR
-                        </a>
+                    <div style="background: rgb(128, 61, 128);">
+                        <form action="" >
+                            <fieldset>
+                                <input type="search" placeholder="Buscar por apellidos...">
+                                <button type="submit" class="bloque">
+                                    <i class='bx bx-search-alt-2'></i>
+                                </button>
+                            </fieldset>
+                            <fieldset>
+                                <input type="search" placeholder="Buscar por nombres...">
+                                <button type="submit"  class="bloque">
+                                    <i class='bx bx-search-alt-2'></i>
+                                </button>
+                            </fieldset>
+                            <fieldset style="float:inline-start;">
+                                <input type="search" placeholder="Buscar por dni...">
+                                <button type="submit">
+                                    <i class='bx bx-search-alt-2'></i>
+                                </button>
+                            </fieldset>
+                        </form>
+                        <div class="contenedor_cliente" style="background: rgb(128, 61, 128);">
+                            <a href="#" class="btn-neon cliente">
+                                <span id="span1"></span>
+                                <span id="span2"></span>
+                                <span id="span3"></span>
+                                <span id="span4"></span>
+                                BUSCAR
+                            </a>
+                            <a href="#" class="btn-neon cliente">
+                                <span id="span1"></span>
+                                <span id="span2"></span>
+                                <span id="span3"></span>
+                                <span id="span4"></span>
+                                AGREGAR CLIENTE
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -101,24 +123,47 @@
             <div class= "grid2"> 
                 <div>
                     <h1 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar Productos</h1>
-                    <div class="contenedor_boton_neon" style="background: rgb(128, 61, 128);">
-                        <a href="#" class="btn-neon" id="boton_buscar_pd">
-                            <span id="span1"></span>
-                            <span id="span2"></span>
-                            <span id="span3"></span>
-                            <span id="span4"></span>
-                            BUSCAR
-                        </a>
+                    <div style="background: rgb(128, 61, 128);">
+                        <div style="background: rgb(128, 61, 128);">
+                            <form action="">
+                                <fieldset>
+                                    <input type="search" placeholder="Buscar por nombre del producto...">
+                                    <button type="submit" class="bloque">
+                                        <i class='bx bx-search-alt-2'></i>
+                                    </button>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="search" placeholder="Buscar por código...">
+                                    <button type="submit" class="bloque">
+                                        <i class='bx bx-search-alt-2'></i>
+                                    </button>
+                                </fieldset>
+                                <fieldset style="float:inline-start;">
+                                    <input type="search" placeholder="Buscar por tipo...">
+                                    <button type="submit">
+                                        <i class='bx bx-search-alt-2'></i>
+                                    </button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="contenedor_buscar_pd"style="background: rgb(128, 61, 128);">
+                            <a href="#" class="btn-neon buscar_pd">
+                                <span id="span1"></span>
+                                <span id="span2"></span>
+                                <span id="span3"></span>
+                                <span id="span4"></span>
+                                BUSCAR
+                            </a>
+                        </div>   
                     </div>
                 </div>
-                
             </div>
             <div class="grid3">
                 <div>
                     <h1 style="position: relative; bottom: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Lista de productos
                         seleccionados</h1>
                     <div style="background: rgb(128, 61, 128);">
-                        <div class="main_conteiner"style="background: rgb(128, 61, 128);"  >
+                        <div class="main_conteiner" style="background: rgb(128, 61, 128);">
                             <table id="tabla_prod_seleccionados" class="table" style="position: relative;top: 40px;">
                                 <thead>
                                     <tr>
@@ -174,15 +219,15 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="contenedor_boton_neon" style="background: rgb(128, 61, 128);">
-                            <a href="#" class="btn-neon">
+                        <div class="contenedor_pd_seleccionados" style="background: rgb(128, 61, 128);">
+                            <a href="#" class="btn-neon pd_seleccionados">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
                                 <span id="span3"></span>
                                 <span id="span4"></span>
                                 AGREGAR PEDIDO
                             </a>
-                            <a href="#" class="btn-neon">
+                            <a href="#" class="btn-neon pd_seleccionados">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
                                 <span id="span3"></span>

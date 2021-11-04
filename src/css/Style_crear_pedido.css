@@ -237,8 +237,7 @@
 }
 .grid div{
     background: #E4E9F7;
-	padding: 1.5em;
-    
+	padding: 0.5em;
 }
 
 /*Tabla*/
@@ -246,7 +245,7 @@
     margin-top: 0px auto;
     width: 100%;
     position: relative;
-    top: -20px;
+    top: -8px;
 }
 table{
     width: 100%;
@@ -271,25 +270,49 @@ tr:hover{
     color: white;
 }
 /*BOTON*/
-.btn-neon{
+.cliente{
     position: relative;
     display: inline-block;
     padding: 15px 30px;
     color: black;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 20px; 
     overflow: hidden;
-    bottom: 50px;
+    bottom: 30px;
     transition: 0.2s;
 }
-.btn-neon:hover{
+.buscar_pd{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px; 
+    overflow: hidden;
+    bottom: 5px;
+    transition: 0.2s;
+}
+.pd_seleccionados{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px; 
+    overflow: hidden;
+    bottom: 5px;
+    transition: 0.2s;
+}
+.pd_seleccionados:hover{
     background: #30063d;
     color: white;
     box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
     transition-delay: 1s;
  }
-.btn-neon span{
+.pd_seleccionados span{
     position: absolute;
     display: block;
 }
@@ -300,7 +323,7 @@ tr:hover{
     height: 2px;
     background: linear-gradient(90deg, transparent,#a945c7);
  }
- .btn-neon:hover #span1{
+ .pd_seleccionados:hover #span1{
     left: 100%;
     transition: 1s;
 }
@@ -311,7 +334,7 @@ tr:hover{
     height: 2px;
     background: linear-gradient(270deg, transparent,#a945c7);
 }
- .btn-neon:hover #span3{
+ .pd_seleccionados:hover #span3{
     right: 100%;
     transition: 1s;
     transition-delay: 0.5s;
@@ -323,7 +346,7 @@ tr:hover{
     height: 100%;
     background: linear-gradient(180deg,transparent,#a945c7);
 }
-.btn-neon:hover #span2{
+.pd_seleccionados:hover #span2{
     top: 100%;
     transition: 1s;
     transition-delay: 0.25s;
@@ -335,12 +358,12 @@ tr:hover{
     height: 100%;
     background: linear-gradient(360deg,transparent,#a945c7);
 }
-.btn-neon:hover #span4{
+.pd_seleccionados:hover #span4{
     bottom: 100%;
     transition: 1s;
     transition-delay: 0.75s;
 }
-.contenedor_boton_neon{
+.contenedor_cliente{
     margin: 0;
     padding: 0;
     display: flex;
@@ -350,21 +373,133 @@ tr:hover{
     background: #1a0321;
     font-family:consolas;
 }
-#boton_agregar_cliente{
-    position: relative;
-    top: 0px;
-    right: -570px;
+.contenedor_buscar_pd{
+    margin: 0;
+    padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background: #1a0321;
+    font-family:consolas;
 }
-#boton_buscar{
-    position: relative;
-    top: 0px;
-    right: -87px;
+.contenedor_pd_seleccionados{
+    margin: 0;
+    padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    background: #1a0321;
+    font-family:consolas;
 }
-#boton_buscar_pd{
+.buscar_pd:hover{
+    background: #30063d;
+    color: white;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+ }
+.buscar_pd span{
+    position: absolute;
+    display: block;
+}
+.buscar_pd:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+.buscar_pd:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.buscar_pd:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.buscar_pd:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.cliente:hover{
+    background: #30063d;
+    color: white;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+ }
+.cliente span{
+    position: absolute;
+    display: block;
+}
+.cliente:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+.cliente:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.cliente:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.cliente:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/*Buscador animado*/
+form{
+    width: 1248px;
+     margin-top: 20px;
+     margin-left: 95px;
+}
+fieldset{
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 0 0 0 10px;
+}
+input,button{
     position: relative;
-    right: -550px;
-    display: flex;
-    top: 5px;
+    float:left;
+    width: 340px;
+    height: 50px;
+    padding: 0;
 }
+input{
+    color: #666;
+    border: none;
+    z-index: 2;
+}
+button{
+    font-size: 1.5em;
+    width: 40px;
+    border: none;
+    background: #333;
+    transform: translate(-50px,0);
+    transition-duration: .3s;
+}
+.fa-search{
+    color: #bbb;
+    transform: translate(-190px,0);
+    transition: all .1s ease-in-out;
+}
+input:focus{
+    outline: none;
+}
+input:focus + button{
+    transform: translate(0,0);
+    transition-duration: .3s;
+}
+input:focus + button.fa{
+    color: #fff;
+    transform: translate(0,0);
+    transition-duration: .4s;
+}
+
