@@ -241,11 +241,12 @@
 }
 /*Tabla*/
 .contenedor_tabla{ 
-    padding: 50px;  
+    padding: 30px;  
 }
 .contenedor_tabla_boton{
     background: #BFC9CA;
     border-radius: 10px;
+    padding: 8px 0px 5px 0px;
 }
 table{
     width: 100%;
@@ -257,12 +258,18 @@ table{
 }
 th, td{
         border: solid 1px #1a0321;
-        padding: 20px;
+        padding: 20px 20px 20px 82px;
     }
 thead{
     background-color: #1a0321;
     border-bottom: solid 5px #30063d;
     color: white;
+}
+tbody{
+    width: 100%;
+    height: 200px;
+    text-align: left;
+
 }
 tr:nth-child(even){
     background-color: #ddd;
@@ -270,6 +277,9 @@ tr:nth-child(even){
 tr:hover{
     background-color: #30063d;
     color: white;
+}
+tbody tr{
+    cursor: pointer;
 }
 /*BOTON*/
 .cliente{
@@ -455,6 +465,47 @@ tr:hover{
     transition: 1s;
     transition-delay: 0.75s;
 }
+.agregar_cli_existente{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px; 
+    overflow: hidden;
+    bottom: 0px;
+    transition: 0.2s;
+}
+.agregar_cli_existente:hover{
+    background: #30063d;
+    color: white;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+ }
+.agregar_cli_existente span{
+    position: absolute;
+    display: block;
+}
+.agregar_cli_existente:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+.agregar_cli_existente:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.agregar_cli_existente:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.agregar_cli_existente:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
 /*Buscador animado*/
 form{   
     display: inline-flex;
@@ -538,12 +589,16 @@ input:focus + button.fa{
 }
 .popup1{
     background: #f8f8f8;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.7);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
     border-radius: 3px;
     font-family: 'Poppins', sans-serif;
     padding: 20px;
     text-align: center;
-    width: 600px;
+    width: 1050px;
+    
+    transition: .3s ease all;
+    transform: scale(0.3);
+    opacity: 0;
 }
 .popup1 .btn-cerrar-pop-up1{
     font-size: 30px;
@@ -560,9 +615,111 @@ input:focus + button.fa{
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 10px;
-    /*opacity: 0;*/
+    opacity: 0;
+}
+.popup1 .table{
+    opacity: 0;
 }
 .popup1 form .contenedor-inputs1{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    text-align: right;
+    border-radius: 1px solid #BBBBBB;
+}
+
+/*Animaciones*/
+.popup1.activate{
+    opacity: 1;
+    transform: scale(1);
+}
+.popup1.activate h3{
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+.popup1.activate table{
+    animation: entradaTabla .8s ease .5s forwards;
+}
+@keyframes entradaTitulo{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaTabla{
+    from{
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.bx-checkbox{
+    font-size: 40px;
+}
+.bx-checkbox-checked{
+    font-size: 40px;
+}
+.check1{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+}
+.overlay2{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden ;
+}
+.overlay2.activate{
+    visibility: visible;
+}
+.popup2{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 1050px;
+    
+    transition: .3s ease all;
+    transform: scale(0.3);
+    opacity: 0;
+}
+.popup2 .btn-cerrar-pop-up2{
+    font-size: 30px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #f8f8f8;
+    transition: .3s ease all;
+}
+.popup2 .btn-cerrar-pop-up2:hover{
+    color: #000;
+}
+.popup2 h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+.popup2 .table{
+    opacity: 0;
+}
+.popup2 form .contenedor-inputs1{
     width: 100%;
     margin-bottom: 20px;
     height: 52px;
@@ -583,7 +740,7 @@ input:focus + button.fa{
     overflow: hidden;
     bottom: 0px;
     transition: 0.2s;
-    left: 146px;
+    left: 26px;
 }
 .agregar_prod:hover{
     background: #30063d;
@@ -614,4 +771,25 @@ input:focus + button.fa{
     transition: 1s;
     transition-delay: 0.75s;
 }
-/**/
+/*Animaciones*/
+.popup2.activate{
+    opacity: 1;
+    transform: scale(1);
+}
+.popup2.activate h3{
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+.popup2.activate table{
+    animation: entradaTabla .8s ease .5s forwards;
+}
+.bxs-trash{
+font-size: 30px;
+}
+#Nombre_Cliente_pedido{
+    height: 30px;
+    width: 50%;
+}
+#DNI_pedido{
+    height: 30px;
+    width: 20%;
+}

@@ -106,7 +106,7 @@
                                 <span id="span4"></span>
                                 BUSCAR
                             </a>
-                            <a href="#" class="btn-neon cliente">
+                            <a href="#" class="btn-neon cliente" id="btn-neon-agregar_cliente">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
                                 <span id="span3"></span>
@@ -142,7 +142,7 @@
                             </form>
                         </div>
                         <div class="contenedor_buscar_pd"style="background: #BFC9CA;">
-                            <a href="#" class="btn-neon buscar_pd">
+                            <a href="#" class="btn-neon buscar_pd" id="btn-neon-buscar_pd">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
                                 <span id="span3"></span>
@@ -152,60 +152,38 @@
                         </div>   
                     </div>
                 </div>
-                    <span class="text">Lista de productos seleccionados</span>
+                    <span class="text">Vista previa del pedido</span>
                     <div class="contenedor_tabla_boton">
+                        <div style="justify-content: center; text-align: center; padding: 10px 0px 0px 30px;height: 40px;">
+                            <span class="text" style="float: left;">Nombre del Cliente:</span>
+                            <input type="text" name="Nombre_Cliente_pedido" id="Nombre_Cliente_pedido"style="justify-content: center; text-align: center;">
+                            <span class="text" style="float: left;">DNI: </span>
+                            <input type="text" name="DNI_pedido" id="DNI_pedido"
+                                style="justify-content: center; text-align: center;">
+                        </div>  
                         <div class="contenedor_tabla">
+                            <span class="text" style="justify-content: center; text-align: center;">Lista de Productos Seleccionados</span>
                             <table id="tabla_prod_seleccionados" class="table">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>Producto</th>
-                                        <th>Tipo Prod.</th>
-                                        <th>Cantidad</th>
-                                        <th>Precio</th>
-                                        <th></th>
+                                        <th>ID</th><th>Producto</th><th>Tipo Prod.</th><th>Cantidad</th><th>Precio</th><th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
                                     </tr>
                                     <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
                                     </tr>
                                     <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
                                     </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
+                                     <tr>
+                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
                                     </tr>
-                                    <tr>
-                                        <th>123</th>
-                                        <th>aro</th>
-                                        <th>anillo</th>
-                                        <th>12</th>
-                                        <th>123$</th>
-                                        <th></th>
+                                     <tr>
+                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
                                     </tr>
                                 </tbody>
                             </table>
@@ -237,39 +215,84 @@
             sidebar.classList.toggle("close");
         });
     </script>
-    <div class="overlay1" id="overlay">
-        <div class="popup1">
+    <div class="overlay1" id="overlay1">
+        <div class="popup1" id="popup1">
             <a href="#" id="btn-cerrar-pop-up1" class="btn-cerrar-pop-up1"><i class='bx bx-x'></i></a>
             <h3>CLIENTES DISPONIBLES</h3>
             <div class="contenedor-tabla-pop-up1">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>ID</th><th>Producto</th><th>Tipo Prod.</th><th>Cantidad</th><th>Precio</th><th></th>   
+                            <th>DNI</th><th>Nombres</th><th>Apellidos</th><th></th>   
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th></th>   
+                            <th>70504167</th><th>Iosif Gustavo</th><th>Monrroy Rojo</th><th><input type="checkbox" class="check1"></th>   
                         </tr>
                         <tr>
-                            <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th></th>   
-                        </tr>
-                        <tr>
-                            <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th></th>   
+                            <th>70342812</th><th>Yozip Stalin</th><th>Monrroy Rojo</th><th><input type="checkbox"class="check1"></th>   
                         </tr>
                     </tbody>
                 </table>
                 <form action="">
                     <div class="contenedor-inputs">
-                        <input type="submit" class="btn-neon agregar_prod" value="Agregar" >
+                        <a href="#" class="btn-neon agregar_cli_existente" id="btn_agregar_cli_existente">
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            AGREGAR
+                        </a>
                     </div>
                 </form>
             </div>  
         </div>
     </div>
-    <script src="../../JS/Crear_pedido.js"></script>
-
-</body>
+    <div class="overlay2" id="overlay2">
+        <div class="popup2" id="popup2">
+            <a href="#" id="btn-cerrar-pop-up2" class="btn-cerrar-pop-up2"><i class='bx bx-x'></i></a>
+            <h3>PRODUCTOS DISPONIBLES</h3>
+            <div class="contenedor-tabla-pop-up2">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>70504167</th>
+                            <th>Iosif Gustavo</th>
+                            <th>Monrroy Rojo</th>
+                            <th><input type="checkbox" class="check1"></th>
+                        </tr>
+                        <tr>
+                            <th>70342812</th>
+                            <th>Yozip Stalin</th>
+                            <th>Monrroy Rojo</th>
+                            <th><input type="checkbox" class="check1"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <a href="#" class="btn-neon agregar_prod" id="btn_agregar_prod">
+                            <span id="span1"></span>
+                            <span id="span2"></span>
+                            <span id="span3"></span>
+                            <span id="span4"></span>
+                            AGREGAR
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     
+    <script src="../../JS/Crear_pedido.js"></script>
+</body>   
 </html>
