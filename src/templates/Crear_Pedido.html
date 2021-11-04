@@ -76,10 +76,9 @@
             </i>
         </div>
         <div class="grid">
-            <div class="grid1">
                 <div>
-                    <h1 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Asignar cliente</h1>
-                    <div style="background: rgb(128, 61, 128);">
+                    <span class="text">Asignar cliente</span>
+                    <div class="contenedor_cliente_1">
                         <form action="" >
                             <fieldset>
                                 <input type="search" placeholder="Buscar por apellidos...">
@@ -100,7 +99,7 @@
                                 </button>
                             </fieldset>
                         </form>
-                        <div class="contenedor_cliente" style="background: rgb(128, 61, 128);">
+                        <div class="contenedor_cliente_2">
                             <a href="#" class="btn-neon cliente">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
@@ -117,14 +116,11 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                
-            </div> 
-            <div class= "grid2"> 
+                </div>  
                 <div>
-                    <h1 style="position: relative; bottom: 10px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buscar Productos</h1>
-                    <div style="background: rgb(128, 61, 128);">
-                        <div style="background: rgb(128, 61, 128);">
+                    <span class="text">Buscar Productos</span>
+                    <div class="contenedor_buscar">
+                        <div>
                             <form action="">
                                 <fieldset>
                                     <input type="search" placeholder="Buscar por nombre del producto...">
@@ -146,7 +142,7 @@
                                 </fieldset>
                             </form>
                         </div>
-                        <div class="contenedor_buscar_pd"style="background: rgb(128, 61, 128);">
+                        <div class="contenedor_buscar_pd"style="background: #BFC9CA;">
                             <a href="#" class="btn-neon buscar_pd">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
@@ -157,14 +153,10 @@
                         </div>   
                     </div>
                 </div>
-            </div>
-            <div class="grid3">
-                <div>
-                    <h1 style="position: relative; bottom: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Lista de productos
-                        seleccionados</h1>
-                    <div style="background: rgb(128, 61, 128);">
-                        <div class="main_conteiner" style="background: rgb(128, 61, 128);">
-                            <table id="tabla_prod_seleccionados" class="table" style="position: relative;top: 40px;">
+                    <span class="text">Lista de productos seleccionados</span>
+                    <div class="contenedor_tabla_boton">
+                        <div class="contenedor_tabla">
+                            <table id="tabla_prod_seleccionados" class="table">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
@@ -219,7 +211,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="contenedor_pd_seleccionados" style="background: rgb(128, 61, 128);">
+                        <div class="contenedor_pd_seleccionados">
                             <a href="#" class="btn-neon pd_seleccionados">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
@@ -236,17 +228,8 @@
                             </a>
                         </div>
                     </div>
-                    </div>
                 </div>
-                    
-            </div>
-        </div>
-           
-                
-            
-    </section>
-
-
+        </section>                
     <script>
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".bx-menu");
