@@ -8,7 +8,6 @@
     
     <script src="../../JS/jquery-3.6.0.js"></script>
     <script src="../../JS/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/javascript" href="../../JS/Crear_pedido.js">
     <link rel="stylesheet" type="text/javascript" href="../../JS/bootstrap.bundle.min.js">
     <link rel="stylesheet" type="text/css" href="../css/Style_crear_pedido.css">
     <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-ui.min.js">
@@ -81,26 +80,26 @@
                     <div class="contenedor_cliente_1">
                         <form action="" >
                             <fieldset>
-                                <input type="search" placeholder="Buscar por apellidos...">
-                                <button type="submit" class="bloque">
+                                <input type="search" id="nomostrar1"class="nomostrar"placeholder="Buscar por apellidos...">
+                                <button type="submit" >
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                             <fieldset>
-                                <input type="search" placeholder="Buscar por nombres...">
-                                <button type="submit"  class="bloque">
+                                <input type="search" id="nomostrar2"class="nomostrar"placeholder="Buscar por nombres...">
+                                <button type="submit" >
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                             <fieldset style="float:inline-start;">
-                                <input type="search" placeholder="Buscar por dni...">
+                                <input type="search" id="nomostrar3" class="nomostrar"placeholder="Buscar por dni...">
                                 <button type="submit">
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                         </form>
                         <div class="contenedor_cliente_2">
-                            <a href="#" class="btn-neon cliente">
+                            <a href="#" class="btn-neon cliente" id="btn-neon_cliente">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
                                 <span id="span3"></span>
@@ -123,19 +122,19 @@
                         <div>
                             <form action="">
                                 <fieldset>
-                                    <input type="search" placeholder="Buscar por nombre del producto...">
-                                    <button type="submit" class="bloque">
+                                    <input type="search" id="nomostrar4" class="nomostrar"placeholder="Buscar por nombre del producto...">
+                                    <button type="submit">
                                         <i class='bx bx-search-alt-2'></i>
                                     </button>
                                 </fieldset>
                                 <fieldset>
-                                    <input type="search" placeholder="Buscar por código...">
-                                    <button type="submit" class="bloque">
+                                    <input type="search" id="nomostrar5" class="nomostrar"placeholder="Buscar por código...">
+                                    <button type="submit">
                                         <i class='bx bx-search-alt-2'></i>
                                     </button>
                                 </fieldset>
                                 <fieldset style="float:inline-start;">
-                                    <input type="search" placeholder="Buscar por tipo...">
+                                    <input type="search"id="nomostrar6" class="nomostrar" placeholder="Buscar por tipo...">
                                     <button type="submit">
                                         <i class='bx bx-search-alt-2'></i>
                                     </button>
@@ -238,6 +237,38 @@
             sidebar.classList.toggle("close");
         });
     </script>
+    <div class="overlay1" id="overlay">
+        <div class="popup1">
+            <a href="#" id="btn-cerrar-pop-up1" class="btn-cerrar-pop-up1"><i class='bx bx-x'></i></a>
+            <h3>CLIENTES DISPONIBLES</h3>
+            <div class="contenedor-tabla-pop-up1">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th><th>Producto</th><th>Tipo Prod.</th><th>Cantidad</th><th>Precio</th><th></th>   
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th></th>   
+                        </tr>
+                        <tr>
+                            <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th></th>   
+                        </tr>
+                        <tr>
+                            <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th></th>   
+                        </tr>
+                    </tbody>
+                </table>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <input type="submit" class="btn-neon agregar_prod" value="Agregar" >
+                    </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+    <script src="../../JS/Crear_pedido.js"></script>
 
 </body>
     

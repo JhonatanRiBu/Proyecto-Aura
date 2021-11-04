@@ -477,10 +477,13 @@ input,button{
     height: 50px;
     padding: 0;
 }
-input{
+.nomostrar{
     color: #666;
     border: none;
     z-index: 2;
+}
+.nomostrar.activate{
+    visibility:hidden;
 }
 button{
     font-size: 1.5em;
@@ -489,6 +492,7 @@ button{
     background: #333;
     transform: translate(-50px,0);
     transition-duration: .3s;
+    visibility: visible;
 }
 .fa-search{
     color: #bbb;
@@ -515,3 +519,99 @@ input:focus + button.fa{
     background: #BFC9CA; 
     border-radius: 10px;
 }
+
+/*Pop-up*/
+.overlay1{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden ;
+}
+.overlay1.activate{
+    visibility: visible;
+}
+.popup1{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.7);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+}
+.popup1 .btn-cerrar-pop-up1{
+    font-size: 30px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #f8f8f8;
+    transition: .3s ease all;
+}
+.popup1 .btn-cerrar-pop-up1:hover{
+    color: #000;
+}
+.popup1 h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    /*opacity: 0;*/
+}
+.popup1 form .contenedor-inputs1{
+    width: 100%;
+    margin-bottom: 20px;
+    height: 52px;
+    font-size: 18px;
+    text-align: right;
+    border-radius: 1px solid #BBBBBB;
+}
+
+/*Estilos del boton agregar_productos*/
+.agregar_prod{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 20px; 
+    overflow: hidden;
+    bottom: 0px;
+    transition: 0.2s;
+    left: 146px;
+}
+.agregar_prod:hover{
+    background: #30063d;
+    color: white;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+ }
+.agregar_prod span{
+    position: absolute;
+    display: block;
+}
+.agregar_prod:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+.agregar_prod:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.agregar_prod:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.agregar_prod:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+/**/
