@@ -202,7 +202,7 @@
 .home-section{
     position: relative;
     background: #E4E9F7;
-    height: 100vh;
+    height: 100%;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
@@ -346,4 +346,36 @@
     padding-top: 40px;
     padding-left: 35px;
     padding-right: 35px;
+}
+
+.main_conteiner{
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 100%;
+    padding-bottom: 20px;
+}
+table{
+    width: 100%;
+    background-color:gray ;
+    border-collapse: collapse;
+    text-align: left;   
+}
+th, td{
+    border: solid 1px #11101d;
+    padding: 20px;
+}
+thead{
+    background-color: #11101d;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+tr:hover{
+    background-color: #2E4053;
+    color: white;
+}
+.eliminar, .editar{
+    color: black;
 }
