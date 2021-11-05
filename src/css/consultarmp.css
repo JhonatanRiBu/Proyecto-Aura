@@ -379,3 +379,28 @@ tr:hover{
 .eliminar, .editar{
     color: black;
 }
+
+.botones-lista{
+    padding-left: 70%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.agregar-mp{
+    width: 80%;
+    height: 35px;
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.agregar-mp:hover{
+    background: #52BE80;
+    transform: scale(1.1);
+}
