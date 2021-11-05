@@ -270,27 +270,27 @@
 
 
 
-.boton.mp img{
+.boton.consultar img{
     margin-top: 100px;
-    width: 350px;
+    width: 234px;
     height: 200px;
     position: absolute;
     z-index: 2;
     transition: .3s ease all;
 }
 
-.boton.joya img{
+.boton.pedido img{
     margin-top: 100px;
-    width: 350px;
+    width: 234px;
     height: 200px;
     position: absolute;
     z-index: 2;
     transition: .3s ease all;
 }
-.boton.mp span{
+.boton.pedido span{
     margin-bottom: 200px;
 }
-.boton.joya span{
+.boton.consultar span{
     margin-bottom: 200px;
 }
 
@@ -310,7 +310,7 @@
     top: 0;
 }
 
-.link-mp, .link-joya{
+.link-consultar, .link-pedido{
     text-decoration: none;
 }
 
