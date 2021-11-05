@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/consultarmp.css" type="text/css">
+    <link rel="stylesheet" href="../css/consultarjoya.css" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>Materia Prima</title>
+    <title>Joyas</title>
 </head>
 <body>
     <div class="sidebar close">
@@ -63,7 +63,7 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'>
-                <span class="text">Materia Prima</span>
+                <span class="text">Joyas</span>
             </i>
         </div>
 
@@ -72,28 +72,33 @@
                 <form class="form">
                     <div class="primera-fila">
                         <label>Código:</label>
-                        <input type="text" placeholder="Ingrese código de la materia prima">
+                        <input type="text" placeholder="Ingrese código de la joya">
                     
                         <label class="s-column">Nombre:</label>
-                        <input type="text" placeholder="Ingrese nombre de la materia prima">
+                        <input type="text" placeholder="Ingrese nombre de la joya">
                     </div>
                     <div class="segunda-fila">
-                        <label>Tipo de materia prima:</label>
+                        <label>Tipo de joya:</label>
                         <select name="tipo" id="">
                             <option disabled selected="">Seleccione tipo</option>
-                            <option value="">Metal precioso</option>
-                            <option value="">Metal</option>
-                            <option value="">Piedra</option>
+                            <option value="">Sortija</option>
+                            <option value="">Dije</option>
+                            <option value="">Pulsera</option>
+                            <option value="">Arete</option>
+                            <option value="">Gemelo</option>
+                            <option value="">Collar</option>
+                            <option value="">Anillo</option>
+                            <option value="">Aro de matrimonio</option>
                         </select>
                     
-                        <label class="s-column2">Unidad de medida:</label>
+                        <label class="s-column2">Tipo de pureza:</label>
                         <select name="tipo" id="">
                             <option disabled selected="">Seleccione tipo</option>
                             <option value="">Ley</option>
                             <option value="">Kilates</option>
                         </select>
 
-                        <label class="s-column2">Valor:</label>
+                        <label class="s-column2">Valor de pureza:</label>
                         <select name="tipo" id="">
                             <option disabled selected="">Seleccione valor</option>
                             <option value="">999</option>
@@ -127,7 +132,7 @@
         </div>
 
         <div class="lista-mp">
-            <h1>Lista de materia prima</h1>
+            <h1>Lista de joyas</h1>
         </div>
 
         <div class="main_conteiner">
@@ -135,22 +140,20 @@
                 <thead>
                     <tr>
                         <th>Código</th>
-                        <th>Materia Prima</th>
-                        <th>Tipo materia prima</th>
+                        <th>Joya</th>
+                        <th>Tipo de joya</th>
                         <th>Pureza</th>
                         <th>Stock</th>
-                        <th>Unidad de medida</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th>AU242021K</th>
-                        <th>Oro</th>
-                        <th>Metal Precioso</th>
+                        <th>Anillo Venice Oro</th>
+                        <th>Anillo</th>
                         <th>24 K</th>
-                        <th>50</th>
-                        <th>gramos</th>
+                        <th>5</th>
                         <th class="botones-ee">
                             <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
@@ -158,11 +161,10 @@
                     </tr>
                     <tr>
                         <th>AU182019K</th>
-                        <th>Oro</th>
-                        <th>Metal Precioso</th>
-                        <th>18 K</th>
-                        <th>67</th>
-                        <th>gramos</th>
+                        <th>Dije modelo libélula fina</th>
+                        <th>Dije</th>
+                        <th>Ley 950</th>
+                        <th>4</th>
                         <th>
                             <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
@@ -170,11 +172,10 @@
                     </tr>
                     <tr>
                         <th>PL9992021L</th>
-                        <th>Plata</th>
-                        <th>Metal Precioso</th>
-                        <th>Ley 999</th>
-                        <th>20</th>
-                        <th>gramos</th>
+                        <th>Dije señor de los milagros</th>
+                        <th>Dije</th>
+                        <th>Ley 950</th>
+                        <th>10</th>
                         <th>
                             <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
@@ -182,11 +183,10 @@
                     </tr>
                     <tr>
                         <th>PL9502021L</th>
-                        <th>Plata</th>
-                        <th>Metal Precioso</th>
+                        <th>Sortija cuadrada con piedra luna negro</th>
+                        <th>Sortija</th>
                         <th>Ley 950</th>
-                        <th>40</th>
-                        <th>gramos</th>
+                        <th>3</th>
                         <th>
                             <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
@@ -194,11 +194,10 @@
                     </tr>
                     <tr>
                         <th>PL9252021L</th>
-                        <th>Plata</th>
-                        <th>Metal Precioso</th>
-                        <th>Ley 925</th>
-                        <th>100</th>
-                        <th>gramos</th>
+                        <th>Sortija embutida espiral alto relieve</th>
+                        <th>Sortija</th>
+                        <th>24 K</th>
+                        <th>6</th>
                         <th>
                             <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
@@ -210,7 +209,7 @@
         </div>
         <div class="botones-lista">
             <button class="agregar-mp">
-                <span>Agregar nueva materia prima</span>
+                <span>Agregar nueva joya</span>
                 <i class='bx bx-list-plus'></i>
             </button>
         </div>
