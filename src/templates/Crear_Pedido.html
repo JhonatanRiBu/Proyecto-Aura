@@ -9,7 +9,7 @@
     <script src="../../JS/jquery-3.6.0.js"></script>
     <script src="../../JS/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/javascript" href="../../JS/bootstrap.bundle.min.js">
-    <link rel="stylesheet" type="text/css" href="../css/Style_crear_pedido.css">
+    <link rel="stylesheet" type="text/css" href="../css/crear_pedido.css">
     <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-ui.min.js">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -155,9 +155,9 @@
                     <span class="text">Vista previa del pedido</span>
                     <div class="contenedor_tabla_boton">
                         <div style="justify-content: center; text-align: center; padding: 10px 0px 0px 30px;height: 40px;">
-                            <span class="text" style="float: left;">Nombre del Cliente:</span>
+                            <span class="text" style="float: left;">Nombre del Cliente:&nbsp;</span>
                             <input type="text" name="Nombre_Cliente_pedido" id="Nombre_Cliente_pedido"style="justify-content: center; text-align: center;">
-                            <span class="text" style="float: left;">DNI: </span>
+                            <span class="text" style="float: left;">&nbsp;DNI:&nbsp;</span>
                             <input type="text" name="DNI_pedido" id="DNI_pedido"
                                 style="justify-content: center; text-align: center;">
                         </div>  
@@ -171,20 +171,26 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
+                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
                                     </tr>
                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
+                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
                                     </tr>
                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
+                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
                                     </tr>
                                      <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="5"></th>
+                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
                                     </tr>
                                      <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th>12</th><th>123$</th><th><i class='bx bxs-trash'></i></th>
+                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="5"></th>
+                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
                                     </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>
@@ -194,9 +200,9 @@
                                 <span id="span2"></span>
                                 <span id="span3"></span>
                                 <span id="span4"></span>
-                                AGREGAR PEDIDO
+                                CREAR PEDIDO
                             </a>
-                            <a href="#" class="btn-neon pd_seleccionados">
+                            <a href="pedidos.html" class="btn-neon pd_seleccionados">
                                 <span id="span1"></span>
                                 <span id="span2"></span>
                                 <span id="span3"></span>
@@ -257,24 +263,15 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>DNI</th>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th></th>
+                            <th>Código del Producto</th><th>Nombre del Producto</th><th>Tipo de Producto</th><th>Cantidad Disponible</th><th></th>    
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>70504167</th>
-                            <th>Iosif Gustavo</th>
-                            <th>Monrroy Rojo</th>
-                            <th><input type="checkbox" class="check1"></th>
+                            <th>P0001</th><th>Puñera de plata texturada brillante</th><th>puñeras</th><th>4</th><th><input type="checkbox" class="check1"></th>
                         </tr>
                         <tr>
-                            <th>70342812</th>
-                            <th>Yozip Stalin</th>
-                            <th>Monrroy Rojo</th>
-                            <th><input type="checkbox" class="check1"></th>
+                            <th>P0002</th><th>Dije cristal circular</th><th>dijes</th><th>5</th><th><input type="checkbox" class="check1"></th>
                         </tr>
                     </tbody>
                 </table>
