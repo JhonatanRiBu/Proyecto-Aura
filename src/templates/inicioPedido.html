@@ -5,36 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pedidos.css" type="text/css">
+    <link rel="stylesheet" href="../css/inicioinventario.css" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>Página de Inicio</title>
+    <title>Inventarios</title>
 </head>
 
 <body>
-    <div class="sidebar close">
+    <div class="sidebar">
         <div class="logo-details">
             <i class='bx bxl-sketch'></i>
             <span class="logo_name">Joyería Aura</span>
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#">
+                <a href="InicioInventarios.html">
                     <i class='bx bxs-box'></i>
                     <span class="link_name">Inventarios</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Inventarios</a></li>
+                    <li><a class="link_name" href="InicioInventarios.html">Inventarios</a></li>
 
                 </ul>
             </li>
             <li>
-                <a href="#">
+                <a href="InicioVenta.html">
                     <i class='bx bxs-dollar-circle'></i>
                     <span class="link_name">Ventas</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Ventas</a></li>
+                    <li><a class="link_name" href="InicioVenta.html">Ventas</a></li>
                 </ul>
             </li>
             <li>
@@ -65,38 +65,23 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'>
-                <span class="text">Pedidos</span>
+                <span class="text">Pedido</span>
             </i>
         </div>
-        <div class="grid">
-            <div class="contenedor-Boton">
-                <a class ="botones_pedido"href="Crear_Pedido.html">
-                    <div>
-                        <button id="Crear_Pedido" class="Boton Crear_Pedido">
-                            <span>Crear Pedido</span>
-                            <i class='bx bx-cart bx-tada'></i>
-                        </button>
-                    </div>
-                </a>
-                <a class ="botones_pedido" href="Listar_Pedidos.html">
-                    <div>
-                        <button id="Listar_Pedidos" class="Boton Listar_Pedidos">
-                            <span>Listar Pedidos</span>
-                            <i class='bx bx-list-check bx-burst'></i>
-                        </button>
-                    </div>
-                </a>
-                <a class="botones_pedido"href="">
-                    <div>
-                        <button id="Cotizacion" class="Boton Cotizacion">
-                            <span>Cotizacion</span>
-                            <i class='bx bx-receipt bx-fade-left'></i>
-                        </button>
-                    </div>
-                </a>
-    
-            </div>
+
+        <div class="contenedor-botones">
+            <a class="link-mp" href="Crear_Pedido.html">
+                <button class="boton mp">
+                    <span>Crear Pedido</span>
+                    <img src="materiaprima.jpg" alt="MP">
+                </button></a>
+            <a class="link-joya" href="consultar_pedidos.html">
+                <button class="boton joya">
+                    <span>Consultar pedidos</span>
+                    <img src="joya.jpg" alt="Joya">
+                </button></a>
         </div>
+
     </section>
 
 

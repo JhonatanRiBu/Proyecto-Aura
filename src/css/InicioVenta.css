@@ -202,7 +202,7 @@
 .home-section{
     position: relative;
     background: #E4E9F7;
-    height: 100%;
+    height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
@@ -229,177 +229,139 @@
     font-size: 26px;
     font-weight: 600;
 }
-
-.buscar{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px;
-}
-
-.contenedor-buscar{
-    background-color: #BFC9CA;
-    height: 220px;
-    border-radius: 10px;
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
-.contenedor-buscar input{
-    width: 25%;
-    height: 100%;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid black;
-    background: none;
-    font-size: 18px;
-    margin-left: 10px;
-}
-.contenedor-buscar label{
+.grid .contenedor-Boton{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);  
+    height: 500px;
     position: relative;
-    color: black;
-    font-size: 18px;
+    padding: 92px 30px 0px 30px;
+    gap: 30px;
 }
-.contenedor-buscar .s-column{
-    padding-left: 150px;
-}
-.primera-fila{
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-.segunda-fila{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.tercera-fila{
-    padding-top: 15px;
-    padding-left: 60%;
-}
-.segunda-fila select{
-    margin-left: 10px;
-    width: 15%;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
-    opacity: 0.6;
-}
-.contenedor-buscar .s-column2{
-    padding-left: 50px;
-}
-
-.boton{
+.contenedor-Boton .Pedido{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
-    height: 35px;
-    background: #141414;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: .3s ease all;
-    border-radius: 5px;
-    margin-left: 50px;
-}
-.boton.buscarbt span{
-    transition: .4s ease-in-out all;
-    position: absolute;
-    padding-left: 0%;
-
-}
-.boton-eliminar{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 35px;
-    background: #141414;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: .3s ease all;
-    border-radius: 5px;
-}
-.boton-eliminar span{
-    transition: .4s ease-in-out all;
-    position: absolute;
-    padding-left: 0%;
-}
-.boton-eliminar .icono{
-    padding-left: 80%;
-}
-.boton .icono{
-    padding-left: 80%;
-}
-.boton-eliminar:hover{
-    background: #E74C3C;
-    transform: scale(1.1);
-}
-.boton:hover{
-    background: #52BE80;
-    transform: scale(1.1);
-}
-.lista-mp{
-    padding-top: 40px;
-    padding-left: 35px;
-    padding-right: 35px;
-}
-
-.main_conteiner{
-    padding-top: 20px;
-    padding-left: 35px;
-    padding-right: 35px;
-    height: 100%;
-    padding-bottom: 20px;
-}
-table{
+    background: #141414 ;
     width: 100%;
-    background-color:gray ;
-    border-collapse: collapse;
-    text-align: left;   
-}
-th, td{
-    border: solid 1px #11101d;
-    padding: 20px;
-}
-thead{
-    background-color: #11101d;
-    color: white;
-}
-tr:nth-child(even){
-    background-color: #ddd;
-}
-tr:hover{
-    background-color: #2E4053;
-    color: white;
-}
-.eliminar, .editar{
-    color: black;
-}
-.botones-lista{
-     padding-left: 70%;
-    padding-top: 10px;
-    padding-bottom: 30px;
-}
-.agregar-nuevo-pedido{
-    width: 80%;
-    height: 35px;
-    background: #141414;
+    height: 500px;
+    margin: -50px auto;
     color: #fff;
-    font-size: 18px;
+    font-size: 40px;
     font-weight: 500;
     border: none;
     cursor: pointer;
+    text-transform: uppercase;
     transition: .3s ease all;
     border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Boton::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #A3E4D7;
+    position: absolute;
+    top: -559px;
+    left: 0;
+    transition: .3s ease-in-out all;
+}
+.Boton:hover::after{
+    top: 0;
+}
+.contenedor-Boton .Pedido:hover{
+    background: #ccc;
+}
+
+.contenedor-Boton .Pedido span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+.contenedor-Boton .Comprobante{
+display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #141414 ;
+    width: 100%;
+    height: 500px;
+    margin: -50px auto;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.contenedor-Boton .Comprobante:hover{
+    background: #ccc;
+}
+
+.contenedor-Boton .Comprobante span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.contenedor-Boton .Cotizacion{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background: #141414 ;
+    width: 100%;
+    height: 500px;
+    margin: -50px auto;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
-.agregar-nuevo-pedido:hover{
-    background: #52BE80;
-    transform: scale(1.1);
+.contenedor-Boton .Cotizacion:hover{
+    background: #ccc;
+}
+
+.contenedor-Boton .Cotizacion span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.bx-cart {
+    position: absolute;
+    font-size: 100px;
+    justify-items: center;
+    justify-content: center;
+    display: inline-block;
+    top: 283px;
+}
+.bx-receipt {
+    position: absolute;
+    font-size: 100px;
+    justify-items: center;
+    justify-content: center;
+    display: inline-block;
+    top: 283px;
+}
+.bx-spreadsheet {
+    position: absolute;
+    font-size: 100px;
+    justify-items: center;
+    justify-content: center;
+    display: inline-block;
+    top: 283px;
+}
+.botones_venta{
+    height: 500px;
+    width: 100%;
+    text-decoration: none;
 }
