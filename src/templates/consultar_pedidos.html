@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/consultar_pedidos.css" type="text/css">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Materia Prima</title>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-sketch'></i>
+            <span class="logo_name">Joyería Aura</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="InicioInventarios.html">
+                    <i class='bx bxs-box'></i>
+                    <span class="link_name">Inventarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="InicioInventarios.html">Inventarios</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link_name">Ventas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="profile.png" alt="profile">
+                    </div>
+
+                    <div class="name-job">
+                        <div class="profile_name">Jesus P.</div>
+                        <div class="job">Asist. Comercial</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'>
+                <span class="text">Consultar Pedidos</span>
+            </i>
+        </div>
+
+        <div class="buscar">
+            <div class="contenedor-buscar">
+                <form class="form">
+                    <div class="primera-fila">
+                        <label>Código:</label>
+                        <input type="text" placeholder="Ingrese código del pedido">
+
+                        <label class="s-column">Producto del Pedido:</label>
+                        <input type="text" placeholder="Ingrese el nombre del producto">
+                    </div>
+                    <div class="segunda-fila">
+                        <label>Tipo de pedido:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione tipo</option>
+                            <option value="">Personalizado</option>
+                            <option value="">Convencional</option>
+                        </select>
+                        <label class="s-column2">Fecha de creación:</label>
+                         <input type="date" , name="day" style="width: 170px;">        
+
+                        <label class="s-column2">Estado del pedido:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione tipo</option>
+                            <option value="">Pendiente</option>
+                            <option value="">Hecho</option>
+                            <option value="">Cancelado</option>
+                        </select>
+                    </div>
+                    <div class="tercera-fila">
+                        <button class="boton-eliminar">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                </svg>
+                            </div>
+                            <span>Eliminar búsqueda</span>
+                        </button>
+                        <button class="boton buscarbt">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </div>
+                            <span>Buscar</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="lista-mp">
+            <h1>Lista de pedidos</h1>
+        </div>
+
+        <div class="main_conteiner">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre del producto</th>
+                        <th>Fecha de creación</th>
+                        <th>Estado</th>
+                        <th>Tipo</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>AU242021K</th>
+                        <th>Dije cristal circular</th>
+                        <th>25/11/2020</th>
+                        <th>Hecho</th>
+                        <th>Personalizado</th>
+                        <th>
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>AU242021K</th>
+                        <th>Dije cristal circular</th>
+                        <th>25/11/2020</th>
+                        <th>Hecho</th>
+                        <th>Personalizado</th>
+                        <th>
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>AU242021K</th>
+                        <th>Dije cristal circular</th>
+                        <th>25/11/2020</th>
+                        <th>Hecho</th>
+                        <th>Personalizado</th>
+                        <th>
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                   <tr>
+                        <th>AU242021K</th>
+                        <th>Dije cristal circular</th>
+                        <th>25/11/2020</th>
+                        <th>Hecho</th>
+                        <th>Personalizado</th>
+                        <th>
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>AU242021K</th>
+                        <th>Dije cristal circular</th>
+                        <th>25/11/2020</th>
+                        <th>Hecho</th>
+                        <th>Personalizado</th>
+                        <th>
+                            
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="botones-lista">
+            <button class="guardar_cambios">
+                <span>Volver</span>
+                <i class='bx bx-list-plus'></i>
+            </button>
+            <button class="volver" >
+                <span>Guardar cambios</span>
+                <i class='bx bx-list-plus'></i>
+            </button>
+        </div>
+    </section>
+
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+
+</html>
