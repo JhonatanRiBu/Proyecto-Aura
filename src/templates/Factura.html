@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="../../JS/jquery-3.6.0.js"></script>
+    <script src="../../JS/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/javascript" href="../../JS/Crear_pedido.js">
+    <link rel="stylesheet" type="text/javascript" href="../../JS/bootstrap.bundle.min.js">
+    <link rel="stylesheet" type="text/css" href="../css/Factura.css">
+    <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-ui.min.js">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    
+    <title>Factura</title>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-sketch'></i>
+            <span class="logo_name">Joyería Aura</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bxs-box'></i>
+                    <span class="link_name">Inventarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Inventarios</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link_name">Ventas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="profile.png" alt="profile">
+                    </div>
+
+                    <div class="name-job">
+                        <div class="profile_name">Jesus P.</div>
+                        <div class="job">Asist. Comercial</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'>
+                <span class="text">Generar Factura</span>
+            </i>
+        </div>
+        <span style="font-size: 20px; margin:20px; padding: 10px;">Datos de Factura</span>
+        <div class="primera-fila">
+            <div class="lateral1">
+                <div class="fila1-lateral1">
+                    <label class ="label-l1f1">N° Factura</label>
+                    <input type="text" placeholder="N° Factura" class="campo-l1f1" style="float: left;">
+                </div>
+                <div class="fila1-lateral1">
+                    <label class ="label-l1f1">Razón Social</label>
+                    <input type="text" placeholder="Razón Social" class="campo-l1f1" style="float: left;">
+                </div>
+                <div class="fila1-lateral1">
+                    <label class ="label-l1f1">Dirección</label>
+                    <input type="text" placeholder="Dirección" class="campo-l1f1" style="float: left;">
+                </div>
+            </div>
+            <div class="lateral2">
+                <div class="fila1-lateral2">
+                    <label class ="label-l2f1">Fecha de Emisión</label>
+                    <input type="date" class="campo-l2f1" style="float: left;">
+                </div>
+                <div class="fila1-lateral2">
+                    <label class ="label-l2f1">Fecha de Vencimiento</label>
+                    <input type="date"class="campo-l2f1" style="float: left;">
+                </div>
+                <div class="fila1-lateral2">
+                    <label class ="label-l2f1">RUC</label>
+                    <input type="text" placeholder="RUC" class="campo-l2f1" style="float: left;">
+                </div>
+            </div>
+        </div>
+        <span style="font-size: 20px; margin:20px; padding: 10px;">Productos a Facturar</span>
+        <div class="segunda-fila">
+            <div class="fila2-lateral1">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código Producto</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Descuento</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>123</td>
+                        <td>un collar</td>
+                        <td>1</td>
+                        <td>125$</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>un collar</td>
+                        <td>1</td>
+                        <td>125$</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>un collar</td>
+                        <td>1</td>
+                        <td>125$</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>un collar</td>
+                        <td>1</td>
+                        <td>125$</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>123</td>
+                        <td>un collar</td>
+                        <td>1</td>
+                        <td>125$</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tercera-fila">
+            <div class="fila3-lateral1">
+                <div style="width: 45%; float: left;">
+
+                </div>
+            </div>
+            <div class="fila3-lateral2">
+                <div class="div-f3l2">
+                    <label style="float:right; width: 15%; margin-left: 5px;"> Sub Total Ventas</label>
+                    <input style="float:right; width: 15%; border-radius: 8px;" type="text">
+                </div>
+                <div class="div-f3l2">
+                    <label style="float:right; width: 15%; margin-left: 5px;"> IGV</label>
+                    <input style="float:right; width: 15%; border-radius: 8px;" type="text">
+                </div>
+                <div class="div-f3l2">
+                    <label style="float:right; width: 15%; margin-left: 5px;"> Importe Total</label>
+                    <input style="float:right; width: 15%; border-radius: 8px;" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="Cuarta-fila">
+            <div class="fila4-lateral1">
+                <div>
+                </div>
+            </div>
+            <div class="fila4-lateral2">
+                <div>
+                    <button style="float:right; margin: 10px; padding: 5px; font-size: 20px; border-radius: 8px;" onclick="return crear_factura()">
+                        Generar Factura</button>
+                    <button style="float:right; margin: 10px; padding: 5px; font-size: 20px; border-radius: 8px;">
+                        Cancelar</button>
+                </div>
+            </div>
+        </div>
+                
+            
+    </section>
+
+    <script type="text/javascript">
+        function crear_factura()
+        {
+            var respuesta = confirm("La factura ha sido creada");
+
+            if(respuesta == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+</body>
+    
+</html>
