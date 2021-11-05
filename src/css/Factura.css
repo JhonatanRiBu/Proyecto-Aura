@@ -301,6 +301,15 @@ td, th{
 thead{
     color: blanchedalmond;
 }
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+tr:hover{
+    background-color: #2E4053;
+    color: white;
+}
+
 .tercera-fila{
     width: 100%;
     float: right;
@@ -326,4 +335,10 @@ thead{
 .fila4-lateral2{
     width: 100%;
     float: right;
+}
+
+.boton-final:hover{
+    transform: scale(1.1);
+    transition: 0.5 ease-in-out all;
+    background-color: rgb(192, 192, 192);
 }
