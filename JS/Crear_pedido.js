@@ -155,3 +155,8 @@ btnAgregarPd.addEventListener('click', function () {
 }); btnAgregarPd.addEventListener('click', function () {
     nomostrar6.classList.remove("activate");
 });
+
+var btn_pd_seleccionados = document.getElementById("btn_pd_seleccionados");
+btn_pd_seleccionados.addEventListener('click', function () {
+    alert("Pedido agregado coorectamente");
+});
