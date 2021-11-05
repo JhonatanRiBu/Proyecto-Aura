@@ -342,7 +342,7 @@
     background: #52BE80;
     transform: scale(1.1);
 }
-.lista-mp{
+.lista-pedidos{
     padding-top: 40px;
     padding-left: 35px;
     padding-right: 35px;
@@ -399,7 +399,17 @@ tr:hover{
     align-items: center;
     justify-content: center;
 }
+
 .agregar-nuevo-pedido:hover{
     background: #52BE80;
     transform: scale(1.1);
 }
+.agregar-nuevo-pedido span {
+    transition: .4s ease-in-out all;
+    position: absolute;
+    padding-left: 0%;
+}
+.agregar-nuevo-pedido .bx-list-plus{
+    padding-left: 80%;
+}
+
