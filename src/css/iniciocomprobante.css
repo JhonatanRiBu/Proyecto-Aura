@@ -308,6 +308,14 @@
 .boton:hover::after{
     top: 0;
 }
+.bx-receipt {
+    position: absolute;
+    font-size: 100px;
+    justify-items: center;
+    justify-content: center;
+    display: inline-block;
+    top: 283px;
+}
 
 
 
