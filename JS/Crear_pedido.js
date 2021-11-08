@@ -31,7 +31,10 @@ var nomostrar1 = document.getElementById('nomostrar1'),
     nomostrar3 = document.getElementById('nomostrar3'),
     nomostrar4 = document.getElementById('nomostrar4'),
     nomostrar5 = document.getElementById('nomostrar5'),
-    nomostrar6 = document.getElementById('nomostrar6');
+    nomostrar6 = document.getElementById('nomostrar6'),
+    nomostrar7 = document.getElementById('nomostrar7'),
+    nomostrar8 = document.getElementById('nomostrar8'),
+    nomostrar9 = document.getElementById('nomostrar9');
 btnAbrirpopup1.addEventListener('click', function () {
     nomostrar1.classList.add("activate");
 });
@@ -50,6 +53,15 @@ btnAbrirpopup1.addEventListener('click', function () {
 btnAbrirpopup1.addEventListener('click', function () {
     nomostrar6.classList.add("activate");
 });
+btnAbrirpopup1.addEventListener('click', function () {
+    nomostrar7.classList.add("activate");
+});
+btnAbrirpopup1.addEventListener('click', function () {
+    nomostrar8.classList.add("activate");
+});
+btnAbrirpopup1.addEventListener('click', function () {
+    nomostrar9.classList.add("activate");
+});
 
 btnCerrarpopup1.addEventListener('click', function () {
     nomostrar1.classList.remove("activate");
@@ -69,20 +81,42 @@ btnCerrarpopup1.addEventListener('click', function () {
 btnCerrarpopup1.addEventListener('click', function () {
     nomostrar6.classList.remove("activate");
 });
+btnCerrarpopup1.addEventListener('click', function () {
+    nomostrar7.classList.remove("activate");
+});
+btnCerrarpopup1.addEventListener('click', function () {
+    nomostrar8.classList.remove("activate");
+});
+btnCerrarpopup1.addEventListener('click', function () {
+    nomostrar9.classList.remove("activate");
+});
 
 btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar1.classList.remove("activate");
 });
 btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar2.classList.remove("activate");
-}); btnAgregarCliExistente.addEventListener('click', function () {
+});
+btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar3.classList.remove("activate");
-}); btnAgregarCliExistente.addEventListener('click', function () {
+});
+btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar4.classList.remove("activate");
-}); btnAgregarCliExistente.addEventListener('click', function () {
+});
+btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar5.classList.remove("activate");
-}); btnAgregarCliExistente.addEventListener('click', function () {
+});
+btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar6.classList.remove("activate");
+});
+btnAgregarCliExistente.addEventListener('click', function () {
+    nomostrar7.classList.remove("activate");
+});
+btnAgregarCliExistente.addEventListener('click', function () {
+    nomostrar8.classList.remove("activate");
+});
+btnAgregarCliExistente.addEventListener('click', function () {
+    nomostrar9.classList.remove("activate");
 });
 
 
@@ -121,6 +155,15 @@ btnAbrirpopup2.addEventListener('click', function () {
 btnAbrirpopup2.addEventListener('click', function () {
     nomostrar6.classList.add("activate");
 });
+btnAbrirpopup2.addEventListener('click', function () {
+    nomostrar7.classList.add("activate");
+});
+btnAbrirpopup2.addEventListener('click', function () {
+    nomostrar8.classList.add("activate");
+});
+btnAbrirpopup2.addEventListener('click', function () {
+    nomostrar9.classList.add("activate");
+});
 
 btnCerrarpopup2.addEventListener('click', function () {
     nomostrar1.classList.remove("activate");
@@ -140,6 +183,15 @@ btnCerrarpopup2.addEventListener('click', function () {
 btnCerrarpopup2.addEventListener('click', function () {
     nomostrar6.classList.remove("activate");
 });
+btnCerrarpopup2.addEventListener('click', function () {
+    nomostrar7.classList.remove("activate");
+});
+btnCerrarpopup2.addEventListener('click', function () {
+    nomostrar8.classList.remove("activate");
+});
+btnCerrarpopup2.addEventListener('click', function () {
+    nomostrar9.classList.remove("activate");
+});
 
 btnAgregarPd.addEventListener('click', function () {
     nomostrar1.classList.remove("activate");
@@ -154,6 +206,13 @@ btnAgregarPd.addEventListener('click', function () {
     nomostrar5.classList.remove("activate");
 }); btnAgregarPd.addEventListener('click', function () {
     nomostrar6.classList.remove("activate");
+});
+btnAgregarPd.addEventListener('click', function () {
+    nomostrar7.classList.remove("activate");
+}); btnAgregarPd.addEventListener('click', function () {
+    nomostrar8.classList.remove("activate");
+}); btnAgregarPd.addEventListener('click', function () {
+    nomostrar9.classList.remove("activate");
 });
 
 var btn_pd_seleccionados = document.getElementById("btn_pd_seleccionados");
