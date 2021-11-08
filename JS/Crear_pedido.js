@@ -1,10 +1,10 @@
 /*Popup*/
-var btnAbrirpopup1 = document.getElementById('btn-neon_cliente'),
+var btnAbrirpopup1 = document.getElementById('cliente'),
     overlay1 = document.getElementById("overlay1"),
     popup1 = document.getElementById("popup1"),
     btnCerrarpopup1 = document.getElementById("btn-cerrar-pop-up1"),
     btnAgregarCliExistente = document.getElementById("btn_agregar_cli_existente"),
-    btnAbrirpopup2 = document.getElementById("btn-neon-buscar_pd"),
+    btnAbrirpopup2 = document.getElementById("buscar_pd"),
     overlay2 = document.getElementById("overlay2"),
     popup2 = document.getElementById("popup2"),
     btnCerrarpopup2 = document.getElementById("btn-cerrar-pop-up2"),

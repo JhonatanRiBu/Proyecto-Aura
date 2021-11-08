@@ -99,20 +99,24 @@
                             </fieldset>
                         </form>
                         <div class="contenedor_cliente_2">
-                            <a href="#" class="btn-neon cliente" id="btn-neon_cliente">
-                                <span id="span1"></span>
-                                <span id="span2"></span>
-                                <span id="span3"></span>
-                                <span id="span4"></span>
-                                BUSCAR
-                            </a>
-                            <a href="#" class="btn-neon cliente" id="btn-neon-agregar_cliente">
-                                <span id="span1"></span>
-                                <span id="span2"></span>
-                                <span id="span3"></span>
-                                <span id="span4"></span>
-                                AGREGAR CLIENTE
-                            </a>
+                        <a href="#" id="cliente" class="cliente">
+                            <button class="boton buscar">
+                                <span>&nbsp;Buscar&nbsp;</span>
+                                <div class="icono">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </a>
+                        <a href="#">
+                            <button class="boton agregar" id="agregar_cliente">
+                                <span>&nbsp;Agregar cliente&nbsp;</span>
+                                <div class="icono"><i class='bx bx-list-plus'></i></div>
+                            </button>
+                        </a>
                         </div>
                     </div>
                 </div>  
@@ -142,12 +146,17 @@
                             </form>
                         </div>
                         <div class="contenedor_buscar_pd"style="background: #BFC9CA;">
-                            <a href="#" class="btn-neon buscar_pd" id="btn-neon-buscar_pd">
-                                <span id="span1"></span>
-                                <span id="span2"></span>
-                                <span id="span3"></span>
-                                <span id="span4"></span>
-                                BUSCAR
+                            <a href="#" id="buscar_pd">
+                                <button class="boton buscar">
+                                    <span>&nbsp;Buscar Producto&nbsp;</span>
+                                    <div class="icono">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                        </svg>
+                                    </div>
+                                </button>
                             </a>
                         </div>   
                     </div>
@@ -157,11 +166,38 @@
                         <div style="justify-content: center; text-align: center; padding: 10px 0px 0px 30px;height: 40px;">
                             <span class="text" style="float: left;">Nombre del Cliente:&nbsp;</span>
                             <input type="text" name="Nombre_Cliente_pedido" id="Nombre_Cliente_pedido"style="justify-content: center; text-align: center;">
-                            <span class="text" style="float: left;">&nbsp;DNI:&nbsp;</span>
+                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;DNI:&nbsp;</span>
                             <input type="text" name="DNI_pedido" id="DNI_pedido"
-                                style="justify-content: center; text-align: center;">
+                            style="justify-content: center; text-align: center;"> 
+                            <br>
+                            <br>
+                            <span class="text" style="float: left;">Fecha inicio:&nbsp;</span>
+                            <input type="date" name="fecha_inicio" id="fecha_inicio"
+                            style="justify-content: center; text-align: center;width: 170px; height: 35px;">
+                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;Plazo de entrega:&nbsp;</span>
+                            <input type="date" name="plazo_entrega" id="plazo_entrega"
+                            style="justify-content: center; text-align: center;width: 170px; height: 35px;">
+                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;ID Pedido:&nbsp;</span>
+                            <input type="text" 
+                                style="justify-content: center; text-align: center;width: 170px; height: 35px;">
+                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;Tipo de pedido:</span>
+                            <select name="tipo" id="">
+                                <option disabled selected="">Seleccione tipo</option>
+                                <option value="">Personalizado</option>
+                                <option value="">Convencional</option>
+                            </select>
+                            <br>
+                            <br>
+                            <span class="text" style="float: left;">Comentario:&nbsp;</span>
+                            <input type="text" name="plazo_entrega" id="plazo_entrega"
+                            style="justify-content: center; text-align: left;width: 80%; height: 64px;">
                         </div>  
+                            <br>
                         <div class="contenedor_tabla">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
                             <span class="text" style="justify-content: center; text-align: center;">Lista de Productos Seleccionados</span>
                             <table id="tabla_prod_seleccionados" class="table">
                                 <thead>
@@ -195,19 +231,24 @@
                             </table>
                         </div>
                         <div class="contenedor_pd_seleccionados">
-                            <a href="#" class="btn-neon pd_seleccionados" id="btn_pd_seleccionados">
-                                <span id="span1"></span>
-                                <span id="span2"></span>
-                                <span id="span3"></span>
-                                <span id="span4"></span>
-                                CREAR PEDIDO
+                            <a href="#" id="btn_pd_seleccionados">
+                                <button class="boton agregar">
+                                    <span>&nbsp;Crear Pedido&nbsp;</span>
+                                    <div class="icono"><i class='bx bx-list-plus'></i></div>
+                                </button>
                             </a>
-                            <a href="inicioPedido.html" class="btn-neon pd_seleccionados">
-                                <span id="span1"></span>
-                                <span id="span2"></span>
-                                <span id="span3"></span>
-                                <span id="span4"></span>
-                                CANCELAR
+                            <a href="inicioPedido.html">
+                                <button class="boton cancelar">
+                                    <span>&nbsp;Cancelar&nbsp;</span>
+                                    <div class="icono">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                            <path fill-rule="evenodd"
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                        </svg>
+                                </button>
                             </a>
                         </div>
                     </div>
@@ -243,12 +284,11 @@
                 </table>
                 <form action="">
                     <div class="contenedor-inputs">
-                        <a href="#" class="btn-neon agregar_cli_existente" id="btn_agregar_cli_existente">
-                            <span id="span1"></span>
-                            <span id="span2"></span>
-                            <span id="span3"></span>
-                            <span id="span4"></span>
-                            AGREGAR
+                        <a href="#" id="btn_agregar_cli_existente">
+                            <button class="boton agregar">
+                                <span>&nbsp;Agregar cliente&nbsp;</span>
+                                <div class="icono"><i class='bx bx-list-plus'></i></div>
+                            </button>
                         </a>
                     </div>
                 </form>
@@ -277,12 +317,11 @@
                 </table>
                 <form action="">
                     <div class="contenedor-inputs">
-                        <a href="#" class="btn-neon agregar_prod" id="btn_agregar_prod">
-                            <span id="span1"></span>
-                            <span id="span2"></span>
-                            <span id="span3"></span>
-                            <span id="span4"></span>
-                            AGREGAR
+                        <a href="#" id="btn_agregar_prod">
+                            <button class="boton agregar">
+                                <span>&nbsp;Agregar producto&nbsp;</span>
+                                <div class="icono"><i class='bx bx-list-plus'></i></div>
+                            </button>
                         </a>
                     </div>
                 </form>

@@ -298,229 +298,63 @@ tbody tr{
     cursor: pointer;
 }
 /*BOTON*/
-.cliente{
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: black;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 20px; 
-    overflow: hidden;
-    bottom: 10px;
-    transition: 0.2s;
-}
-.buscar_pd{
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: black;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 20px; 
-    overflow: hidden;
-    bottom: 5px;
-    transition: 0.2s;
-}
-.pd_seleccionados{
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: black;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 20px; 
-    overflow: hidden;
-    bottom: 5px;
-    transition: 0.2s;
-}
-.pd_seleccionados:hover{
-    background: #30063d;
-    color: white;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    transition-delay: 1s;
- }
-.pd_seleccionados span{
-    position: absolute;
-    display: block;
-}
-#span1{
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent,#a945c7);
- }
- .pd_seleccionados:hover #span1{
-    left: 100%;
-    transition: 1s;
-}
- #span3{
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent,#a945c7);
-}
- .pd_seleccionados:hover #span3{
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-}
-#span2{
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,#a945c7);
-}
-.pd_seleccionados:hover #span2{
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-#span4{
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,#a945c7);
-}
-.pd_seleccionados:hover #span4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
-}
 .contenedor_cliente_2{
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     border-radius: 10px;
-    background: #BFC9CA;
     font-family:consolas;
+    gap: 30px;
 }
 .contenedor_buscar_pd{
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     border-radius: 10px;
-    background: #1a0321;
     font-family:consolas;
 }
 .contenedor_pd_seleccionados{
     margin: 0;
-    padding: 0;
+    padding-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     font-family:consolas;
 }
-.buscar_pd:hover{
-    background: #30063d;
-    color: white;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    transition-delay: 1s;
- }
-.buscar_pd span{
-    position: absolute;
-    display: block;
+.boton{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 50px;
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease all;
+    border-radius: 5px;
+    margin-left: 50px;
 }
-.buscar_pd:hover #span1{
-    left: 100%;
-    transition: 1s;
+.agregar:hover{
+    background: #52BE80;
+    font-size: 23px;
 }
-.buscar_pd:hover #span3{
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
+.cancelar:hover{
+    background: #E74C3C;
+    font-size: 23px;
 }
-.buscar_pd:hover #span2{
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-.buscar_pd:hover #span4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
-}
-
-.cliente:hover{
-    background: #30063d;
-    color: white;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    transition-delay: 1s;
- }
-.cliente span{
-    position: absolute;
-    display: block;
-}
-.cliente:hover #span1{
-    left: 100%;
-    transition: 1s;
-}
-.cliente:hover #span3{
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-}
-.cliente:hover #span2{
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-.cliente:hover #span4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
-}
-.agregar_cli_existente{
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    color: black;
-    letter-spacing: 4px;
-    text-decoration: none;
-    font-size: 20px; 
-    overflow: hidden;
-    bottom: 0px;
-    transition: 0.2s;
-}
-.agregar_cli_existente:hover{
-    background: #30063d;
-    color: white;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    transition-delay: 1s;
- }
-.agregar_cli_existente span{
-    position: absolute;
-    display: block;
-}
-.agregar_cli_existente:hover #span1{
-    left: 100%;
-    transition: 1s;
-}
-.agregar_cli_existente:hover #span3{
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-}
-.agregar_cli_existente:hover #span2{
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-.agregar_cli_existente:hover #span4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
+.buscar:hover{
+    font-size: 23px;
+    background: #5f59a5;
 }
 /*Buscador animado*/
 form{   
@@ -759,35 +593,6 @@ input:focus + button.fa{
     transition: 0.2s;
     left: 26px;
 }
-.agregar_prod:hover{
-    background: #30063d;
-    color: white;
-    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
-    transition-delay: 1s;
- }
-.agregar_prod span{
-    position: absolute;
-    display: block;
-}
-.agregar_prod:hover #span1{
-    left: 100%;
-    transition: 1s;
-}
-.agregar_prod:hover #span3{
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-}
-.agregar_prod:hover #span2{
-    top: 100%;
-    transition: 1s;
-    transition-delay: 0.25s;
-}
-.agregar_prod:hover #span4{
-    bottom: 100%;
-    transition: 1s;
-    transition-delay: 0.75s;
-}
 /*Animaciones*/
 .popup2.activate{
     opacity: 1;
@@ -813,4 +618,17 @@ font-size: 30px;
 .contenedor-tabla-popup2 table th{
     padding: 20px 20px 20px 0px;
 
+}
+th .bxs-trash:hover{
+font-size: 35px;
+}
+select{
+margin-left: 0px;
+width: 15%;
+height: 30px;
+border-radius: 10px;
+border: none;
+opacity: 0.6;
+justify-content: center; 
+text-align: center;
 }
