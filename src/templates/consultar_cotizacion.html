@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/consultar_cotizacion.css" type="text/css">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Consultar Cotización</title>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-sketch'></i>
+            <span class="logo_name">Joyería Aura</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="InicioInventarios.html">
+                    <i class='bx bxs-box'></i>
+                    <span class="link_name">Inventarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="InicioInventarios.html">Inventarios</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="InicioVenta.html">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link_name">Ventas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Configuración</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configuración</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="profile.png" alt="profile">
+                    </div>
+
+                    <div class="name-job">
+                        <div class="profile_name">Jesus P.</div>
+                        <div class="job">Asist. Comercial</div>
+                    </div>
+                    <a href="InicioSesion.html"><i class='bx bx-log-out'></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'>
+                <span class="text">Consultar Cotización</span>
+            </i>
+        </div>
+
+        <div class="buscar">
+            <div class="contenedor-buscar">
+                <form class="form">
+                    <div class="primera-fila">
+                        <label>Código:</label>
+                        <input type="text" placeholder="Ingrese código de la Cotizacion">
+                 
+                        <label class="s-column">ID del pedido:</label>
+                        <input type="text" placeholder="Ingrese el código del pedido">
+
+                        <label class="s-column">Fecha:</label>
+                        <input type="date" style="width: 190px;">
+                    </div>
+                    <div class="segunda-fila">
+                        <label>Valor de la cotización:</label>
+                        <select name="" id="">
+                            <option disabled selected="">Seleccione valor</option>
+                            <option value="">S/0 - S/500</option>
+                            <option value="">S/500 - S/1000</option>
+                            <option value="">S/1000 - S/2000</option>
+                        </select>
+
+                        <label class="s-column2">Estado:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione estado</option>
+                            <option value="">Aprobado</option>
+                            <option value="">Rechazado</option>
+                            <option value="">Pendiente</option>
+                        </select>
+
+                        <label class="s-column2">Tipo de joya:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione Tipo</option>
+                            <option value="">Sortija</option>
+                            <option value="">Dije</option>
+                            <option value="">Pulsera</option>
+                            <option value="">Arete</option>
+                            <option value="">Gemelo</option>
+                            <option value="">Collar</option>
+                            <option value="">Anillo</option>
+                            <option value="">Aro de matrimonio</option>
+                        </select>
+                    </div>
+                    <div class="tercera-fila">
+                        <button class="boton-eliminar">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                </svg>
+                            </div>
+                            <span>Eliminar búsqueda</span>
+                        </button>
+                        <button class="boton buscarbt">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </div>
+                            <span>Buscar</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="lista-cotizacion">
+            <h1>Lista de cotizaciones</h1>
+        </div>
+
+        <div class="main_conteiner">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>ID pedido</th>
+                        <th>Fecha</th>
+                        <th>Tipo de joya</th>
+                        <th>Valor</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>C0001</th>
+                        <th>AU182019K</th>
+                        <th>20/12/2020</th>
+                        <th>Anillo Venice Oro</th>
+                        <th>S/. 780</th>
+                        <th>Aprobado</th>
+                        <th class="botones-ee">
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>C0001</th>
+                        <th>AU182019K</th>
+                        <th>20/12/2020</th>
+                        <th>Anillo Venice Oro</th>
+                        <th>S/. 780</th>
+                        <th>Aprobado</th>
+                        <th class="botones-ee">
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>C0001</th>
+                        <th>AU182019K</th>
+                        <th>20/12/2020</th>
+                        <th>Anillo Venice Oro</th>
+                        <th>S/. 780</th>
+                        <th>Aprobado</th>
+                        <th class="botones-ee">
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>C0001</th>
+                        <th>AU182019K</th>
+                        <th>20/12/2020</th>
+                        <th>Anillo Venice Oro</th>
+                        <th>S/. 780</th>
+                        <th>Aprobado</th>
+                        <th class="botones-ee">
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>C0001</th>
+                        <th>AU182019K</th>
+                        <th>20/12/2020</th>
+                        <th>Anillo Venice Oro</th>
+                        <th>S/. 780</th>
+                        <th>Aprobado</th>
+                        <th class="botones-ee">
+                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="botones-lista">
+            <a href="Crear_cotizacion.html" style="text-decoration: none;">
+                <button class="agregar-cotizacion">
+                    <span>Agregar nueva cotización</span>
+                    <i class='bx bx-list-plus'></i>
+                </button>
+            </a>
+           
+        </div>
+    </section>
+
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+
+</html>
