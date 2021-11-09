@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/consultarmp.css" type="text/css">
+    <link rel="stylesheet" href="../css/agregarmp.css" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Materia Prima</title>
@@ -67,15 +67,19 @@
             </i>
         </div>
 
+        <div class="lista-mp">
+            <h1>Agregar nueva materia prima</h1>
+        </div>
+
         <div class="buscar">
             <div class="contenedor-buscar">
                 <form class="form">
                     <div class="primera-fila">
                         <label>Código:</label>
-                        <input type="text" placeholder="Ingrese código de la materia prima">
+                        <input type="text" class="texto" placeholder="Ingrese código de la materia prima">
                     
                         <label class="s-column">Nombre:</label>
-                        <input type="text" placeholder="Ingrese nombre de la materia prima">
+                        <input type="text" class="texto" placeholder="Ingrese nombre de la materia prima">
                     </div>
                     <div class="segunda-fila">
                         <label>Tipo de materia prima:</label>
@@ -103,6 +107,28 @@
                             <option value="">18</option>
                         </select>
                     </div>
+
+                    <div class="stock">
+                        <label for="">Stock inicial:</label>
+                        <input type="number" class="numero">
+                        <label for="">Unidad:</label>
+                        <select name="tipo" id="">
+                            <option disabled selected="">Seleccione valor</option>
+                            <option value="">999</option>
+                            <option value="">950</option>
+                            <option value="">925</option>
+                            <option value="">24</option>
+                            <option value="">18</option>
+                        </select>
+                    </div>
+
+                    <div class="descripcion">
+                        <label for="">Descripción:</label>
+                        <div class="cuadro">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    </div>
+
                     <div class="tercera-fila">
                         <button class="boton-eliminar">
                             <div class="icono">
@@ -125,96 +151,7 @@
                 </form>
             </div>
         </div>
-
-        <div class="lista-mp">
-            <h1>Lista de materia prima</h1>
-        </div>
-
-        <div class="main_conteiner">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Materia Prima</th>
-                        <th>Tipo materia prima</th>
-                        <th>Pureza</th>
-                        <th>Stock</th>
-                        <th>Unidad de medida</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>AU242021K</th>
-                        <th>Oro</th>
-                        <th>Metal Precioso</th>
-                        <th>24 K</th>
-                        <th>50</th>
-                        <th>gramos</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>AU182019K</th>
-                        <th>Oro</th>
-                        <th>Metal Precioso</th>
-                        <th>18 K</th>
-                        <th>67</th>
-                        <th>gramos</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>PL9992021L</th>
-                        <th>Plata</th>
-                        <th>Metal Precioso</th>
-                        <th>Ley 999</th>
-                        <th>20</th>
-                        <th>gramos</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>PL9502021L</th>
-                        <th>Plata</th>
-                        <th>Metal Precioso</th>
-                        <th>Ley 950</th>
-                        <th>40</th>
-                        <th>gramos</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>PL9252021L</th>
-                        <th>Plata</th>
-                        <th>Metal Precioso</th>
-                        <th>Ley 925</th>
-                        <th>100</th>
-                        <th>gramos</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-        <div class="botones-lista">
-            <a href="agregarmp.html">
-            <button class="agregar-mp">
-                <span>Agregar nueva materia prima</span>
-                <i class='bx bx-list-plus'></i>
-            </button></a>
-        </div>
+        
     </section>
     
 

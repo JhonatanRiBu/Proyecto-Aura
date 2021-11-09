@@ -202,7 +202,7 @@
 .home-section{
     position: relative;
     background: #E4E9F7;
-    height: 100%;
+    height: 100vh;
     left: 260px;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
@@ -238,13 +238,13 @@
 
 .contenedor-buscar{
     background-color: #BFC9CA;
-    height: 220px;
+    height: 100%;
     border-radius: 10px;
     padding-top: 30px;
     padding-left: 30px;
 }
 
-.contenedor-buscar input{
+.contenedor-buscar .texto{
     width: 25%;
     height: 100%;
     outline: none;
@@ -268,11 +268,12 @@
 }
 .segunda-fila{
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .tercera-fila{
     padding-top: 15px;
     padding-left: 60%;
+    padding-bottom: 20px;
 }
 .segunda-fila select{
     margin-left: 10px;
@@ -343,7 +344,7 @@
     transform: scale(1.1);
 }
 .lista-mp{
-    padding-top: 40px;
+    padding-top: 15px;
     padding-left: 35px;
     padding-right: 35px;
 }
@@ -355,80 +356,31 @@
     height: 100%;
     padding-bottom: 20px;
 }
-table{
-    width: 100%;
-    background-color:gray ;
-    border-collapse: collapse;
-    text-align: left;   
+textarea{
+    width: 50%;
+    height: 150px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
-th, td{
-    border: solid 1px #11101d;
-    padding: 20px;
+.numero{
+    width: 15%;
+    height: 100%;
+    font-size: 18px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    opacity: 0.6;
 }
-thead{
-    background-color: #11101d;
-    color: white;
-}
-tr:nth-child(even){
-    background-color: #ddd;
-}
-tr:hover{
-    background-color: #2E4053;
-    color: white;
-}
-.eliminar, .editar{
-    color: black;
-}
-
-.botones-lista{
-    padding-left: 70%;
+.stock{
     padding-top: 10px;
     padding-bottom: 30px;
 }
-.botones-lista a{
-    text-decoration: none;
-}
-.agregar-mp{
-    width: 80%;
-    height: 35px;
-    background: #141414;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
+.stock select{
+    margin-left: 10px;
+    width: 15%;
+    height: 30px;
+    border-radius: 10px;
     border: none;
-    cursor: pointer;
-    transition: .3s ease all;
-    border-radius: 5px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
-.agregar-mp:hover{
-    background: #52BE80;
-    transform: scale(1.1);
-}
-
-
-.botones-ee{
-    padding: 10;
-}
-.bx.bx-edit{
-    height: 30px;
-    width: 30px;
-    font-size: 30px;
-}
-.bx.bx-edit:hover{
-    transform: scale(1.5);
-    transition: 0.3s ease all;
-}
-.bx.bx-trash{
-    height: 30px;
-    width: 30px;
-    font-size: 30px;
-    padding-left: 10px;
-}
-.bx.bx-trash:hover{
-    transform: scale(1.5);
-    transition: 0.3s ease all;
+    opacity: 0.6;
 }
