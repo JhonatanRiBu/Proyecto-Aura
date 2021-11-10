@@ -421,7 +421,10 @@ input:focus + button.fa{
     background: #BFC9CA; 
     border-radius: 10px;
 }
-
+.buscar:hover{
+    font-size: 23px;
+    background: #5f59a5;
+}
 /*Pop-up*/
 .overlay1{
     background: rgba(0,0,0,.7);
