@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/agregarmp.css" type="text/css">
+    <link rel="stylesheet" href="../css/agregarjoya.css" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Materia Prima</title>
@@ -63,12 +63,12 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'>
-                <span class="text">Materia Prima</span>
+                <span class="text">Joyas</span>
             </i>
         </div>
 
         <div class="lista-mp">
-            <h1>Agregar nueva materia prima</h1>
+            <h1>Agregar nueva joya</h1>
         </div>
 
         <div class="buscar">
@@ -76,21 +76,26 @@
                 <form class="form">
                     <div class="primera-fila">
                         <label>Código:</label>
-                        <input type="text" class="texto" placeholder="Ingrese código de la materia prima">
+                        <input type="text" class="texto" placeholder="Ingrese código de la joya">
                     
                         <label class="s-column">Nombre:</label>
-                        <input type="text" class="texto" placeholder="Ingrese nombre de la materia prima">
+                        <input type="text" class="texto" placeholder="Ingrese nombre de la joya">
                     </div>
                     <div class="segunda-fila">
-                        <label>Tipo de materia prima:</label>
+                        <label>Tipo de joya:</label>
                         <select name="tipo" id="">
                             <option disabled selected="">Seleccione tipo</option>
-                            <option value="">Metal precioso</option>
-                            <option value="">Metal</option>
-                            <option value="">Piedra</option>
+                            <option value="">Sortija</option>
+                            <option value="">Dije</option>
+                            <option value="">Pulsera</option>
+                            <option value="">Arete</option>
+                            <option value="">Gemelo</option>
+                            <option value="">Collar</option>
+                            <option value="">Anillo</option>
+                            <option value="">Aro de matrimonio</option>
                         </select>
                     
-                        <label class="s-column2">Unidad de medida:</label>
+                        <label class="s-column2">Pureza:</label>
                         <select name="tipo" id="">
                             <option disabled selected="">Seleccione tipo</option>
                             <option value="">Ley</option>
@@ -111,11 +116,13 @@
                     <div class="stock">
                         <label for="">Stock inicial:</label>
                         <input type="number" class="numero">
-                        <label class="s-column2" for="">Unidad:</label>
+                        <label class="s-column2" for="">Precio:</label>
+                        <input type="number" class="numero">
+                        <label class="s-column2" for="">Moneda:</label>
                         <select name="tipo" id="">
                             <option disabled selected="">Seleccione valor</option>
-                            <option value="">unid</option>
-                            <option value="">gramos</option>
+                            <option value="">soles</option>
+                            <option value="">dólares</option>
                         </select>
                     </div>
 

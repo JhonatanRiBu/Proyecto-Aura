@@ -284,7 +284,7 @@
     opacity: 0.6;
 }
 .contenedor-buscar .s-column2{
-    padding-left: 50px;
+    padding-left: 150px;
 }
 
 .boton{
@@ -357,7 +357,7 @@
     padding-bottom: 20px;
 }
 textarea{
-    width: 50%;
+    width: 70%;
     height: 150px;
     font-size: 18px;
     margin-top: 10px;
