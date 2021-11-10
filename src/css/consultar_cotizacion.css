@@ -342,40 +342,7 @@
     background: #52BE80;
     transform: scale(1.1);
 }
-.lista-cotizacion{
-    padding-top: 40px;
-    padding-left: 35px;
-    padding-right: 35px;
-}
 
-.main_conteiner{
-    padding-top: 20px;
-    padding-left: 35px;
-    padding-right: 35px;
-    height: 100%;
-    padding-bottom: 20px;
-}
-table{
-    width: 100%;
-    background-color:gray ;
-    border-collapse: collapse;
-    text-align: left;   
-}
-th, td{
-    border: solid 1px #11101d;
-    padding: 20px;
-}
-thead{
-    background-color: #11101d;
-    color: white;
-}
-tr:nth-child(even){
-    background-color: #ddd;
-}
-tr:hover{
-    background-color: #F9E79F;
-    color: #11101d;
-}
 .eliminar, .editar{
     color: black;
 }
