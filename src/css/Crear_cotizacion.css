@@ -253,7 +253,15 @@
     padding-top: 30px;
     height: 550px;
 }
+.buscar_cliente:hover{
+    transform: scale(1.1);
+    background: #5f59a5;
+}
 
+.agregar:hover{
+    background: #52BE80;
+    transform: scale(1.1);
+}
 .contenedor-buscar{
     background-color: #BFC9CA;
     height: 95%;
@@ -301,6 +309,26 @@
 .quinta-fila{
     padding-top: 20px;
     padding-left: 60%;
+}
+.boton_agregar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 50px;
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-left: 366px;
+}
+.boton_agregar:hover{
+    background: #52BE80;
+    transform: scale(1.1);
 }
 .segunda-fila select{
     margin-left: 10px;
@@ -490,6 +518,7 @@ fieldset{
     transform: translate(-50px,0);
     transition-duration: .3s;
     visibility: visible;
+    bottom: -3.2px;
 }
 .nomostrar{
     color: #666;
@@ -498,6 +527,23 @@ fieldset{
 }
 .nomostrar.activate{
     visibility:hidden;
+}
+.fa-search{
+    color: #bbb;
+    transform: translate(-190px,0);
+    transition: all .1s ease-in-out;
+}
+input:focus{
+    outline: none;
+}
+input:focus + button{
+    transform: translate(0,0);
+    transition-duration: .3s;
+}
+input:focus + button.fa{
+    color: #fff;
+    transform: translate(0,0);
+    transition-duration: .4s;
 }
 .boton_cliente{
     display: inline-flex;
@@ -521,4 +567,104 @@ textarea{
     font-size: 18px;
     margin-top: 10px;
     border-radius: 10px;
+}
+/*Pop-up*/
+.overlay1{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden ;
+}
+.overlay1.activate{
+    visibility: visible;
+}
+.popup1{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 1050px;
+    transition: .3s ease all;
+    transform: scale(0.3);
+    opacity: 0;
+}
+.popup1 .btn-cerrar-pop-up1{
+    font-size: 30px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #f8f8f8;
+    transition: .3s ease all;
+}
+.popup1 .btn-cerrar-pop-up1:hover{
+    color: #000;
+}
+.popup1 h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0;
+}
+.popup1 .table{
+    opacity: 0;
+}
+.popup1 form .contenedor-inputs{
+    width: 95%;
+    padding-top: 10px;
+    height: 60px;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 370px;
+    border-radius: 1px solid #BBBBBB;
+}
+
+/*Animaciones*/
+.popup1.activate{
+    opacity: 1;
+    transform: scale(1);
+}
+.popup1.activate h3{
+    animation: entradaTitulo .8s ease .5s forwards;
+}
+.popup1.activate table{
+    animation: entradaTabla .8s ease .5s forwards;
+}
+@keyframes entradaTitulo{
+    from{
+        transform: translateY(-25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes entradaTabla{
+    from{
+        transform: translateY(25px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.bx-checkbox{
+    font-size: 40px;
+}
+.bx-checkbox-checked{
+    font-size: 40px;
+}
+.check1{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
 }

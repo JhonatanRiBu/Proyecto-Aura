@@ -92,7 +92,7 @@
                         </fieldset>
                     </form>
                     <div class="contenedor_cliente_2">
-                        <a href="#" id="cliente" class="cliente">
+                        <a href="#" id="cliente" class="cliente" style="text-decoration: none;">
                             <button class="boton_cliente buscar_cliente">
                                 <span>&nbsp;Buscar&nbsp;</span>
                                 <div class="icono">
@@ -104,8 +104,8 @@
                                 </div>
                             </button>
                         </a>
-                        <a href="#">
-                            <button class="boton_cliente agregar" id="agregar_cliente">
+                        <a href="#"style="text-decoration: none;">
+                            <button class="boton_cliente agregar" id="agregar_cliente" >
                                 <span>&nbsp;Agregar cliente&nbsp;</span>
                                 <div class="icono"><i class='bx bx-list-plus'></i></div>
                             </button>
@@ -214,6 +214,49 @@
             sidebar.classList.toggle("close");
         });
     </script>
+    <div class="overlay1" id="overlay1">
+        <div class="popup1" id="popup1">
+            <a href="#" id="btn-cerrar-pop-up1" class="btn-cerrar-pop-up1"><i class='bx bx-x'></i></a>
+            <h3>CLIENTES DISPONIBLES</h3>
+            <div class="contenedor-tabla-pop-up1">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>70504167</th>
+                            <th>Iosif Gustavo</th>
+                            <th>Monrroy Rojo</th>
+                            <th><input type="checkbox" class="check1"></th>
+                        </tr>
+                        <tr>
+                            <th>70342812</th>
+                            <th>Yozip Stalin</th>
+                            <th>Monrroy Rojo</th>
+                            <th><input type="checkbox" class="check1"></th>
+                        </tr>
+                    </tbody>
+                </table>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <a href="#" id="btn_agregar_cli_existente" style="text-decoration: none;">
+                            <button class="boton_agregar cliente">
+                                <span>&nbsp;Agregar cliente&nbsp;</span>
+                                <div class="icono"><i class='bx bx-list-plus'></i></div>
+                            </button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../JS/crear_cotizacion.js"></script>
 </body>
 
 </html>
