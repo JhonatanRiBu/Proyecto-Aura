@@ -417,6 +417,7 @@ tr:hover{
     height: 30px;
     width: 30px;
     font-size: 30px;
+    margin-left: 10px;
 }
 .bx.bx-edit:hover{
     transform: scale(1.5);
@@ -426,9 +427,18 @@ tr:hover{
     height: 30px;
     width: 30px;
     font-size: 30px;
-    padding-left: 10px;
+    margin-left: 10px;
 }
 .bx.bx-trash:hover{
+    transform: scale(1.5);
+    transition: 0.3s ease all;
+}
+.bx.bx-show{
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+}
+.bx.bx-show:hover{
     transform: scale(1.5);
     transition: 0.3s ease all;
 }
