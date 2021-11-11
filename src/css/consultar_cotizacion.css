@@ -395,3 +395,77 @@
     transform: scale(1.5);
     transition: 0.3s ease all;
 }
+/*Tabla*/
+.main_conteiner{
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+table{
+    width: 100%;
+    background-color:gray ;
+    border-collapse: collapse;
+    text-align: left;   
+}
+th, td{
+    border: solid 1px #11101d;
+    padding: 20px;
+}
+thead{
+    background-color: #11101d;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+tr:hover{
+    background-color: #2E4053;
+    color: white;
+}
+.eliminar, .editar{
+    color: black;
+}
+.botones-lista{
+     padding-left: 70%;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.lista-cotizacion{
+    padding-top: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.agregar-nuevo-pedido{
+    width: 80%;
+    height: 35px;
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agregar-nuevo-pedido:hover{
+    background: #52BE80;
+    transform: scale(1.1);
+}
+.agregar-nuevo-pedido span {
+    transition: .4s ease-in-out all;
+    position: absolute;
+    padding-left: 0%;
+}
+.agregar-nuevo-pedido .bx-list-plus{
+    padding-left: 80%;
+}
+div .icono{
+    padding-left: 80%;
+}

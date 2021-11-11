@@ -54,3 +54,8 @@ btnAgregarCliExistente.addEventListener('click', function () {
 btnAgregarCliExistente.addEventListener('click', function () {
     nomostrar3.classList.remove("activate");
 });
+var btn_agregar_cotizacion = document.getElementById("boton-eliminar");
+btn_agregar_cotizacion.addEventListener('click', function () {
+    alert("Cotización agregada correctamente");
+});
+
