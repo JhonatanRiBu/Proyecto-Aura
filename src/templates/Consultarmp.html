@@ -152,8 +152,8 @@
                         <th>50</th>
                         <th>gramos</th>
                         <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-show'></i></a>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="editar" id="visualizar1"><i class='bx bx-show'></i></a>
+                            <a href="#" class="editar" id="modificar1"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
                         </th>
                     </tr>
@@ -231,5 +231,43 @@
             sidebar.classList.toggle("close");
         });
     </script>
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="" id="btn-cerrar-pop-up" class="btn-cerrar-pop-up"><i class='bx bx-x'></i></a>
+            <h3>Especificaciones</h3>
+            <div class="buscar-1">
+                <div class="contenedor-buscar-1">
+                    <form class="form">
+                        <div class="primera-fila-1">
+                            <label>Código: AU242021K</label>
+                        
+                            <label class="s-column2">Nombre: Oro</label>
+                        </div>
+                        <div class="segunda-fila-1">
+                            <label>Tipo de materia prima: Metal precioso</label>
+                            <label class="s-column2">Pureza: 24K</label>
+                        </div>
+
+                        <div class="tercera-fila-1">
+                            <label>Stock: 50</label>
+                            <label class="s-column2">Unidad de medida: gramos</label>
+                        </div>
+
+                        <div class="cuarta-fila-1">
+                            <label>Descripción: </label>
+                            <div class="cuadro-texto">
+                                <p>XDDDDDDDDDD</p>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../JS/consultarmp.js"></script>
+
 </body>
 </html>
