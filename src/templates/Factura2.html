@@ -103,7 +103,6 @@
                         <th>Pureza</th>
                         <th>Cantidad</th>
                         <th>Precio Unitario</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -112,55 +111,35 @@
                         <th>Anillo Venice Oro</th>
                         <th>24 K</th>
                         <th>1</th>
-                        <th>125$</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        <th>S/. 200</th>
                     </tr>
                     <tr>
                         <th>AU182019K</th>
                         <th>Dije modelo libélula fina</th>
                         <th>Ley 950</th>
                         <th>1</th>
-                        <th>140$</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        <th>S/. 200</th>
                     </tr>
                     <tr>
                         <th>PL9992021L</th>
                         <th>Dije señor de los milagros</th>
                         <th>Ley 950</th>
                         <th>1</th>
-                        <th>160$</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        <th>S/. 200</th>
                     </tr>
                     <tr>
                         <th>PL9502021L</th>
                         <th>Sortija cuadrada con piedra luna negro</th>
                         <th>Ley 950</th>
                         <th>1</th>
-                        <th>110$</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        <th>S/. 200</th>
                     </tr>
                     <tr>
                         <th>PL9252021L</th>
                         <th>Sortija embutida espiral alto relieve</th>
                         <th>24 K</th>
                         <th>1</th>
-                        <th>120$</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        <th>S/. 200</th>
                     </tr>
                     
                 </tbody>
@@ -183,7 +162,7 @@
             <div class="fila4-lateral2">
                 <div class="botones-lista">
                     <a href="#">
-                    <button class="agregar-mp">
+                    <button class="agregar-mp" onclick="crear_factura()">
                         <span>Generar Factura</span>
                         <i class='bx bx-list-plus'></i>
                     </button></a>
@@ -197,7 +176,21 @@
             </div>
         </div>
     </section>
-    
+    <script type="text/javascript">
+        function crear_factura()
+        {
+            var respuesta = confirm("La factura ha sido creada");
+
+            if(respuesta == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
 
     <script>
         let sidebar = document.querySelector(".sidebar");
