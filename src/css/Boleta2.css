@@ -238,10 +238,11 @@
 
 .contenedor-buscar{
     background-color: #BFC9CA;
-    height: 300px;
+    height: 250px;
     border-radius: 10px;
     padding-top: 30px;
     padding-left: 30px;
+    padding-bottom: 30px;
 }
 
 .contenedor-buscar input{
@@ -474,4 +475,7 @@ tr:hover{
 .agregar-mp:hover{
     background: #52BE80;
     transform: scale(1.1);
+}
+.Cuarta-fila{
+    height: 80px;
 }
