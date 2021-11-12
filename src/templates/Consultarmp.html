@@ -240,30 +240,83 @@
                 <div class="contenedor-buscar-1">
                     <form class="form">
                         <div class="primera-fila-1">
-                            <label>Código: AU242021K</label>
+                            <label>Código: </label>
+                            <input type="text" value="AU242021K" disabled>
                         
-                            <label class="s-column2">Nombre: Oro</label>
+                            <label class="s-column2">Nombre: </label>
+                            <input type="text" value="Oro" disabled>
                         </div>
                         <div class="segunda-fila-1">
-                            <label>Tipo de materia prima: Metal precioso</label>
-                            <label class="s-column2">Pureza: 24K</label>
+                            <label>Tipo de materia prima: </label>
+                            <input type="text" value="Metal precioso" disabled>
+
+                            <label class="s-column2">Pureza: </label>
+                            <input type="text" value="24K" disabled>
                         </div>
 
                         <div class="tercera-fila-1">
-                            <label>Stock: 50</label>
-                            <label class="s-column2">Unidad de medida: gramos</label>
+                            <label>Stock: </label>
+                            <input type="text" value="50" disabled>
+
+                            <label class="s-column2">Unidad de medida: </label>
+                            <input type="text" value="gramos" disabled>
                         </div>
 
                         <div class="cuarta-fila-1">
                             <label>Descripción: </label>
-                            <div class="cuadro-texto">
-                                <p>XDDDDDDDDDD</p>
-                            </div>
+                            <div class="cuadro">
+                            <textarea name="" id="" cols="30" rows="10" disabled>Metal precioso Oro 24K </textarea>
+                        </div>
                         </div>
 
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="overlay2" id="overlay2">
+        <div class="popup2" id="popup2">
+            <a href="" id="btn-cerrar-pop-up2" class="btn-cerrar-pop-up2"><i class='bx bx-x'></i></a>
+            <h3>Modificar Stock</h3>
+            
+            <div class="main_conteiner">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Materia Prima</th>
+                            <th>Tipo materia prima</th>
+                            <th>Pureza</th>
+                            <th>Stock</th>
+                            <th>Unidad de medida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>AU242021K</th>
+                            <th>Oro</th>
+                            <th>Metal Precioso</th>
+                            <th>24 K</th>
+                            <th>50</th>
+                            <th>gramos</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modificar-stock">
+                <label for="">Nueva cantidad:</label>
+                <input type="number" min="1" class="numero">
+            </div>
+
+            <div class="boton-lista-1">
+                <a href="">
+                <button class="modificar-stock-boton">
+                    <span>Modificar stock</span>
+                    <i class='bx bx-list-plus'></i>
+                </button></a>
+
         </div>
     </div>
 

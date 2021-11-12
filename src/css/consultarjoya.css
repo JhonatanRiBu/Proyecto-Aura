@@ -441,3 +441,206 @@ tr:hover{
     transform: scale(1.5);
     transition: 0.3s ease all;
 }
+
+/*-------------------------------------------------------------------*/
+/*Pop up */
+.overlay{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden ;
+}
+.overlay.activate{
+    visibility: visible;
+}
+.popup{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 1050px;
+    
+    transition: .3s ease all;
+    transform: scale(0.3);
+    opacity: 0;
+}
+
+.popup .btn-cerrar-pop-up{
+    font-size: 30px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+.popup .btn-cerrar-pop-up:hover{
+    color: #000;
+}
+.popup h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.popup.activate{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.primera-fila-1{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+}
+.contenedor-buscar p{
+    position: relative;
+    margin-left: 10px;
+}
+.segunda-fila-1{
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.tercera-fila-1{
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.buscar-1{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.contenedor-buscar-1{
+    background-color: #BFC9CA;
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.contenedor-buscar-1 label{
+    position: relative;
+    color: black;
+    font-size: 18px;
+}
+.contenedor-buscar-1 .s-column2{
+    padding-left: 150px;
+}
+textarea{
+    width: 90%;
+    height: 120px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.contenedor-buscar-1 input{
+    width: 25%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/*---------------------------------------------------------------*/
+/*Popup2*/
+.overlay2{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden ;
+}
+.overlay2.activate{
+    visibility: visible;
+}
+.popup2{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 1050px;
+    
+    transition: .3s ease all;
+    transform: scale(0.3);
+    opacity: 0;
+}
+
+.popup2 .btn-cerrar-pop-up2{
+    font-size: 30px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+}
+.popup2 .btn-cerrar-pop-up2:hover{
+    color: #000;
+}
+.popup2 h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.popup2.activate{
+    opacity: 1;
+    transform: scale(1);
+}
+.numero{
+    width: 15%;
+    height: 100%;
+    font-size: 18px;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    background-color: #E5E8E8;
+}
+
+.boton-lista-1{
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.boton-lista-1 a{
+    text-decoration: none;
+}
+.modificar-stock-boton{
+    width: 25%;
+    height: 35px;
+    background: #141414;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.modificar-stock-boton:hover{
+    background: #5D6D7E;
+    transform: scale(1.1);
+}

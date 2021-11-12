@@ -159,8 +159,8 @@
                         <th>24 K</th>
                         <th>5</th>
                         <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-show'></i></a>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                            <a href="#" class="editar" id="visualizar1"><i class='bx bx-show'></i></a>
+                            <a href="#" class="editar" id="modificar1"><i class='bx bx-edit'></i></a>
                             <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
                         </th>
                     </tr>
@@ -243,5 +243,100 @@
             sidebar.classList.toggle("close");
         });
     </script>
+
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="" id="btn-cerrar-pop-up" class="btn-cerrar-pop-up"><i class='bx bx-x'></i></a>
+            <h3>Especificaciones</h3>
+            <div class="buscar-1">
+                <div class="contenedor-buscar-1">
+                    <form class="form">
+                        <div class="primera-fila-1">
+                            <label>Código: </label>
+                            <input type="text" value="AU242021K" disabled>
+                        
+                            <label class="s-column2">Nombre: </label>
+                            <input type="text" value="Anillo Venice Oro" disabled>
+                        </div>
+                        <div class="segunda-fila-1">
+                            <label>Tipo de joya: </label>
+                            <input type="text" value="Anillo" disabled>
+
+                            <label class="s-column2">Pureza: </label>
+                            <input type="text" value="24K" disabled>
+                        </div>
+
+                        <div class="tercera-fila-1">
+                            <label>Stock: </label>
+                            <input type="text" value="5" disabled>
+
+                            <label class="s-column2">Precio: </label>
+                            <input type="text" value="100 soles" disabled>
+                        </div>
+
+                        <div class="cuarta-fila-1">
+                            <label>Descripción: </label>
+                            <div class="cuadro">
+                            <textarea name="" id="" cols="30" rows="10" disabled>Anillo Venice Oro con medidas de ...</textarea>
+                        </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overlay2" id="overlay2">
+        <div class="popup2" id="popup2">
+            <a href="" id="btn-cerrar-pop-up2" class="btn-cerrar-pop-up2"><i class='bx bx-x'></i></a>
+            <h3>Modificar Stock</h3>
+            
+            <div class="main_conteiner">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Joya</th>
+                            <th>Tipo de joya</th>
+                            <th>Precio</th>
+                            <th>Soles</th>
+                            <th>Pureza</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>AU242021K</th>
+                            <th>Anillo Venice Oro</th>
+                            <th>Anillo</th>
+                            <th>100</th>
+                            <th>Soles</th>
+                            <th>24 K</th>
+                            <th>5</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="modificar-stock">
+                <label for="">Nueva cantidad:</label>
+                <input type="number" min="1" class="numero">
+            </div>
+
+            <div class="boton-lista-1">
+                <a href="">
+                <button class="modificar-stock-boton">
+                    <span>Modificar stock</span>
+                    <i class='bx bx-list-plus'></i>
+                </button></a>
+
+        </div>
+    </div>
+
+
+    <script src="../../JS/consultarjoya.js"></script>
+
 </body>
 </html>

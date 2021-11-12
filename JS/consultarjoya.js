@@ -14,6 +14,7 @@ btnCerrarPopup.addEventListener('click', function(){
     popup.classList.remove("activate");
 });
 
+
 var btnAbrirPopup2 = document.getElementById('modificar1'),
     overlay2 = document.getElementById('overlay2'),
     popup2 = document.getElementById('popup2'),
