@@ -243,7 +243,7 @@
                         </div>
                         <div class="contenedor_pd_seleccionados">
                             <a href="#" id="btn_pd_seleccionados">
-                                <button class="boton agregar">
+                                <button class="boton agregar" onclick="redirigir_boleta()">
                                     <span>&nbsp;Crear Pedido&nbsp;</span>
                                     <div class="icono"><i class='bx bx-list-plus'></i></div>
                                 </button>
@@ -339,6 +339,22 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function redirigir_boleta()
+        {
+            var respuesta = confirm("Redireccionando para crear boleta");
+
+            if(respuesta == true)
+            {
+                location.href="Boleta2.html"
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
     
     <script src="../../JS/Crear_pedido.js"></script>
 </body>   
