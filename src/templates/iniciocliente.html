@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/bar.css" type="text/css">
+    <link rel="stylesheet" href="../css/iniciocliente.css" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>Página de Inicio</title>
+    <title>Clientes</title>
 </head>
 <body>
     <div class="sidebar">
@@ -32,10 +32,18 @@
                     <span class="link_name">Ventas</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Ventas</a></li>
+                    <li><a class="link_name" href="InicioVenta.html">Ventas</a></li>
                 </ul>
             </li>
-            
+            <li>
+                <a href="InicioVenta.html">
+                    <i class='bx bx-left-arrow-circle' ></i>
+                    <span class="link_name">Volver</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="InicioVenta.html">Volver</a></li>
+                </ul>
+            </li>
         <li>
         <div class="profile-details">
             <div class="profile-content">
@@ -46,7 +54,7 @@
                 <div class="profile_name">Jesus P.</div>
                 <div class="job">Asist. Comercial</div>
             </div>
-            <a href="InicioSesion.html"><i class='bx bx-log-out'></i></a> 
+            <a href="InicioSesion.html"><i class='bx bx-log-out'></i></a>
         </div>
         </li>
     </ul>
@@ -55,20 +63,23 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'>
-                <span class="text">Aura</span>
+                <span class="text">Clientes</span>
             </i>
         </div>
-        <div class = "Titular">
-            <span>Bienvenido al Sistema de Gestión de Ventas e Inventarios de la Joyería Aura & Jaluarti</span>
+
+        <div class="contenedor-botones" style="width: 80%; margin-left: 85px; padding-right: 0px;">
+            <a class="link-mp" href="Agregarcliente.html">
+            <button class="boton mp">
+                <span>Agregar Clientes</span>
+                <i class='bx bxs-user-plus' ></i>
+            </button></a>
+            <a class="link-joya" href="Consultarcliente.html">
+            <button class="boton joya">
+                <span>Consultar Clientes</span>
+                <i class='bx bxs-user-detail'></i>
+            </button></a>
         </div>
-        <div class = "Titular-2">
-            <span>Misión</span>
-            <p>"Joyería Aura es una empresa dedicada a la elaboración de joyas en plata hechas a mano, con diseños propios y personalizados, con estándares de calidad para la satisfacción de nuestros clientes. Tenemos como misión valorar, dar a conocer, difundir y posicionarnos en el mercado local e internacional, la calidad, la variedad, el buen gusto de los productos hechos por manos artesanas peruanas, promoviendo de esta forma las riquezas culturales de nuestro Perú."</p>
-        </div>
-        <div class = "Titular-2">
-            <span>Visión</span>
-            <p>"Desarrollar y consolidar a nuestra empresa como líder en el rubro de joyería en plata y oro con presencia nacional e internacional, comprometiéndonos con el desarrollo y aprendizaje constante, usando nuevas tecnologías de fabricación de piezas de joyería, de alta calidad, con garantía y exclusividad en diseños, para complacer las exigencias cada vez mayores de nuestros clientes."</p>
-        </div>
+
     </section>
     
 

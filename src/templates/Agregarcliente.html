@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/agregarcliente.css" type="text/css">
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Cliente</title>
+</head>
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class='bx bxl-sketch'></i>
+            <span class="logo_name">Joyería Aura</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="InicioInventarios.html">
+                    <i class='bx bxs-box'></i>
+                    <span class="link_name">Inventarios</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="InicioInventarios.html">Inventarios</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="InicioVenta.html">
+                    <i class='bx bxs-dollar-circle'></i>
+                    <span class="link_name">Ventas</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="InicioVenta.html">Ventas</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="iniciocliente.html">
+                    <i class='bx bx-left-arrow-circle' ></i>
+                    <span class="link_name">Volver</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="iniciocliente.html">Volver</a></li>
+                </ul>
+            </li>
+        <li>
+        <div class="profile-details">
+            <div class="profile-content">
+                <img src="profile.png" alt="profile">
+            </div>
+            
+            <div class="name-job">
+                <div class="profile_name">Jesus P.</div>
+                <div class="job">Asist. Comercial</div>
+            </div>
+            <a href="InicioSesion.html"><i class='bx bx-log-out'></i></a>
+        </div>
+        </li>
+    </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'>
+                <span class="text">Agregar Cliente</span>
+            </i>
+        </div>
+        <div class="lista-mp">
+            <h1>Persona</h1>
+        </div>
+
+        <div class="buscar">
+            <div class="contenedor-buscar">
+                <form class="form">
+                    <div class="primera-fila">
+                        <label>DNI</label>
+                        <input type="text" placeholder="Número de DNI">
+                    
+                        <label class="s-column">Nombres:</label>
+                        <input type="text" placeholder="Ingrese Nombres">
+                    </div>
+                    <div class="primera-fila">
+                        <label>Ap. Paterno:</label>
+                        <input type="text" placeholder="Ingrese Apellido Paterno">
+                    
+                        <label class="s-column">Ap. Materno</label>
+                        <input type="text" placeholder="Ingrese Apellido Materno">
+                    </div>
+                    <div class="primera-fila">
+                        <label>Fecha Nacimiento:</label>
+                        <input type="date">
+
+                        <label class="s-column">Fecha Registro:</label>
+                        <input type="date">
+                    </div>
+                    
+                    
+                    <div class="tercera-fila">
+                        <button class="boton-eliminar">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                  </svg>
+                            </div>
+                            <span>Cancelar</span>
+                        </button>
+                        <button class="boton buscarbt">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                  </svg>
+                            </div>
+                            <span>Agregar Cliente</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="lista-mp">
+            <h1>Organización</h1>
+        </div>
+
+        <div class="buscar">
+            <div class="contenedor-buscar">
+                <form class="form">
+                    <div class="primera-fila">
+                        <label>Razón Social:</label>
+                        <input type="text" placeholder="Ingrese Razón Social">
+                    
+                        <label class="s-column">RUC:</label>
+                        <input type="text" placeholder="Ingrese RUC">
+                    </div>
+                    <div class="primera-fila">
+                        <label>Dirección:</label>
+                        <input type="text" placeholder="Ingrese Dirección">
+ 
+                    </div>
+                    <div class="primera-fila">
+                        <label>Fecha Fundación:</label>
+                        <input type="date">
+
+                        <label class="s-column">Fecha Registro:</label>
+                        <input type="date">
+
+                    </div>
+                    
+                    
+                    <div class="tercera-fila">
+                        <button class="boton-eliminar">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                  </svg>
+                            </div>
+                            <span>Cancelar</span>
+                        </button>
+                        <button class="boton buscarbt">
+                            <div class="icono">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                  </svg>
+                            </div>
+                            <span>Agregar Cliente</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+    </script>
+</body>
+</html>
