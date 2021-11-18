@@ -143,13 +143,7 @@
                                     </button>
                                 </fieldset>
                                 <fieldset style="float:inline-start;">
-                                    <input type="search" id="nomostrar8" class="nomostrar" placeholder="Buscar por material...">
-                                    <button type="submit">
-                                        <i class='bx bx-search-alt-2'></i>
-                                    </button>
-                                </fieldset>
-                                <fieldset style="float:inline-start;">
-                                    <input type="search" id="nomostrar9" class="nomostrar" placeholder="Buscar por color...">
+                                    <input type="search" id="nomostrar8" class="nomostrar" placeholder="Buscar por pureza...">
                                     <button type="submit">
                                         <i class='bx bx-search-alt-2'></i>
                                     </button>
@@ -174,41 +168,23 @@
                 </div>
                     <span class="text">Vista previa del pedido</span>
                     <div class="contenedor_tabla_boton">
-                        <div style="justify-content: center; text-align: center; padding: 10px 0px 0px 30px;height: 40px;">
-                            <span class="text" style="float: left;">Nombre del Cliente:&nbsp;</span>
-                            <input type="text" name="Nombre_Cliente_pedido" id="Nombre_Cliente_pedido"style="justify-content: center; text-align: center;">
-                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;DNI:&nbsp;</span>
-                            <input type="text" name="DNI_pedido" id="DNI_pedido"
-                            style="justify-content: center; text-align: center;"> 
-                            <br>
-                            <br>
-                            <span class="text" style="float: left;">Fecha inicio:&nbsp;</span>
-                            <input type="date" name="fecha_inicio" id="fecha_inicio"
-                            style="justify-content: center; text-align: center;width: 170px; height: 35px;">
-                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;Plazo de entrega:&nbsp;</span>
-                            <input type="date" name="plazo_entrega" id="plazo_entrega"
-                            style="justify-content: center; text-align: center;width: 170px; height: 35px;">
-                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;ID Pedido:&nbsp;</span>
-                            <input type="text" 
-                                style="justify-content: center; text-align: center;width: 170px; height: 35px;">
-                            <span class="text" style="float: left;">&nbsp;&nbsp;&nbsp;Tipo de pedido:</span>
-                            <select name="tipo" id="">
-                                <option disabled selected="">Seleccione tipo</option>
-                                <option value="">Personalizado</option>
-                                <option value="">Convencional</option>
-                            </select>
-                            <br>
-                            <br>
-                            <span class="text" style="float: left;">Comentario:&nbsp;</span>
-                            <input type="text" name="plazo_entrega" id="plazo_entrega"
-                            style="justify-content: center; text-align: left;width: 80%; height: 64px;">
-                        </div>  
-                            <br>
+                        <section class="fila1">
+                            <span class="text" style="float: left;">Nombres del Cliente:&nbsp;</span>
+                            <input type="text" name="Nombre_Cliente_pedido" id="Nombre_Cliente_pedido"
+                                style="justify-content: center; text-align: center;">
+                            <span class="text" style="float: left;">&nbsp;Apellidos del Cliente:&nbsp;</span>
+                            <input type="text" name="Nombre_Cliente_pedido" id="Nombre_Cliente_pedido"
+                                style="justify-content: center; text-align: center;">
+                            <span class="text" style="float: left;">&nbsp;&nbsp;DNI:&nbsp;</span>
+                            <input type="text" name="DNI_pedido" id="DNI_pedido" style="justify-content: center; text-align: center;">
+                        </section>
+                            <section class="fila2">
+                                    <span for="" class="text">Descripción:</span>
+                                    <div class="cuadro">
+                                        <textarea name="" id="" cols="206" rows="5"></textarea>
+                                </div>
+                            </section>
                         <div class="contenedor_tabla">
-                            <br>
-                            <br>
-                            <br>
-                            <br>
                             <span class="text" style="justify-content: center; text-align: center;">Lista de Productos Seleccionados</span>
                             <table id="tabla_prod_seleccionados" class="table">
                                 <thead>

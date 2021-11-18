@@ -238,9 +238,9 @@
 
 .contenedor-buscar{
     background-color: #BFC9CA;
-    height: 220px;
+    height: 200px;
     border-radius: 10px;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-left: 30px;
 }
 
@@ -260,7 +260,7 @@
     font-size: 18px;
 }
 .contenedor-buscar .s-column{
-    padding-left: 150px;
+    padding-left: 30px;
 }
 .primera-fila{
     padding-top: 10px;
