@@ -96,8 +96,6 @@ insert into MateriaPrima(CodMateriaPrima, NombMateriaPrima, Descripcion, CodTipo
 values ("MP8", "Rubí", "Rubíes ", "TMP3", "Pz7");
 
 
-
-
 create table TipoMateriaPrima(
     CodTipoMP varchar(50),
     Descripcion varchar(50),
