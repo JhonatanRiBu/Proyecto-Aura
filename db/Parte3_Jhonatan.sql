@@ -9,7 +9,6 @@ create table ReporteVentas(
     MontoTotal numeric(9,2),
     FechaInicio date,
     FechaFin date,
-    TipoJoya varchar(50),
     primary key(CodReporteVentas)
 );
 create table Comprobante(
@@ -51,22 +50,22 @@ create table Cliente(
     ApellidoPat varchar(50),
     ApellidoMat varchar(50),
     FechaNacim date,
-    primary key(DNI)
+    primary key(DNI)  
 );
 
 insert into TipoComprobante(CodTipComprobante,Descripcion) values ('C1','Factura');
 insert into TipoComprobante(CodTipComprobante,Descripcion) values ('C2','Boleta');
 
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Mar 2019',820.00,'2 Mar 2019','31 Mar 2019','Dije');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Abr 2019',670.00,'2 Abr 2019','30 Mar 2019','Collar');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 May 2019',620.00,'2 May 2019','31 Mar 2019','Aro');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values '1 Jun 2019',620.00,'2 Jun 2019','30 Mar 2019','Dije'();
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Jul 2019',710.00,'2 Jul 2019','31 Mar 2019','Pulsera');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Ago 2019',840.00,'2 Ago 2019','31 Mar 2019','gemelos');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Set 2019',920.00,'2 Set 2019','30 Mar 2019','sortijas');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Oct 2019',1020.00,'2 Oct 2019','31 Mar 2019','sortijas');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Nov 2019',980.00,'2 Nov 2019','30 Mar 2019','aros');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Dic 2019',750.00,'2 Dic 2019','31 Mar 2019','Dije');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('7 Abr 2019',820.00,'2 Mar 2019','31 Mar 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('7 May 2019',670.00,'2 Abr 2019','30 Abr 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('7 Jun 2019',620.00,'2 May 2019','31 May 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Jul 2019',620.00,'2 Jun 2019','30 Jun 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Ago 2019',710.00,'2 Jul 2019','31 Jul 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Set 2019',840.00,'2 Ago 2019','31 Ago 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Oct 2019',920.00,'2 Set 2019','30 Set 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Nov 2019',1020.00,'2 Oct 2019','31 Oct 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Dic 2019',980.00,'2 Nov 2019','30 Nov 2019');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('1 Ene 2019',750.00,'2 Dic 2019','31 Dic 2019');
 
 insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2 Mar 2019',140.00,1,'C1',1,114.8,25.2,'9 Mar 2019');
 insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('5 Jun 2020',200.00,2,'C2',2,164,36,NULL);
@@ -90,16 +89,17 @@ insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (5,3);
 insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (5,4);
 insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (6,1);
 
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P1',1,3);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P2',1,2);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P2',2,1);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P3',3,1);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P4',3,2);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P1',4,1);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P5',4,3);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P5',5,2);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P2',5,2);
-insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('P1',6,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',1,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',2,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('DI202014',2,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('PU201889',3,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('ARE201965',4,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('GE202156',5,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('CO201901',6,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('AR201743',7,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',8,1);
+insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',9,1);
+INSERT INTO ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',10,1);
 
 
 insert into StockProducto(CodProducto,Stock) values ('P1',9);
