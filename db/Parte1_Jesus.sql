@@ -88,16 +88,16 @@ INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(8, 'SO201925
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(9, 'SO201925', 1);
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(10, 'SO201925', 1);
 
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO201925', 'Sortija de compromiso', '14 Mar 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'SO', '60.00', 'LP2');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202014', 'Sortija de compromiso', '24 Abr 2020', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'DI', '60.00', '18K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('PU201889', 'Sortija de compromiso', '19 Mar 2018', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'PU', '60.00', 'LP5');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('ARE201965', 'Sortija de compromiso', '25 Ene 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'ARE', '60.00', 'LP2');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('GE202156', 'Sortija de compromiso', '08 Ene 2021', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'GE', '60.00', 'O2K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201901', 'Sortija de compromiso', '11 Nov 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'CO', '60.00', 'O2K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('AR201743', 'Sortija de compromiso', '07 Mar 2017', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'AR', '60.00', 'O2K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202078', 'Sortija de compromiso', '29 Ene 2020', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'DI', '60.00', 'LP9');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('ARE202161', 'Sortija de compromiso', '15 Mar 2021', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'ARE', '60.00', 'LP5');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201910', 'Sortija de compromiso', '16 Nov 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'CO', '60.00', 'LP2');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO201925', 'Sortija de compromiso', '14 Mar 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'SO', 60.00, 'LP2');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202014', 'Sortija de compromiso', '24 Abr 2020', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'DI', 60.00, '18K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('PU201889', 'Sortija de compromiso', '19 Mar 2018', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'PU', 60.00, 'LP5');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('ARE201965', 'Sortija de compromiso', '25 Ene 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'ARE', 60.00, 'LP2');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('GE202156', 'Sortija de compromiso', '08 Ene 2021', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'GE', 60.00, 'O2K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201901', 'Sortija de compromiso', '11 Nov 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'CO', 60.00, 'O2K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('AR201743', 'Sortija de compromiso', '07 Mar 2017', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'AR', 60.00, 'O2K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202078', 'Sortija de compromiso', '29 Ene 2020', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'DI', 60.00, 'LP9');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('ARE202161', 'Sortija de compromiso', '15 Mar 2021', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'ARE', 60.00, 'LP5');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201910', 'Sortija de compromiso', '16 Nov 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'CO', 60.00, 'LP2');
 
 
 INSERT INTO CategoriaProducto(CodCateg, Descripcion) VALUES('SO', 'Sortija');
@@ -115,6 +115,6 @@ INSERT INTO Pureza(CodPureza, Pureza) VALUES('LP9', 'Ley 999');
 INSERT INTO Pureza(CodPureza, Pureza) VALUES('LP5', 'Ley 950');
 INSERT INTO Pureza(CodPureza, Pureza) VALUES('LP2', 'Ley 925');
 
-INSERT INTO ItemCotizacion(Cantidad, PrecioUnitarioCotiz, Especificacion, CodCotizacion, CodCateg, CodPureza) VALUES();
+INSERT INTO ItemCotizacion(Cantidad, PrecioUnitarioCotiz, Especificacion, CodCotizacion, CodCateg, CodPureza) VALUES(1, 150.00);
 
 INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES()
