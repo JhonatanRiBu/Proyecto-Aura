@@ -67,16 +67,16 @@ insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya)
 insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('7 Dic 2019',980.00,'2 Nov 2019','30 Nov 2019');
 insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('7 Ene 2019',750.00,'2 Dic 2019','31 Dic 2019');
 
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2 Mar 2019',140.00,1,'C1',1,114.8,25.2,'9 Mar 2019');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('5 Jun 2020',200.00,2,'C2',2,164,36,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('12 May 2020',376.00,3,'C2',3,308.32,67.68,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('11 Set 2021',110.00,4,'C2',4,90.2,19.8,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('25 Ene 2019',86.00,5,'C1',5,70.52,15.48,'1 Feb 2019');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('23 Feb 2020',300.00,6,'C1',6,246,54,'1 Abr 2020');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('1 Nov 2018',1400.00,7,'C2',7,1148,252,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('14 Nov 2019',250.00,8,'C1',8,205,45,'21 Nov 2019');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('13 Dic 2018',175.00,9,'C1',9,143.5,31.5,'20 Dic 2018');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('7 Abr 2021',200.00,10,'C2',10,164,36,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('19 Nov 2019',140.00,1,'C1',1,114.8,25.2,'26 Nov 2019');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('18 Nov 2019',200.00,2,'C2',2,164,36,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('17 Nov 2019',376.00,3,'C2',3,308.32,67.68,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('16 Nov 2019',110.00,4,'C2',4,90.2,19.8,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('15 Nov 2019',86.00,5,'C1',5,70.52,15.48,'22 Nov 2019');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('14 Nov 2019',300.00,6,'C1',6,246,54,'21 Nov 2019');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('13 Nov 2019',1400.00,7,'C2',7,1148,252,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('12 Nov 2019',250.00,8,'C1',8,205,45,'19 Nov 2019');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('11 Nov 2019',175.00,9,'C1',9,143.5,31.5,'18 Nov 2019');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('10 Nov 2019',200.00,10,'C2',10,164,36,NULL);
 
 insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (1,2);
 insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (1,4);
