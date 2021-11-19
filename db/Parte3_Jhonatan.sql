@@ -50,7 +50,8 @@ create table Cliente(
     ApellidoPat varchar(50),
     ApellidoMat varchar(50),
     FechaNacim date,
-    primary key(DNI)  
+    primary key(DNI), 
+    foreign key(DNI) references Party(DNI)  
 );
 
 insert into TipoComprobante(CodTipComprobante,Descripcion) values ('C1','Factura');
