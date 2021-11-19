@@ -15,7 +15,6 @@ create table TipoRol(
     primary key(CodTipPartyRol)
 );
 
-insert into TipoRol (CodTipPartyRol, Descripcion) values ('cl','Cliente');
 insert into TipoRol (CodTipPartyRol, Descripcion) values ('log','Encargado de logística');
 insert into TipoRol (CodTipPartyRol, Descripcion) values ('com','Asistente comercial');
 
@@ -27,7 +26,7 @@ create table UnidadMedida(
 
 insert into UnidadMedida (CodUMedida, Descripcion) values ('Kg','Kilogramos');
 insert into UnidadMedida (CodUMedida, Descripcion) values ('g','gramos');
-insert into UnidadMedida (CodUMedida, Descripcion) values ('Oz','Onzas');
+insert into UnidadMedida (CodUMedida, Descripcion) values ('unid','unidades');
 
 
 create table Party(
@@ -59,15 +58,16 @@ create table Usuario(
     CodTipPartyRol varchar(50),
     NomUsuario varchar(50),
     Contrasena varchar(200),
-    primary key(DNI),
-    foreign key(DNI) references Party(DNI),
+    CodParty integer,
+    primary key (CodParty, DNI),
+    foreign key(CodParty, DNI) references Party(CodParty, DNI) ,
     foreign key(CodTipPartyRol) references TipoRol(CodTipPartyRol)
 );
 
-insert into Usuario (DNI, Nombre, ApellidoPat, ApellidoMat, CodTipPartyRol, NomUsuario, Contrasena)
-values ('74196151', 'Jhon', 'Vera', 'Flores','2','jhonV','jhonV123');
-insert into Usuario (DNI, Nombre, ApellidoPat, ApellidoMat, CodTipPartyRol, NomUsuario, Contrasena)
-values ('74196152', 'Jesus', 'Purizaga', 'Naupas','3','jesusP','jesusp123');
+insert into Usuario (DNI, Nombre, ApellidoPat, ApellidoMat, CodTipPartyRol, NomUsuario, Contrasena, CodParty)
+values ('74196151', 'Jhon', 'Vera', 'Flores','log','jhonV','jhonV123', 1);
+insert into Usuario (DNI, Nombre, ApellidoPat, ApellidoMat, CodTipPartyRol, NomUsuario, Contrasena, CodParty)
+values ('74196152', 'Jesus', 'Purizaga', 'Naupas','com','jesusP','jesusp123', 2);
 
 create table MateriaPrima(
     CodMateriaPrima varchar(50),
@@ -79,15 +79,15 @@ create table MateriaPrima(
 );
 
 insert into MateriaPrima(CodMateriaPrima, NombMateriaPrima, Descripcion, CodTipoMP, CodPureza)
-values ('MP1', 'Oro', 'Oro de 24 kilates', 'TMP1',);
+values ('MP1', 'Oro', 'Oro de 24 kilates', 'TMP1','O2K');
 insert into MateriaPrima(CodMateriaPrima, NombMateriaPrima, Descripcion, CodTipoMP, CodPureza)
-values ('MP2', 'Oro', 'Oro de 18 kilates', 'TMP1',);
+values ('MP2', 'Oro', 'Oro de 18 kilates', 'TMP1','O1K');
 insert into MateriaPrima(CodMateriaPrima, NombMateriaPrima, Descripcion, CodTipoMP, CodPureza)
-values ('MP3', 'Plata', 'Plata de ley 999', 'TMP2',);
+values ('MP3', 'Plata', 'Plata de ley 999', 'TMP2','LP9');
 insert into MateriaPrima(CodMateriaPrima, NombMateriaPrima, Descripcion, CodTipoMP, CodPureza)
-values ('MP4', 'Plata', 'Plata de ley 950', 'TMP2',);
+values ('MP4', 'Plata', 'Plata de ley 950', 'TMP2','LP5');
 insert into MateriaPrima(CodMateriaPrima, NombMateriaPrima, Descripcion, CodTipoMP, CodPureza)
-values ('MP5', 'Plata', 'Plata de ley 925', 'TMP2',);
+values ('MP5', 'Plata', 'Plata de ley 925', 'TMP2','LP2');
 
 create table StockMP(
     CodMateriaPrima varchar(50),

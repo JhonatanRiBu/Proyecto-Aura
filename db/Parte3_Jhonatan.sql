@@ -50,45 +50,38 @@ create table Cliente(
     ApellidoPat varchar(50),
     ApellidoMat varchar(50),
     FechaNacim date,
-    primary key(DNI), 
-    foreign key(DNI) references Party(DNI)  
+    CodParty integer,
+    primary key(CodParty, DNI), 
+    foreign key(CodParty, DNI) references Party(CodParty, DNI)  
 );
 
 insert into TipoComprobante(CodTipComprobante,Descripcion) values ('C1','Factura');
 insert into TipoComprobante(CodTipComprobante,Descripcion) values ('C2','Boleta');
 
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-04-07',820.00,'2019-03-02','2019-03-31');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-05-07',670.00,'2019-04-02','2019-03-30');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-06-07',620.00,'2019-05-02','2019-03-31');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-07-07',620.00,'2019-06-02','2019-03-30');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-08-07',710.00,'2019-07-02','2019-03-31');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-09-07',840.00,'2019-08-02','2019-03-31');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-10-07',920.00,'2019-09-02','2019-03-30');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-11-07',1020.00,'2019-10-02','2019-03-31');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2019-12-07',980.00,'2019-12-02','2019-03-30');
-insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2020-01-07',750.00,'2019-11-02','2019-03-31');
+insert into ReporteVentas(FechaReporte,MontoTotal,FechaInicio,FechaFin,TipoJoya) values ('2021-11-20',820.00,'2021-11-10','2021-11-19');
 
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-19',140.00,1,'C1',1,114.8,25.2,'2019-11-26');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-18',200.00,2,'C2',2,164,36,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-17',376.00,3,'C2',3,308.32,67.68,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-16',110.00,4,'C2',4,90.2,19.8,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-15',86.00,5,'C1',5,70.52,15.48,'2019-11-22');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-14',300.00,6,'C1',6,246,54,'2019-11-21');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-13',1400.00,7,'C2',7,1148,252,NULL);
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-12',250.00,8,'C1',8,205,45,'2019-11-19');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-11',175.00,9,'C1',9,143.5,31.5,'2019-11-18');
-insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2019-11-10',200.00,10,'C2',10,164,36,NULL);
 
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (1,2);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (1,4);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (2,5);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (3,3);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (3,4);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-19',150.00,1,'C1',1,114.8,25.2,'2019-11-26');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-18',200.00,2,'C2',2,164,36,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-17',376.00,3,'C2',3,308.32,67.68,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-16',110.00,4,'C2',4,90.2,19.8,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-15',86.00,5,'C1',5,70.52,15.48,'2019-11-22');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-14',300.00,6,'C1',6,246,54,'2019-11-21');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-13',1400.00,7,'C2',7,1148,252,NULL);
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-12',250.00,8,'C1',8,205,45,'2019-11-19');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-11',175.00,9,'C1',9,143.5,31.5,'2019-11-18');
+insert into Comprobante(FechaFacturacion,MontoTotal,CodPedido,CodTipComprobante,CodParty,SubMontoTotal,IGV,FechaVencimiento) values ('2021-11-10',200.00,10,'C2',10,164,36,NULL);
+
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (1,1);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (2,1);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (3,1);
 insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (4,1);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (4,2);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (5,3);
-insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (5,4);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (5,1);
 insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (6,1);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (7,1);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (8,1);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (9,1);
+insert into ReportexComprobante(CodComprobante,CodReporteVentas) values (10,1);
 
 insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',1,1);
 insert into ItemComprobante(CodProducto,CodComprobante,Cantidad) values ('SO201925',2,1);
@@ -113,7 +106,7 @@ insert into StockProducto(CodProducto,Stock) values ('DI202078',6);
 insert into StockProducto(CodProducto,Stock) values ('ARE202161',7);
 insert into StockProducto(CodProducto,Stock) values ('CO201910',3);
 
-insert into Cliente(DNI,Nombre,ApellidoPat,ApellidoMat,FechaNacim) values ('70503215','Gustavo Jesús','Alvino','Gomez','1993-04-12');
+insert into Cliente(DNI,Nombre,ApellidoPat,ApellidoMat,FechaNacim, CodParty) values ('70503215','Gustavo Jesús','Alvino','Gomez','1993-04-12', 3);
 insert into Cliente(DNI,Nombre,ApellidoPat,ApellidoMat,FechaNacim) values ('70154312','Josep Elian','Artica','Gonzales','1997-06-12');
 insert into Cliente(DNI,Nombre,ApellidoPat,ApellidoMat,FechaNacim) values ('50341231','Alvaro Luis','Aviles','Aguado','1988-04-12');
 insert into Cliente(DNI,Nombre,ApellidoPat,ApellidoMat,FechaNacim) values ('26242032','Carlos','Caballero','Tokudome','1990-01-12');

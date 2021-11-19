@@ -65,39 +65,39 @@ create table Cotizacion(
     foreign key(CodParty) references Party(CodParty)
 );
 
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '19 Nov 2021', 4);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '18 Nov 2021', 3);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '17 Nov 2021', 6);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '16 Nov 2021', 7);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '15 Nov 2021', 5);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '14 Nov 2021', 4);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '13 Nov 2021', 3);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '12 Nov 2021', 5);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '11 Nov 2021', 6);
-INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '10 Nov 2021', 7);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-19', 4);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-18', 3);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-17', 6);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-16', 7);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-15', 5);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-14', 4);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-13', 3);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-12', 5);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-11', 6);
+INSERT INTO Pedido(Comentario, FechaCreacion, CodParty) VALUES('Ninguna especificacion adicional', '2021-11-10', 7);
 
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(1, 'SO201925', 1);
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(2, 'SO201925', 1);
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(2, 'DI202014', 1);
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(3, 'PU201889', 1);
-INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(4, 'ARE201965', 1);
-INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(5, 'GE202156', 1);
+INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(4, 'SO202129', 1);
+INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(5, 'SO202047', 1);
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(6, 'CO201901', 1);
 INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(7, 'AR201743', 1);
-INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(8, 'SO201925', 1);
-INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(9, 'SO201925', 1);
-INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(10, 'SO201925', 1);
+INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(8, 'DI202078', 1);
+INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(9, 'ARE202161', 1);
+INSERT INTO ArticuloPedido(CodPedido, CodProducto, Cantidad) VALUES(10, 'CO201910', 1);
 
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO201925', 'Sortija de compromiso', '14 Mar 2019', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'SO', 60.00, 'LP2');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202014', 'Dije modelo libélula fina', '24 Abr 2020', 'Dije con modelo de libelula fina bañada en oro de 18K con tamaño de 1.5 cm x 2cm', 'DI', 90.00, '18K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('PU201889', 'Pulsera', '19 Mar 2018', 'Pulsera Puñera para mujer plata 950 con dije de corazón swarovski colores Lb', 'PU', 40.00, 'LP5');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO202129', 'Sortija embutida espiral alto relieve', '25 Ene 2019', 'Sortija embutida espiral alto relieve de plata ley 925', 'SO', 150.00, 'LP2');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO202047', 'Sortija cuadrada con piedra luna negro', '08 Ene 2021', 'Sortija cuadrada con piedra luna negro incrustada en el alto relieve', 'SO', 240.00, 'O2K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201901', 'Collar Venice Oro', '11 Nov 2019', 'Collar Venice con dije luna  de oro 24K', 'CO', 120.00, 'O2K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('AR201743', 'Aros de matrimonio', '07 Mar 2017', 'Oro Amarillo 375 / Circonita', 'AR', 1500.00, 'O2K');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202078', 'Dije señor de los milagros', '29 Ene 2020', 'Dije con diseño del señor de los milagros y colores plateado y morado', 'DI', 160.00, 'LP9');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('ARE202161', 'Arete', '15 Mar 2021', 'Arete con piedas celeste en la curvatura inferior de plata ley 950', 'ARE', 68.00, 'LP5');
-INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201910', 'Collar', '16 Nov 2019', 'Collar con decoración de cadena y dije de estrella de plata ley 925', 'CO', 79.00, 'LP2');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO201925', 'Sortija de compromiso', '2019-03-14', 'Sortija bañada en plata 925 con fina piedra Zirconia cubica', 'SO', 60.00, 'LP2');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202014', 'Dije modelo libélula fina', '2020-04-24', 'Dije con modelo de libelula fina bañada en oro de 18K con tamaño de 1.5 cm x 2cm', 'DI', 90.00, 'O1K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('PU201889', 'Pulsera', '2018-03-19', 'Pulsera Puñera para mujer plata 950 con dije de corazón swarovski colores Lb', 'PU', 40.00, 'LP5');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO202129', 'Sortija embutida espiral alto relieve', '2019-01-25', 'Sortija embutida espiral alto relieve de plata ley 925', 'SO', 150.00, 'LP2');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('SO202047', 'Sortija cuadrada con piedra luna negro', '2021-01-08', 'Sortija cuadrada con piedra luna negro incrustada en el alto relieve', 'SO', 240.00, 'O2K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201901', 'Collar Venice Oro', '2019-11-11', 'Collar Venice con dije luna  de oro 24K', 'CO', 120.00, 'O2K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('AR201743', 'Aros de matrimonio', '2017-03-07', 'Oro Amarillo 375 / Circonita', 'AR', 1500.00, 'O2K');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('DI202078', 'Dije señor de los milagros', '2020-01-29', 'Dije con diseño del señor de los milagros y colores plateado y morado', 'DI', 160.00, 'LP9');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('ARE202161', 'Arete', '2021-03-15', 'Arete con piedas celeste en la curvatura inferior de plata ley 950', 'ARE', 68.00, 'LP5');
+INSERT INTO Producto(CodProducto, NomProducto, FechaIntroduccion, Descripcion, CodCateg, Precio, CodPureza) VALUES('CO201910', 'Collar', '2019-11-16', 'Collar con decoración de cadena y dije de estrella de plata ley 925', 'CO', 79.00, 'LP2');
 
 
 INSERT INTO CategoriaProducto(CodCateg, Descripcion) VALUES('SO', 'Sortija');
@@ -120,7 +120,7 @@ INSERT INTO ItemCotizacion(Cantidad, PrecioUnitarioCotiz, Especificacion, CodCot
 INSERT INTO ItemCotizacion(Cantidad, PrecioUnitarioCotiz, Especificacion, CodCotizacion, CodCateg, CodPureza) VALUES(1, 210.00, 'Collar de plata ley 950 con dije escritura nombre Dahana', 3, 'CO', 'LP5');
 INSERT INTO ItemCotizacion(Cantidad, PrecioUnitarioCotiz, Especificacion, CodCotizacion, CodCateg, CodPureza) VALUES(1, 300.00, 'Anillo sin decoración en el alto relieve de oro 24K 0.5 crt', 4, 'AN', 'O2K');
 
-INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(150.00, 'Realizado', '25 Mar 2021', '7', '11 Mar 2021');
-INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(200.00, 'Pendiente', '30 Nov 2021', '6', '11 Nov 2021');
-INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(250.00, 'Pendiente', '29 Nov 2021', '8', '11 Nov 2021');
-INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(300.00, 'Pendiente', '28 Nov 2021', '4', '11 Nov 2021');
+INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(150.00, 'Realizado', '2021-03-25', '7', '2021-03-11');
+INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(200.00, 'Pendiente', '2021-11-30', '6', '2021-11-11');
+INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(250.00, 'Pendiente', '2021-11-29', '8', '2021-11-11');
+INSERT INTO Cotizacion(ValorPrecio, Estado, PlazoEntrega, CodParty, FechaCreacion) VALUES(300.00, 'Pendiente', '2021-11-28', '4', '2021-11-11');
