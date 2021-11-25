@@ -16,7 +16,6 @@
     
     <title>Crear pedido</title>
 </head>
-
 <body>
     <div class="sidebar close">
         <div class="logo-details">
@@ -69,28 +68,28 @@
                 <div>
                     <span class="text">Asignar cliente</span>
                     <div class="contenedor_cliente_1">
-                        <form action="" >
+                        <form action="buscar_cliente.php" >
                             <fieldset>
-                                <input type="search" id="nomostrar1"class="nomostrar"placeholder="Buscar por apellidos...">
+                                <input type="search" id="nomostrar1"class="nomostrar"placeholder="Buscar por apellidos..." name="Apellidos" value="">
                                 <button type="submit" >
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                             <fieldset>
-                                <input type="search" id="nomostrar2"class="nomostrar"placeholder="Buscar por nombres...">
+                                <input type="search" id="nomostrar2"class="nomostrar"placeholder="Buscar por nombres..." name="Nombres">
                                 <button type="submit" >
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                             <fieldset style="float:inline-start;">
-                                <input type="search" id="nomostrar3" class="nomostrar"placeholder="Buscar por dni...">
+                                <input type="search" id="nomostrar3" class="nomostrar"placeholder="Buscar por dni..." name="Dni">
                                 <button type="submit">
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                         </form>
                         <div class="contenedor_cliente_2">
-                        <a href="#" id="cliente" class="cliente">
+                        <a href="buscar_cliente.php" id="cliente" class="cliente">
                             <button class="boton buscar">
                                 <span>&nbsp;Buscar&nbsp;</span>
                                 <div class="icono">
@@ -193,26 +192,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                    <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                    <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="5"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="5"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
+                                    {% for producto in Productos %}
+                                        <tr>
+                                            <th>{{ producto.0 }}</th>
+                                            <th>{{ producto.1 }}</th>
+                                            <th>{{ producto.4 }}</th>
+                                            <th><input type="number" class="input_cantidad" value="1" min="1" max="10"></th>
+                                            <th>{{ producto.5 }}</th>
+                                            <th><i class='bx bxs-trash'></i></th>
+                                        </tr>
+                                    {% endfor %}
                                     
                                 </tbody>
                             </table>
