@@ -13,7 +13,9 @@ def InicioSesion():
 
 
 # Jhonatan
-
+@app.route('/Crear_Pedido')
+def Crear_Pedido():
+    return render_template('Crear_Pedido.html')
 
 
 
