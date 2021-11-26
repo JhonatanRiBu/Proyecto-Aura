@@ -1,6 +1,7 @@
 from re import S
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 from flask_mysqldb import MySQL
+from werkzeug import datastructures
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'bkstiyllpyyyrxlek7bt-mysql.services.clever-cloud.com'
@@ -21,28 +22,34 @@ def InicioSesion():
 @app.route('/Crear_Pedido')
 def Crear_Pedido():
     cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM Producto')
+    cur.execute('SELECT * FROM Cliente')
     data = cur.fetchall()
     print(data)
-    cur1 = mysql.connection.cursor()
-    cur1.execute('SELECT * FROM Cliente WHERE CodParty < 8')
-    data1 = cur1.fetchall()
-    print(data1)
-    return render_template('Crear_Pedido.html', Producto =data ,Cliente=data1)
-
-
-
-
-
-
+    return render_template('Crear_Pedido.html')
 
 
 
 #Iosif
+@app.route('/Agregarcliente')
+def Agregarcliente():
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM Cliente')
+    data = cur.fetchall()
+    cur.close()
+    return render_template('Agregarcliente.html', Cliente = data)
 
-
-
-
+@app.route('add_Cliente', methods = ['POST'])
+def add_Cliente():
+    Dni = request.form['Dni']
+    Nombre = request.form['Nombre']
+    ApellidoPat = request.form['ApellidoPat']
+    ApellidoMat = request.form['ApellidoMat']
+    FechaNacim = request.form['FechaNacim']
+    cur = mysql.connection.cursor()
+    cur.execute("INSERT INTO contacts (Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim) VALUES (%s,%s,%s,%s,%s)",
+                (Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim))
+    mysql.connection.commit()
+    return redirect(url_for('Agregarcliente'))
 
 
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/agregarcliente.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '/css/agregarcliente.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Cliente</title>
@@ -64,24 +64,24 @@
 
         <div class="buscar">
             <div class="contenedor-buscar">
-                <form class="form">
+                <form class="form" method="post" action="{{url_for('add_Cliente')}}">
                     <div class="primera-fila">
                         <label>DNI</label>
-                        <input type="text" placeholder="Número de DNI">
+                        <input type="text" placeholder="Número de DNI" name="Dni">
                     
                         <label class="s-column">Nombres:</label>
-                        <input type="text" placeholder="Ingrese Nombres">
+                        <input type="text" placeholder="Ingrese Nombres" name="Nombre">
                     </div>
                     <div class="primera-fila">
                         <label>Ap. Paterno:</label>
-                        <input type="text" placeholder="Ingrese Apellido Paterno">
+                        <input type="text" placeholder="Ingrese Apellido Paterno" name="ApellidoPat">
                     
                         <label class="s-column">Ap. Materno</label>
-                        <input type="text" placeholder="Ingrese Apellido Materno">
+                        <input type="text" placeholder="Ingrese Apellido Materno" name="ApellidoMat">
                     </div>
                     <div class="primera-fila">
                         <label>Fecha Nacimiento:</label>
-                        <input type="date">
+                        <input type="date" name="FechaNacim">
 
                     </div>
                     
