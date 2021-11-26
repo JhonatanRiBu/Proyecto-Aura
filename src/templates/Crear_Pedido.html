@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="{{ url_for('static', filename= 'jquery-3.6.0.js')}}"></script>
-    <script src="{{ url_for('static', filename= 'jquery.dataTables.min.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'JS/jquery-3.6.0.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'JS/jquery.dataTables.min.js')}}"></script>
     <link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename= 'bootstrap.bundle.min.js')}}">
     <link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename= 'jquery-ui.min.js')}}">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -68,7 +68,7 @@
                 <div>
                     <span class="text">Asignar cliente</span>
                     <div class="contenedor_cliente_1">
-                        <form action="buscar_cliente.php" >
+                        <form action="/buscar_cliente" >
                             <fieldset>
                                 <input type="search" id="nomostrar1"class="nomostrar"placeholder="Buscar por apellidos..." name="Apellidos" value="">
                                 <button type="submit" >
@@ -89,7 +89,7 @@
                             </fieldset>
                         </form>
                         <div class="contenedor_cliente_2">
-                        <a href="buscar_cliente.php" id="cliente" class="cliente">
+                        <a href="#" id="cliente" class="cliente">
                             <button class="boton buscar">
                                 <span>&nbsp;Buscar&nbsp;</span>
                                 <div class="icono">
@@ -250,12 +250,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>70504167</th><th>Iosif Gustavo</th><th>Monrroy Rojo</th><th><input type="checkbox" class="check1"></th>   
-                        </tr>
-                        <tr>
-                            <th>70342812</th><th>Yozip Stalin</th><th>Monrroy Rojo</th><th><input type="checkbox"class="check1"></th>   
-                        </tr>
+                            {% for cliente in Cliente %}
+                            <tr>
+                                <th>{{ cliente.0 }}</th>
+                                <th>{{ cliente.1 }}</th>
+                                <th>{{ cliente.2 }}</th>
+                                <th><input type="checkbox" class="check1"></th>
+                            </tr>
+                            {% endfor %}
                     </tbody>
                 </table>
                 <form action="">
@@ -321,6 +323,6 @@
         }
     </script>
     
-    <script src="{{ url_for('static', filename= 'Crear_pedido.js')}}"></script>
+    <SCript src="{{ url_for('static', filename= 'JS/Crear_pedido.js')}}"></SCript>
 </body>   
 </html>

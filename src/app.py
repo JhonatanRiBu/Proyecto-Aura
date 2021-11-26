@@ -24,8 +24,11 @@ def Crear_Pedido():
     cur.execute('SELECT * FROM Producto')
     data = cur.fetchall()
     print(data)
-
-    return render_template('Crear_Pedido.html', Productos = data)
+    cur1 = mysql.connection.cursor()
+    cur1.execute('SELECT FROM * Cliente' )
+    data1 = cur1.fetchall()
+    print(data1)
+    return render_template('Crear_Pedido.html', Producto =data ,Cliente=data1)
 
 
 
