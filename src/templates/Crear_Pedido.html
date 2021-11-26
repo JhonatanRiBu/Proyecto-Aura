@@ -192,17 +192,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for producto in Productos %}
-                                        <tr>
-                                            <th>{{ producto.0 }}</th>
-                                            <th>{{ producto.1 }}</th>
-                                            <th>{{ producto.4 }}</th>
-                                            <th><input type="number" class="input_cantidad" value="1" min="1" max="10"></th>
-                                            <th>{{ producto.5 }}</th>
-                                            <th><i class='bx bxs-trash'></i></th>
-                                        </tr>
-                                    {% endfor %}
                                     
+            
                                 </tbody>
                             </table>
                         </div>
@@ -280,17 +271,16 @@
             <div class="contenedor-tabla-pop-up2">
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>Código del Producto</th><th>Nombre del Producto</th><th>Tipo de Producto</th><th>Cantidad Disponible</th><th></th>    
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>P0001</th><th>Puñera de plata texturada brillante</th><th>puñeras</th><th>4</th><th><input type="checkbox" class="check1"></th>
-                        </tr>
-                        <tr>
-                            <th>P0002</th><th>Dije cristal circular</th><th>dijes</th><th>5</th><th><input type="checkbox" class="check1"></th>
-                        </tr>
+                            {% for producto in Productos %}
+                            <tr>
+                                <th>{{ producto.0 }}</th>
+                                <th>{{ producto.1 }}</th>
+                                <th>{{ producto.4 }}</th>
+                                <th><input type="number" class="input_cantidad" value="1" min="1" max="10"></th>
+                                <th>{{ producto.5 }}</th>
+                                <th><i class='bx bxs-trash'></i></th>
+                            </tr>
+                            {% endfor %}
                     </tbody>
                 </table>
                 <form action="">

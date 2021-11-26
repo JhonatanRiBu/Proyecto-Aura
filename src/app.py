@@ -25,7 +25,7 @@ def Crear_Pedido():
     data = cur.fetchall()
     print(data)
     cur1 = mysql.connection.cursor()
-    cur1.execute('SELECT FROM * Cliente' )
+    cur1.execute('SELECT * FROM Cliente WHERE CodParty < 8')
     data1 = cur1.fetchall()
     print(data1)
     return render_template('Crear_Pedido.html', Producto =data ,Cliente=data1)
