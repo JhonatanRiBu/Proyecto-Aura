@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="../../JS/jquery-3.6.0.js"></script>
-    <script src="../../JS/jquery.dataTables.min.js"></script>
-    <link rel="stylesheet" type="text/javascript" href="../../JS/bootstrap.bundle.min.js">
-    <link rel="stylesheet" type="text/css" href="../css/crear_pedido.css">
-    <link rel="stylesheet" type="text/javascript" href="../../JS/jquery-ui.min.js">
+    <script src="{{ url_for('static', filename= 'JS/jquery-3.6.0.js')}}"></script>
+    <script src="{{ url_for('static', filename= 'JS/jquery.dataTables.min.js')}}"></script>
+    <link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename= 'bootstrap.bundle.min.js')}}">
+    <link rel="stylesheet" type="text/javascript" href="{{ url_for('static', filename= 'jquery-ui.min.js')}}">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="http://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= '/css/crear_pedido.css')}}">
     
     <title>Crear pedido</title>
 </head>
-
 <body>
     <div class="sidebar close">
         <div class="logo-details">
@@ -69,21 +68,21 @@
                 <div>
                     <span class="text">Asignar cliente</span>
                     <div class="contenedor_cliente_1">
-                        <form action="" >
+                        <form action="/buscar_cliente" >
                             <fieldset>
-                                <input type="search" id="nomostrar1"class="nomostrar"placeholder="Buscar por apellidos...">
+                                <input type="search" id="nomostrar1"class="nomostrar"placeholder="Buscar por apellidos..." name="Apellidos" value="">
                                 <button type="submit" >
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                             <fieldset>
-                                <input type="search" id="nomostrar2"class="nomostrar"placeholder="Buscar por nombres...">
+                                <input type="search" id="nomostrar2"class="nomostrar"placeholder="Buscar por nombres..." name="Nombres">
                                 <button type="submit" >
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
                             </fieldset>
                             <fieldset style="float:inline-start;">
-                                <input type="search" id="nomostrar3" class="nomostrar"placeholder="Buscar por dni...">
+                                <input type="search" id="nomostrar3" class="nomostrar"placeholder="Buscar por dni..." name="Dni">
                                 <button type="submit">
                                     <i class='bx bx-search-alt-2'></i>
                                 </button>
@@ -193,27 +192,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                    <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                    <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="10"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="5"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
-                                     <tr>
-                                        <th>123</th><th>aro</th><th>anillo</th><th><input type="number" class="input_cantidad" value="1"min="1" max="5"></th>
-                                        <th>123$</th><th><i class='bx bxs-trash'></i></th> 
-                                    </tr>
                                     
+            
                                 </tbody>
                             </table>
                         </div>
@@ -261,12 +241,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>70504167</th><th>Iosif Gustavo</th><th>Monrroy Rojo</th><th><input type="checkbox" class="check1"></th>   
-                        </tr>
-                        <tr>
-                            <th>70342812</th><th>Yozip Stalin</th><th>Monrroy Rojo</th><th><input type="checkbox"class="check1"></th>   
-                        </tr>
+                            {% for cliente in Cliente %}
+                            <tr>
+                                <th>{{ cliente.0 }}</th>
+                                <th>{{ cliente.1 }}</th>
+                                <th>{{ cliente.2 }}</th>
+                                <th><input type="checkbox" class="check1"></th>
+                            </tr>
+                            {% endfor %}
                     </tbody>
                 </table>
                 <form action="">
@@ -289,17 +271,16 @@
             <div class="contenedor-tabla-pop-up2">
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>Código del Producto</th><th>Nombre del Producto</th><th>Tipo de Producto</th><th>Cantidad Disponible</th><th></th>    
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>P0001</th><th>Puñera de plata texturada brillante</th><th>puñeras</th><th>4</th><th><input type="checkbox" class="check1"></th>
-                        </tr>
-                        <tr>
-                            <th>P0002</th><th>Dije cristal circular</th><th>dijes</th><th>5</th><th><input type="checkbox" class="check1"></th>
-                        </tr>
+                            {% for producto in Productos %}
+                            <tr>
+                                <th>{{ producto.0 }}</th>
+                                <th>{{ producto.1 }}</th>
+                                <th>{{ producto.4 }}</th>
+                                <th><input type="number" class="input_cantidad" value="1" min="1" max="10"></th>
+                                <th>{{ producto.5 }}</th>
+                                <th><i class='bx bxs-trash'></i></th>
+                            </tr>
+                            {% endfor %}
                     </tbody>
                 </table>
                 <form action="">
@@ -332,6 +313,6 @@
         }
     </script>
     
-    <script src="../../JS/Crear_pedido.js"></script>
+    <SCript src="{{ url_for('static', filename= 'JS/Crear_pedido.js')}}"></SCript>
 </body>   
 </html>
