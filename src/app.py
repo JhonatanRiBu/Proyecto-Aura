@@ -32,26 +32,23 @@ def Crear_Pedido():
 #Iosif
 @app.route('/Agregarcliente')
 def Agregarcliente():
-    cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM Cliente')
-    data = cur.fetchall()
-    cur.close()
-    return render_template('Agregarcliente.html', Cliente = data)
+    return render_template('Agregarcliente.html')
 
-@app.route('add_Cliente', methods = ['POST'])
+
+@app.route('/add_Cliente', methods=['POST'])
 def add_Cliente():
-    Dni = request.form['Dni']
-    Nombre = request.form['Nombre']
-    ApellidoPat = request.form['ApellidoPat']
-    ApellidoMat = request.form['ApellidoMat']
-    FechaNacim = request.form['FechaNacim']
-    cur = mysql.connection.cursor()
-    cur.execute("INSERT INTO contacts (Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim) VALUES (%s,%s,%s,%s,%s)",
-                (Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim))
-    mysql.connection.commit()
-    return redirect(url_for('Agregarcliente'))
-
-
+    
+    if request.method == 'POST':
+        Dni = request.form['Dni']
+        Nombre = request.form['Nombre']
+        ApellidoPat = request.form['ApellidoPat']
+        ApellidoMat = request.form['ApellidoMat']
+        FechaNacim = request.form['FechaNacim']
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO Party (Dni) VALUES (%s)",(Dni))
+        cur.execute("INSERT INTO Cliente (Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim,CodParty) VALUES (%s,%s,%s,%s,%s)",(Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim))
+        mysql.connection.commit()
+        return redirect(url_for('Agregarcliente'))
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
