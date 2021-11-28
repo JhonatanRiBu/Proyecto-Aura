@@ -53,9 +53,9 @@ def add_Cliente():
 @app.route('/Consultarcliente')
 def Consultarcliente():
     cur = mysql.connection.cursor()
-    cur.execute('SELECT * FROM Cliente')
+    cur.execute('CALL tabla_cliente(@v_maxParty)')
     data = cur.fetchall()
-    return render_template('Consultarcliente.html')
+    return render_template('Consultarcliente.html',Cliente = data)
 @app.route('/registrarbusqueda_cliente',methods = ['POST'])  
 def registrarbusqueda_cliente():
     if request.method == 'POST':
@@ -63,12 +63,27 @@ def registrarbusqueda_cliente():
         Nombre = request.form['Nombre']
         ApellidoPat = request.form['ApellidoPat']
         ApellidoMat = request.form['ApellidoMat']
-        print(Dni)
-        print(Nombre)
-        print(ApellidoPat)
-        if ApellidoMat == '':
-            print(1)
+        
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoPat,Nombre,Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+        if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute(
+                'SELECT * FROM Cliente WHERE Nombre = %s AND Dni = %s', (Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+        if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE Nombre = %s',[Nombre])
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
         else: print(0)
     return 'iosif'
+
+
+
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
