@@ -45,10 +45,24 @@ def add_Cliente():
         ApellidoMat = request.form['ApellidoMat']
         FechaNacim = request.form['FechaNacim']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO Party (Dni) VALUES (%s)",(Dni))
-        cur.execute("INSERT INTO Cliente (Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim,CodParty) VALUES (%s,%s,%s,%s,%s)",(Dni, Nombre, ApellidoPat, ApellidoMat, FechaNacim))
+        cur.execute("CALL add_cliente(%s,%s,%s,%s,%s,@v_CodParty)",(Dni,Nombre,ApellidoPat,ApellidoMat,FechaNacim))
         mysql.connection.commit()
-        return redirect(url_for('Agregarcliente'))
+        return 'recibido'
+
+
+@app.route('/Consultarcliente')
+def Consultarcliente():
+    return render_template('Consultarcliente.html')
+@app.route('/registrarbusqueda_cliente',methods = ['POST'])  
+def registrarbusqueda_cliente():
+    if request.method == 'POST':
+        Cliente = request.form['CodParty']
+        Dni = request.form['Dni']
+        Nombre = request.form['Nombre']
+        ApellidoPat = request.form['ApellidoPat']
+        ApellidoMat = request.form['ApellidoMat']
+        FechaNacimMin = request.form['FechaNacim']
+        FechaNacimMax = request.form['FechaNacim']
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
