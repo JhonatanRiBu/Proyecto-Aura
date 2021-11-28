@@ -52,18 +52,23 @@ def add_Cliente():
 
 @app.route('/Consultarcliente')
 def Consultarcliente():
+    cur = mysql.connection.cursor()
+    cur.execute('SELECT * FROM Cliente')
+    data = cur.fetchall()
     return render_template('Consultarcliente.html')
 @app.route('/registrarbusqueda_cliente',methods = ['POST'])  
 def registrarbusqueda_cliente():
     if request.method == 'POST':
-        Cliente = request.form['CodParty']
         Dni = request.form['Dni']
         Nombre = request.form['Nombre']
         ApellidoPat = request.form['ApellidoPat']
         ApellidoMat = request.form['ApellidoMat']
-        FechaNacimMin = request.form['FechaNacim']
-        FechaNacimMax = request.form['FechaNacim']
-
-
+        print(Dni)
+        print(Nombre)
+        print(ApellidoPat)
+        if ApellidoMat == '':
+            print(1)
+        else: print(0)
+    return 'iosif'
 if __name__ == '__main__':
     app.run(port=3000, debug=True)

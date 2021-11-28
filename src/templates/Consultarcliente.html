@@ -120,46 +120,18 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th>C0001</th>
-                        <th>74396659</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
+                    {% for cliente in Cliente %}
                     <tr>
-                        <th>C0001</th>
-                        <th>74396659</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
+                        <th>{{ cliente.5 }}</th>
+                        <th>{{ cliente.0 }}</th>
+                        <th>{{ cliente.1 }}</th>
+                        <th>{{ cliente.2 }}</th>
+                        <th>{{ cliente.3 }}</th>
+                        <th>{{ cliente.4 }}</th>
                     </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>74396659</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
+                    {% endfor %}
+              
                     </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>74396659</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>74396659</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    
                 </tbody>
             </table>
         </div>
