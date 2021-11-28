@@ -66,29 +66,18 @@
             <div class="contenedor-buscar">
                 <form class="form" method="post" action="/registrarbusqueda_cliente">
                     <div class="primera-fila">
-                        <label>Código:</label>
-                        <input type="text" placeholder="Ingrese código del Cliente", name="Cliente">
-                    
+                        <label>DNI:</label>
+                        <input type="text" placeholder="Ingrese DNI del cliente", name="Dni">
+
                         <label class="s-column">Nombres:</label>
                         <input type="text" placeholder="Ingrese nombres del cliente", name="Nombre">
                     </div>
                     <div class="primera-fila">
-                        <label>DNI:</label>
-                        <input type="text" placeholder="Ingrese DNI del cliente", name="Dni">
-                    
-                        <label class="s-column">Ap. Paterno:</label>
+                        <label >Ap. Paterno:</label>
                         <input type="text" placeholder="Apellido paterno del cliente", name="ApellidoPat">
-                    </div>
-                    <div class="primera-fila">
-                        <label>Ap. Materno:</label>
-                        <input type="text" placeholder="Apellido Materno del cliente", name="ApellidoMat">
-                    </div>
-                    <div class="primera-fila">
-                        <label>Fecha de Nacimiento Entre</label>
-                        <input type="date" name="FechaNacMin">
 
-                        <label>y</label>
-                        <input type="date"name="FechaNacimMax">
+                        <label class="s-column">Ap. Materno:</label>
+                        <input type="text" placeholder="Apellido Materno del cliente", name="ApellidoMat">
                     </div>
                     <div class="tercera-fila">
                         <button class="boton-eliminar">
@@ -165,122 +154,6 @@
                     <tr>
                         <th>C0001</th>
                         <th>74396659</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-        <div class="lista-mp">
-            <h1>Persona con RUC</h1>
-        </div>
-
-        <div class="buscar">
-            <div class="contenedor-buscar">
-                <form class="form">
-                    <div class="primera-fila">
-                        <label>Código:</label>
-                        <input type="text" placeholder="Ingrese código del Cliente">
-                    
-                        <label class="s-column">Nombres:</label>
-                        <input type="text" placeholder="Ingrese nombres del cliente">
-                    </div>
-                    <div class="primera-fila">
-                        <label>RUC:</label>
-                        <input type="text" placeholder="Ingrese RUC del cliente">
-                    
-                        <label class="s-column">Ap. Paterno:</label>
-                        <input type="text" placeholder="Apellido paterno del cliente">
-                    </div>
-                    <div class="primera-fila">
-                        <label>Ap. Materno:</label>
-                        <input type="text" placeholder="Apellido Materno del cliente">
-                    </div>
-                    <div class="primera-fila">
-                        <label>Fecha de Nacimiento Entre</label>
-                        <input type="date">
-
-                        <label>y</label>
-                        <input type="date">
-                    </div>
-                    <div class="tercera-fila">
-                        <button class="boton-eliminar">
-                            <div class="icono">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                                  </svg>
-                            </div>
-                            <span>Eliminar búsqueda</span>
-                        </button>
-                        <button class="boton buscarbt">
-                            <div class="icono">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                  </svg>
-                            </div>
-                            <span>Buscar</span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="lista-mp">
-            <h1>Resultados de Búsqueda de Personas con RUC</h1>
-        </div>
-
-        <div class="main_conteiner">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>RUC</th>
-                        <th>Nombres</th>
-                        <th>Ap. Paterno</th>
-                        <th>Ap. Materno</th>
-                        <th>Fecha Nacimiento</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>C0001</th>
-                        <th>1701300103001</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>1701300103001</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>1701300103001</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>1701300103001</th>
-                        <th>Jhonatan</th>
-                        <th>Riquelme</th>
-                        <th>Bustinza</th>
-                        <th>19/09/1987</th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>1701300103001</th>
                         <th>Jhonatan</th>
                         <th>Riquelme</th>
                         <th>Bustinza</th>
