@@ -358,7 +358,6 @@ tbody tr{
 }
 /*Buscador animado*/
 form{   
-    display: inline-flex;
     width: 100%;
      padding: 25px;
      text-align: center;
