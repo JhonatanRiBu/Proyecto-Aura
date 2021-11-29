@@ -9,8 +9,8 @@ app.config['MYSQL_USER'] = 'utdk0pjqeflx9aib'
 app.config['MYSQL_PASSWORD'] = 'W3W4O1uOe9gGRFHBJINn'
 app.config['MYSQL_DB'] = 'bkstiyllpyyyrxlek7bt'
 mysql = MySQL(app)
-# Jesus
 
+# Jesus
 
 @app.route('/iniciosesion')
 def InicioSesion():
@@ -27,7 +27,20 @@ def Crear_Pedido():
     print(data)
     return render_template('Crear_Pedido.html')
 
+@app.route('/Consultar_pedidos')
+def Consultar_pedidos():
+    cur = mysql.connection.cursor()
+    cur.execute('Select * from Pedido ,ArticuloPedido ')
+    data = cur.fetchall()
+    return render_template('consultar_pedidos.html', Pedido=data)
 
+
+@app.route('/Consultar_cotizacion')
+def Consultar_cotizacion():
+    cur = mysql.connection.cursor()
+    cur.execute('Select * from Cotizacion')
+    data = cur.fetchall()
+    return render_template('consultar_cotizacion.html', Cotizacion=data)
 
 #Iosif
 @app.route('/Agregarcliente')

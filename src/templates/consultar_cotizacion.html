@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/consultar_cotizacion.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/consultar_cotizacion.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Consultar Cotización</title>
@@ -139,75 +139,31 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Código</th>
-                        <th>ID pedido</th>
-                        <th>Fecha</th>
+                        <th>ID del Pedido</th>
                         <th>Tipo de joya</th>
+                        <th>Fecha de creación</th>
+                        <th>Fecha de entrega</th>
                         <th>Valor</th>
                         <th>Estado</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>C0001</th>
-                        <th>AU182019K</th>
-                        <th>20/12/2020</th>
-                        <th>Anillo Venice Oro</th>
-                        <th>S/. 780</th>
-                        <th>Aprobado</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>AU182019K</th>
-                        <th>20/12/2020</th>
-                        <th>Anillo Venice Oro</th>
-                        <th>S/. 780</th>
-                        <th>Aprobado</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>AU182019K</th>
-                        <th>20/12/2020</th>
-                        <th>Anillo Venice Oro</th>
-                        <th>S/. 780</th>
-                        <th>Aprobado</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>AU182019K</th>
-                        <th>20/12/2020</th>
-                        <th>Anillo Venice Oro</th>
-                        <th>S/. 780</th>
-                        <th>Aprobado</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>C0001</th>
-                        <th>AU182019K</th>
-                        <th>20/12/2020</th>
-                        <th>Anillo Venice Oro</th>
-                        <th>S/. 780</th>
-                        <th>Aprobado</th>
-                        <th class="botones-ee">
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        {% for Cotizac in Cotizacion %}
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>{{Cotizac.5}}</th>
+                            <th>{{Cotizac.3}}</th>
+                            <th>{{Cotizac.1}}</th>
+                            <th>{{Cotizac.2}}</th>
+                            <th>
+                                <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                                <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                            </th>
+                        </tr>
+                        {% endfor %}
+                        
                     </tr>
                 </tbody>
             </table>

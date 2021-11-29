@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/consultar_pedidos.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/consultar_pedidos.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Consultar pedidos</title>
@@ -110,59 +110,26 @@
                 <thead>
                     <tr>
                         <th>Código</th>
-                        <th>Nombre del producto</th>
+                        <th>Producto</th>
                         <th>Fecha de creación</th>
+                        <th>Cantidad del pedido</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>AU242021K</th>
-                        <th>Dije cristal circular</th>
-                        <th>25/11/2020</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
+                        {% for Ped in Pedido %}
+                        <tr>
+                            <th>{{Ped.0}}</th>
+                            <th>{{Ped.0}}</th>
+                            <th>{{Ped.2}}</th>
+                            <th>{{Ped.1}}</th>
+                            <th>
+                                <a href="#" class="editar"><i class='bx bx-edit'></i></a>
+                                <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
+                            </th>
+                        </tr>
+                        {% endfor %}
                     </tr>
-                    <tr>
-                        <th>AU242021K</th>
-                        <th>Dije cristal circular</th>
-                        <th>25/11/2020</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>AU242021K</th>
-                        <th>Dije cristal circular</th>
-                        <th>25/11/2020</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                   <tr>
-                        <th>AU242021K</th>
-                        <th>Dije cristal circular</th>
-                        <th>25/11/2020</th>
-                        <th>
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>AU242021K</th>
-                        <th>Dije cristal circular</th>
-                        <th>25/11/2020</th> 
-                        <th>
-                            
-                            <a href="#" class="editar"><i class='bx bx-edit'></i></a>
-                            <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
-                        </th>
-                    </tr>
-
                 </tbody>
             </table>
         </div>
