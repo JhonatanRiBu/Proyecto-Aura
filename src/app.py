@@ -16,6 +16,38 @@ mysql = MySQL(app)
 def InicioSesion():
     return render_template('InicioSesion.html')
 
+@app.route('/InicioInventarios.html')
+def Inventario():
+    return render_template('InicioInventarios.html')
+
+@app.route('/Consultarmp.html')
+def MateriaPrima():
+    cur = mysql.connection.cursor()
+    cur.execute('CALL mostrar_mp()')
+    mp = cur.fetchall()
+    return render_template('Consultarmp.html',materiaprima = mp)
+
+@app.route('/busquedamp', methods = ['POST'])
+def BusquedaMP():
+    if request.method == 'POST':
+        Codigo = request.form['codigomp']
+        Nombre = request.form['nombremp']
+        Tipomp = request.form.get('tipomp')
+        Purezamp = request.form['tipopureza']
+        print(Codigo)
+        print(Nombre)
+        print(Tipomp)
+        print(Purezamp)
+        return 'received'
+
+@app.route('/agregarmp.html')
+def CargarAgregar():
+    return render_template('agregarmp.html')
+
+
+
+
+
 
 
 # Jhonatan

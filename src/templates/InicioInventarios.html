@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/inicioinventario.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/inicioinventario.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Inventarios</title>
@@ -39,7 +39,7 @@
         <li>
         <div class="profile-details">
             <div class="profile-content">
-                <img src="profile.png" alt="profile">
+                <img src="{{ url_for('static', filename= 'profile.png')}}" alt="profile">
             </div>
             
             <div class="name-job">
@@ -63,12 +63,12 @@
             <a class="link-mp" href="Consultarmp.html">
             <button class="boton mp">
                 <span>Materia Prima</span>
-                <img src="materiaprima.jpg" alt="MP">
+                <img src="{{ url_for('static', filename= 'materiaprima.jpg')}}" alt="MP">
             </button></a>
             <a class="link-joya" href="Consultarjoya.html">
             <button class="boton joya">
                 <span>Joyas</span>
-                <img src="joya.jpg" alt="Joya">
+                <img src="{{ url_for('static', filename= 'joya.jpg')}}" alt="Joya">
             </button></a>
         </div>
 
