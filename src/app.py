@@ -108,27 +108,103 @@ def registrarbusqueda_cliente():
         Nombre = request.form['Nombre']
         ApellidoPat = request.form['ApellidoPat']
         ApellidoMat = request.form['ApellidoMat']
-        
-        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+
+#1 campo
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre == '' and Dni == '':
             cur = mysql.connection.cursor()
-            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoPat,Nombre,Dni))
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s',[ApellidoMat])
             data = cur.fetchall()
             return render_template('Consultarcliente.html', Cliente=data)
-        if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre == '' and Dni == '':
             cur = mysql.connection.cursor()
-            cur.execute(
-                'SELECT * FROM Cliente WHERE Nombre = %s AND Dni = %s', (Nombre, Dni))
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s',[ApellidoPat])
             data = cur.fetchall()
             return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat == '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE Dni = %s',[Dni])
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
         if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni == '':
             cur = mysql.connection.cursor()
             cur.execute('SELECT * FROM Cliente WHERE Nombre = %s',[Nombre])
             data = cur.fetchall()
             return render_template('Consultarcliente.html', Cliente=data)
+
+#2 campos
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre == '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s',(ApellidoMat, ApellidoPat))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND Nombre = %s',(ApellidoMat, Nombre))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+        
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND Nombre = %s',(ApellidoMat, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s',(ApellidoPat, Nombre))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Dni = %s',(ApellidoPat, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE Nombre = %s AND Dni = %s',(Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+#3 campos
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s AND Nombre = %s',(ApellidoMat, ApellidoPat, Nombre))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s AND Dni = %s',(ApellidoMat, ApellidoPat, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoPat, Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND Nombre = %s AND Dni = %s',(ApellidoMat, Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+#4 Campos    
+
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoMat, ApellidoPat, Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+
         else: print(0)
     return 'iosif'
-
-
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
