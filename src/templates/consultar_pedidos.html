@@ -62,16 +62,16 @@
 
         <div class="buscar">
             <div class="contenedor-buscar">
-                <form class="form">
+                <form class="form" method="POST" action="/busqueda_Pedidos">
                     <div class="primera-fila">
                         <label>Código:</label>
-                        <input type="text" placeholder="Ingrese código del pedido" style="width: 250px;">
+                        <input type="text" placeholder="Ingrese código del pedido" style="width: 250px;" name="Codigo">
 
                         <label class="s-column">Producto del Pedido:</label>
-                        <input type="text" placeholder="Ingrese el nombre del producto">
+                        <input type="text" placeholder="Ingrese el nombre del producto" name="Producto">
 
                         <label class="s-column2">Fecha de creación:</label>
-                        <input type="date" , name="day" style="width: 170px;">
+                        <input type="date" , name="Fecha" style="width: 170px;">
                     </div>
                     <div class="tercera-fila">
                         <button class="boton-eliminar">
@@ -113,16 +113,18 @@
                         <th>Producto</th>
                         <th>Fecha de creación</th>
                         <th>Cantidad del pedido</th>
+                        <th>Comentario</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                        {% for Ped in Pedido %}
+                        {% for Ped in Pedidos %}
                         <tr>
                             <th>{{Ped.0}}</th>
-                            <th>{{Ped.0}}</th>
-                            <th>{{Ped.2}}</th>
                             <th>{{Ped.1}}</th>
+                            <th>{{Ped.4}}</th>
+                            <th>{{Ped.2}}</th>
+                            <th>{{Ped.3}}</th>
                             <th>
                                 <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                                 <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>

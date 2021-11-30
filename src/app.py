@@ -62,10 +62,57 @@ def Crear_Pedido():
 @app.route('/Consultar_pedidos')
 def Consultar_pedidos():
     cur = mysql.connection.cursor()
-    cur.execute('Select * from Pedido ,ArticuloPedido ')
-    data = cur.fetchall()
-    return render_template('consultar_pedidos.html', Pedido=data)
+    cur.execute('CALL mostrar_pedidos()')
+    ped = cur.fetchall()
+    return render_template('consultar_pedidos.html', Pedidos = ped)
 
+
+@app.route('/busqueda_Pedidos', methods=['POST'])
+def BusquedaPedidos():
+    if request.method == 'POST':
+        Codigo = request.form['Codigo']
+        Producto = request.form['Producto']
+        Fecha = request.form.get('Fecha')
+        if Codigo == '' and Producto != '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos1(%s)',[Producto])
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto == '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos2(%s)', [Codigo])
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo == '' and Producto == '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos3(%s)', [Fecha])
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto != '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos4(%s,%s)', (Codigo,Producto))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo == '' and Producto != '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos5(%s,%s)', (Producto,Fecha))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto == '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos6(%s,%s)', (Codigo,Fecha))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto != '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos7(%s,%s,%s)', (Codigo,Producto,Fecha))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo == '' and Producto == '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL mostrar_pedidos()')
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
 
 @app.route('/Consultar_cotizacion')
 def Consultar_cotizacion():
