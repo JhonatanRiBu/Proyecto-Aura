@@ -51,7 +51,7 @@ def CargarAgregar():
 
 
 # Jhonatan
-@app.route('/Crear_Pedido')
+@app.route('/Crear_Pedido.html')
 def Crear_Pedido():
     cur = mysql.connection.cursor()
     cur.execute('SELECT * FROM Cliente')
@@ -59,7 +59,7 @@ def Crear_Pedido():
     print(data)
     return render_template('Crear_Pedido.html')
 
-@app.route('/Consultar_pedidos')
+@app.route('/Consultar_pedidos.html')
 def Consultar_pedidos():
     cur = mysql.connection.cursor()
     cur.execute('CALL mostrar_pedidos()')
@@ -114,12 +114,34 @@ def BusquedaPedidos():
             ped = cur.fetchall()
             return render_template('consultar_pedidos.html', Pedidos=ped)
 
-@app.route('/Consultar_cotizacion')
-def Consultar_cotizacion():
+@app.route('/consultar_cotizacion.html')
+def consultar_cotizacion():
     cur = mysql.connection.cursor()
-    cur.execute('Select * from Cotizacion')
-    data = cur.fetchall()
-    return render_template('consultar_cotizacion.html', Cotizacion=data)
+    cur.execute('CALL mostrar_cotizaciones()')
+    Cot = cur.fetchall()
+    return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+
+
+@app.route('/busqueda_cotizacion', methods=['POST'])
+def busqueda_Cotizacion():
+    if request.method == 'POST':
+        Codigo = request.form['Codigo']
+        Nombre_Cliente = request.form['Nombre_Cliente']
+        Fecha = request.form.get('Fecha')
+        Valor_Cotizacion = request.form.get('Valor_Cotizacion')
+        Estado = request.form.get('Estado')
+        Tipo_Joya = request.form.get('Tipo_Joya')
+        if Codigo != '' and Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == '' and Estado == '' and Tipo_Joya == '':
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones1(%s)",[Codigo])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Codigo == '' and Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == '' and Estado == '' and Tipo_Joya == '':
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones2(%s)", [Nombre_Cliente])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        
 
 #Iosif
 @app.route('/Agregarcliente')

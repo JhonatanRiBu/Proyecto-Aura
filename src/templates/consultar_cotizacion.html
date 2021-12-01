@@ -62,45 +62,45 @@
 
         <div class="buscar">
             <div class="contenedor-buscar">
-                <form class="form">
+                <form class="form" method="POST" action="/busqueda_cotizacion">
                     <div class="primera-fila">
                         <label>Código:</label>
-                        <input type="text" placeholder="Ingrese código de la Cotizacion">
+                        <input type="number" placeholder="Ingrese código de la Cotizacion" name="Codigo">
                  
-                        <label class="s-column">ID del pedido:</label>
-                        <input type="text" placeholder="Ingrese el código del pedido">
+                        <label class="s-column">Nombre del cliente:</label>
+                        <input type="text" placeholder="Ingrese el nombre" name="Nombre_Cliente">
 
                         <label class="s-column">Fecha:</label>
-                        <input type="date" style="width: 190px;">
+                        <input type="date" style="width: 190px;" name="Fecha">
                     </div>
                     <div class="segunda-fila">
                         <label>Valor de la cotización:</label>
-                        <select name="" id="">
+                        <select name="Valor_Cotizacion" id="Valor_Cotizacion">
                             <option disabled selected="">Seleccione valor</option>
-                            <option value="">S/0 - S/500</option>
-                            <option value="">S/500 - S/1000</option>
-                            <option value="">S/1000 - S/2000</option>
+                            <option value="S/0 - S/500">S/0 - S/500</option>
+                            <option value="S/500 - S/1000">S/500 - S/1000</option>
+                            <option value="S/1000 - S/2000">S/1000 - S/2000</option>
                         </select>
 
                         <label class="s-column2">Estado:</label>
-                        <select name="tipo" id="">
+                        <select name="Estado" id="Estado">
                             <option disabled selected="">Seleccione estado</option>
-                            <option value="">Aprobado</option>
-                            <option value="">Rechazado</option>
-                            <option value="">Pendiente</option>
+                            <option value="Aprobado">Aprobado</option>
+                            <option value="Rechazado">Rechazado</option>
+                            <option value="Pendiente">Pendiente</option>
                         </select>
 
                         <label class="s-column2">Tipo de joya:</label>
-                        <select name="tipo" id="">
+                        <select name="Tipo_Joya" id="Tipo_Joya">
                             <option disabled selected="">Seleccione Tipo</option>
-                            <option value="">Sortija</option>
-                            <option value="">Dije</option>
-                            <option value="">Pulsera</option>
-                            <option value="">Arete</option>
-                            <option value="">Gemelo</option>
-                            <option value="">Collar</option>
-                            <option value="">Anillo</option>
-                            <option value="">Aro de matrimonio</option>
+                            <option value="Sortija">Sortija</option>
+                            <option value="Dije">Dije</option>
+                            <option value="Pulsera">Pulsera</option>
+                            <option value="Arete">Arete</option>
+                            <option value="Gemelo">Gemelo</option>
+                            <option value="Collar">Collar</option>
+                            <option value="Anillo">Anillo</option>
+                            <option value="Aro de matrimonio">Aro de matrimonio</option>
                         </select>
                     </div>
                     <div class="tercera-fila">
@@ -139,24 +139,26 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID del Pedido</th>
+                        <th>ID de cotizacion</th>
                         <th>Tipo de joya</th>
                         <th>Fecha de creación</th>
                         <th>Fecha de entrega</th>
+                        <th>Nombre del Cliente</th>
                         <th>Valor</th>
                         <th>Estado</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                        {% for Cotizac in Cotizacion %}
+                        {% for Cot in Cotizacion %}
                         <tr>
-                            <th></th>
-                            <th></th>
-                            <th>{{Cotizac.5}}</th>
-                            <th>{{Cotizac.3}}</th>
-                            <th>{{Cotizac.1}}</th>
-                            <th>{{Cotizac.2}}</th>
+                            <th>{{Cot.0}}</th>
+                            <th>{{Cot.1}}</th>
+                            <th>{{Cot.2}}</th>
+                            <th>{{Cot.3}}</th>
+                            <th>{{Cot.4}}</th>
+                            <th>{{Cot.5}}</th>
+                            <th>{{Cot.6}}</th>
                             <th>
                                 <a href="#" class="editar"><i class='bx bx-edit'></i></a>
                                 <a href="#" class="eliminar"><i class='bx bx-trash'></i></a>
