@@ -64,13 +64,11 @@
             <div class="contenedor-buscar">
                 <form class="form" method="POST" action="/busqueda_cotizacion">
                     <div class="primera-fila">
-                        <label>Código:</label>
-                        <input type="number" placeholder="Ingrese código de la Cotizacion" name="Codigo">
                  
                         <label class="s-column">Nombre del cliente:</label>
                         <input type="text" placeholder="Ingrese el nombre" name="Nombre_Cliente">
 
-                        <label class="s-column">Fecha:</label>
+                        <label class="s-column">Fecha de creación:</label>
                         <input type="date" style="width: 190px;" name="Fecha">
                     </div>
                     <div class="segunda-fila">
@@ -79,14 +77,13 @@
                             <option disabled selected="">Seleccione valor</option>
                             <option value="S/0 - S/500">S/0 - S/500</option>
                             <option value="S/500 - S/1000">S/500 - S/1000</option>
-                            <option value="S/1000 - S/2000">S/1000 - S/2000</option>
+                            <option value="S/1000 - S/1000">S/1000 - S/2000</option>
                         </select>
 
                         <label class="s-column2">Estado:</label>
                         <select name="Estado" id="Estado">
                             <option disabled selected="">Seleccione estado</option>
-                            <option value="Aprobado">Aprobado</option>
-                            <option value="Rechazado">Rechazado</option>
+                            <option value="Realizado">Realizado</option>
                             <option value="Pendiente">Pendiente</option>
                         </select>
 
