@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/inicioCotizacion.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/iniciocotizacion.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Cotización</title>
@@ -40,7 +40,7 @@
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="profile.png" alt="profile">
+                        <img src="{{ url_for('static', filename= 'profile.png')}}" alt="profile">
                     </div>
 
                     <div class="name-job">
@@ -64,12 +64,12 @@
             <a class="link-cotizacion" href="Crear_cotizacion.html">
                 <button class="boton cotizacion">
                     <span>Crear Cotización</span>
-                    <img src="../../imagenes/cotizacion.jpg" alt="cotizacion">
+                    <img src="{{ url_for('static', filename= 'cotizacion.jpg')}}" alt="cotizacion">
                 </button></a>
             <a class="link-consultar" href="consultar_cotizacion.html">
                 <button class="boton consultar">
                     <span>Consultar cotización</span>
-                    <img src="../../imagenes/consultar_cotizacion.jpg" alt="consultar">
+                    <img src="{{ url_for('static', filename= 'consultar_cotizacion.jpg')}}" alt="consultar">
                 </button></a>
         </div>
 

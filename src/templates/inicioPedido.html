@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/inicioPedido.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/inicioPedido.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Pedido</title>
@@ -39,7 +39,7 @@
             <li>
                 <div class="profile-details">
                     <div class="profile-content">
-                        <img src="profile.png" alt="profile">
+                        <img src="{{ url_for('static', filename= 'profile.png')}}" alt="profile">
                     </div>
 
                     <div class="name-job">
@@ -63,12 +63,12 @@
             <a class="link-pedido" href="Crear_Pedido.html">
                 <button class="boton pedido">
                     <span>Crear Pedido</span>
-                    <img src="../../imagenes/inicio_pedido.jpg" alt="pedido">
+                    <img src="{{ url_for('static', filename= 'inicio_pedido.jpg')}}" alt="pedido">
                 </button></a>
             <a class="link-consultar" href="consultar_pedidos.html">
                 <button class="boton consultar">
                     <span>Consultar pedidos</span>
-                    <img src="../../imagenes/consultar_pedido.jpg" alt="consultar">
+                    <img src="{{ url_for('static', filename= 'consultar_pedido.jpg')}}" alt="consultar">
                 </button></a>
         </div>
 

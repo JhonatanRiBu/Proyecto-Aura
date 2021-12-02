@@ -59,7 +59,7 @@ def Crear_Pedido():
     print(data)
     return render_template('Crear_Pedido.html')
 
-@app.route('/Consultar_pedidos.html')
+@app.route('/consultar_pedidos.html')
 def Consultar_pedidos():
     cur = mysql.connection.cursor()
     cur.execute('CALL mostrar_pedidos()')
@@ -131,20 +131,57 @@ def busqueda_Cotizacion():
         Valor_Cotizacion = request.form.get('Valor_Cotizacion')
         Estado = request.form.get('Estado')
         Tipo_Joya = request.form.get('Tipo_Joya')
+        print(Codigo)
+        print(Nombre_Cliente)
+        print(Fecha)
+        print(type (Valor_Cotizacion))
+        print(Estado)
+        print(Tipo_Joya)
         if Codigo != '' and Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == '' and Estado == '' and Tipo_Joya == '':
             cur = mysql.connection.cursor()
             cur.execute("CALL realizarbusqueda_cotizaciones1(%s)",[Codigo])
             Cot = cur.fetchall()
             return render_template('consultar_cotizacion.html', Cotizacion=Cot)
-        if Codigo == '' and Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == '' and Estado == '' and Tipo_Joya == '':
+        if Codigo == '' and Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya == None:
             cur = mysql.connection.cursor()
             cur.execute("CALL realizarbusqueda_cotizaciones2(%s)", [Nombre_Cliente])
             Cot = cur.fetchall()
             return render_template('consultar_cotizacion.html', Cotizacion=Cot)
-        
 
+
+@app.route('/Crear_cotizacion.html')
+def CrearCotizacion():
+    return render_template('Crear_cotizacion.html')
+@app.route('/add_cotizacion')
+def add_cotizacion():
+    if request.method == 'POST':
+        Tipo_joya = request.form['Tipo_joya']
+        Tipo_Pureza = request.form['Tipo_Pureza']
+        Nombrejoya = request.form['Nombrejoya']
+        cantidad = request.form['cantidad']
+        preciounitario = request.form['preciounitario']
+        Especificacion = request.form['Especificacion']
+        cur = mysql.connection.cursor()
+        cur.execute("")
+        mysql.connection.commit()
+        return 'received'
+
+
+@app.route('/inicioPedido.html')
+def iniciopedido():
+    return render_template('inicioPedido.html')
+
+@app.route('/InicioVenta.html')
+def InicioVenta():
+    return render_template('InicioVenta.html')
+
+
+@app.route('/inicioCotizacion.html')
+def inicioCotizacion():
+    return render_template('inicioCotizacion.html')
+    
 #Iosif
-@app.route('/Agregarcliente')
+@app.route('/Agregarcliente.html')
 def Agregarcliente():
     return render_template('Agregarcliente.html')
 
