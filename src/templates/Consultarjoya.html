@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/consultarjoya.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/consultarjoya.css')}}" type="text/css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>Joyas</title>
@@ -38,7 +38,7 @@
         <li>
         <div class="profile-details">
             <div class="profile-content">
-                <img src="profile.png" alt="profile">
+                <img src="{{ url_for('static', filename= 'profile.png')}}" alt="profile">
             </div>
             
             <div class="name-job">
@@ -82,22 +82,16 @@
                             <option value="">Aro de matrimonio</option>
                         </select>
                     
-                        <label class="s-column2">Tipo de pureza:</label>
-                        <select name="tipo" id="">
-                            <option disabled selected="">Seleccione tipo</option>
-                            <option value="">Ley</option>
-                            <option value="">Kilates</option>
+                        <label class="s-column">Pureza:</label>
+                        <select name="tipopureza" id="tipopureza">
+                            <option selected="" value="null">Cualquiera</option>
+                            <option value="O2K">24 K</option>
+                            <option value="O1K">18 K</option>
+                            <option value="LP9">Ley 999</option>
+                            <option value="LP5">Ley 950</option>
+                            <option value="LP2">Ley 925</option>
                         </select>
 
-                        <label class="s-column2">Valor de pureza:</label>
-                        <select name="tipo" id="">
-                            <option disabled selected="">Seleccione valor</option>
-                            <option value="">999</option>
-                            <option value="">950</option>
-                            <option value="">925</option>
-                            <option value="">24</option>
-                            <option value="">18</option>
-                        </select>
                     </div>
                     <div class="tercera-fila">
                         <button class="boton-eliminar">
@@ -327,7 +321,7 @@
     </div>
 
 
-    <script src="../../JS/consultarjoya.js"></script>
+    <script src="{{ url_for('static', filename='JS/consultarjoya.js')}}"></script>
 
 </body>
 </html>

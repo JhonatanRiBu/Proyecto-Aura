@@ -12,9 +12,13 @@ mysql = MySQL(app)
 
 # Jesus
 
-@app.route('/iniciosesion')
+@app.route('/InicioSesion.html')
 def InicioSesion():
     return render_template('InicioSesion.html')
+
+@app.route('/InicioPage.html')
+def InicioPage():
+    return render_template('InicioPage.html')
 
 @app.route('/InicioInventarios.html')
 def Inventario():
@@ -34,15 +38,39 @@ def BusquedaMP():
         Nombre = request.form['nombremp']
         Tipomp = request.form.get('tipomp')
         Purezamp = request.form['tipopureza']
-        print(Codigo)
-        print(Nombre)
-        print(Tipomp)
-        print(Purezamp)
-        return 'received'
+        
+        if Codigo == '' and Nombre != '' and Tipomp != '' and Purezamp != '':
+            cur = mysql.connection.cursor()
+            cur.execute("""
+            SELECT m.CodMateriaPrima, m.NombMateriaPrima, t.Descripcion, p.Pureza, s.Stock, u.Descripcion
+            FROM MateriaPrima m INNER JOIN TipoMateriaPrima t
+                                INNER JOIN Pureza p
+                                INNER JOIN StockMP s INNER JOIN UnidadMedida u
+            WHERE  m.CodTipoMP= %s AND m.CodPureza= %s AND m.NombMateriaPrima= %s 
+            and m.CodTipoMP=t.CodTipoMP and p.CodPureza=m.CodPureza 
+            and s.CodMateriaPrima=m.CodMateriaPrima and s.CodUMedida = u.CodUMedida;""",(Tipomp, Purezamp, Nombre))
+            mp = cur.fetchall()
+            return render_template('Consultarmp.html', materiaprima=mp)
+
+@app.route('/especificaciones/<string:codigo>')
+def Mostrarespecif(codigo):
+    cur = mysql.connection.cursor()
+    cur.execute("CALL especificaciones_mp(%s)", [codigo])
+    especif_data = cur.fetchall()
+    esp = especif_data[0]
+    print(esp)
+    return render_template('Consultarmp.html', esp = especif_data[0])
+
+
 
 @app.route('/agregarmp.html')
 def CargarAgregar():
     return render_template('agregarmp.html')
+
+
+@app.route('/Consultarjoya.html')
+def ConsultarJoya():
+    return render_template('Consultarjoya.html')
 
 
 
