@@ -16,6 +16,87 @@ mysql = MySQL(app)
 def InicioSesion():
     return render_template('InicioSesion.html')
 
+@app.route('/Agregarcliente.html')
+def Agregarcliente_2():
+    return render_template('Agregarcliente.html')
+
+@app.route('/agregarjoya.html')
+def agregarjoya_2():
+    return render_template('agregarjoya.html')
+
+@app.route('/agregarmp.html')
+def agregarmp_2():
+    return render_template('agregarmp.html')
+
+@app.route('/Boleta2.html')
+def Boleta2():
+    return render_template('Boleta2.html')
+
+@app.route('/comprobante.html')
+def comprobante2():
+    return render_template('comprobante.html')
+
+@app.route('/consultar_cotizacion.html')
+def consultar_cotizacion2():
+    return render_template('consultar_cotizacion.html')
+
+@app.route('/consultar_pedidos.html')
+def consultar_pedidos2():
+    return render_template('consultar_pedidos.html')
+
+@app.route('/Consultarcliente.html')
+def Consultarcliente2():
+    return render_template('Consultarcliente.html')
+
+@app.route('/Consultarjoya.html')
+def Consultarjoya2():
+    return render_template('Consultarjoya.html')
+
+@app.route('/Consultarmp.html')
+def Consultarmp2():
+    return render_template('Consultarmp.html')
+
+@app.route('/Crear_cotizacion.html')
+def Crear_cotizacion2():
+    return render_template('Crear_cotizacion.html')
+
+@app.route('/Factura2.html')
+def Factura2():
+    return render_template('Factura2.html')
+
+@app.route('/iniciocliente.html')
+def iniciocliente2():
+    return render_template('iniciocliente.html')
+
+@app.route('/inicioCotizacion.html')
+def inicioCotizacion2():
+    return render_template('inicioCotizacion.html')
+
+@app.route('/InicioPage.html')
+def InicioPage2():
+    return render_template('InicioPage.html')
+
+@app.route('/InicioSesion.html')
+def InicioSesion2():
+    return render_template('InicioSesion.html')
+
+@app.route('/InicioVenta.html')
+def InicioVenta2():
+    return render_template('InicioVenta.html')
+
+@app.route('/Joyeria.html')
+def Joyeria2():
+    return render_template('Joyeria.html')
+
+@app.route('/MateriaPrima.html')
+def MateriaPrima2():
+    return render_template('MateriaPrima.html')
+
+@app.route('/reporteventas.html')
+def reporteventas2():
+    return render_template('reporteventas.html')
+
+
 @app.route('/InicioInventarios.html')
 def Inventario():
     return render_template('InicioInventarios.html')
@@ -319,7 +400,7 @@ def add_cotizacion():
         return 'received'
 
 
-@app.route('/inicioPedido.html')
+@app.route('/iniciopedido.html')
 def iniciopedido():
     return render_template('inicioPedido.html')
 
