@@ -79,7 +79,7 @@ def ConsultarJoya():
 
 
 # Jhonatan
-@app.route('/Crear_Pedido')
+@app.route('/Crear_Pedido.html')
 def Crear_Pedido():
     cur = mysql.connection.cursor()
     cur.execute('SELECT * FROM Cliente')
@@ -87,23 +87,281 @@ def Crear_Pedido():
     print(data)
     return render_template('Crear_Pedido.html')
 
-@app.route('/Consultar_pedidos')
+@app.route('/consultar_pedidos.html')
 def Consultar_pedidos():
     cur = mysql.connection.cursor()
-    cur.execute('Select * from Pedido ,ArticuloPedido ')
-    data = cur.fetchall()
-    return render_template('consultar_pedidos.html', Pedido=data)
+    cur.execute('CALL mostrar_pedidos()')
+    ped = cur.fetchall()
+    return render_template('consultar_pedidos.html', Pedidos = ped)
 
 
-@app.route('/Consultar_cotizacion')
-def Consultar_cotizacion():
+@app.route('/busqueda_Pedidos', methods=['POST'])
+def BusquedaPedidos():
+    if request.method == 'POST':
+        Codigo = request.form['Codigo']
+        Producto = request.form['Producto']
+        Fecha = request.form.get('Fecha')
+        if Codigo == '' and Producto != '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos1(%s)',[Producto])
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto == '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos2(%s)', [Codigo])
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo == '' and Producto == '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos3(%s)', [Fecha])
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto != '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos4(%s,%s)', (Codigo,Producto))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo == '' and Producto != '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos5(%s,%s)', (Producto,Fecha))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto == '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos6(%s,%s)', (Codigo,Fecha))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo != '' and Producto != '' and Fecha != '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL realizarbusqueda_pedidos7(%s,%s,%s)', (Codigo,Producto,Fecha))
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+        if Codigo == '' and Producto == '' and Fecha == '':
+            cur = mysql.connection.cursor()
+            cur.execute('CALL mostrar_pedidos()')
+            ped = cur.fetchall()
+            return render_template('consultar_pedidos.html', Pedidos=ped)
+
+@app.route('/consultar_cotizacion.html')
+def consultar_cotizacion():
     cur = mysql.connection.cursor()
-    cur.execute('Select * from Cotizacion')
-    data = cur.fetchall()
-    return render_template('consultar_cotizacion.html', Cotizacion=data)
+    cur.execute('CALL mostrar_cotizaciones()')
+    Cot = cur.fetchall()
+    return render_template('consultar_cotizacion.html', Cotizacion=Cot)
 
+
+@app.route('/busqueda_cotizacion', methods=['POST'])
+def busqueda_Cotizacion():
+    if request.method == 'POST':
+        Nombre_Cliente = request.form['Nombre_Cliente']
+        Fecha = request.form.get('Fecha')
+        Valor_Cotizacion = request.form.get('Valor_Cotizacion')
+        Estado = request.form.get('Estado')
+        Tipo_Joya = request.form.get('Tipo_Joya')
+        if  Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones1(%s)",[Fecha])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if  Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones2(%s)", [Nombre_Cliente])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones3A()")
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == 'S/500 - S/1000' and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones3B()")
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == 'S/1000 - S/2000' and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones3C()")
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if  Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones4(%s)", [Estado])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if  Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones5(%s)", [Tipo_Joya])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        
+        if  Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute(
+                "CALL realizarbusqueda_cotizaciones6(%s,%s)", (Nombre_Cliente, Fecha))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute(
+                "CALL realizarbusqueda_cotizaciones7(%s)", [Nombre_Cliente])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute(
+                "CALL realizarbusqueda_cotizaciones8(%s,%s)", (Nombre_Cliente,Estado))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute(
+                "CALL realizarbusqueda_cotizaciones9(%s,%s)", (Nombre_Cliente,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones10(%s)", [Fecha])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones11(%s,%s)", (Fecha,Estado))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones12(%s,%s)", (Fecha,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones13(%s)", [Estado])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones14(%s)", [Tipo_Joya])
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones15(%s,%s)", (Estado,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+
+        if Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones16(%s,%s)", (Nombre_Cliente,Fecha))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones17(%s,%s,%s)", (Nombre_Cliente,Fecha,Estado))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones18(%s,%s,%s)", (Nombre_Cliente,Fecha,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones19(%s,%s)", (Fecha,Estado))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones20(%s,%s)", (Fecha,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones21(%s,%s)", (Estado,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones21A(%s,%s)", (Nombre_Cliente, Estado))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones21B(%s,%s)", (Nombre_Cliente,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha == '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones21C(%s,%s,%s)", (Nombre_Cliente,Estado,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == None and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones21D(%s,%s)", (Fecha,Estado,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        
+        if Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones22(%s,%s,%s)", (Nombre_Cliente,Fecha,Estado))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado == None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones23(%s,%s,%s)", (Nombre_Cliente,Fecha,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        if Nombre_Cliente == '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones24(%s,%s,%s)", (Fecha,Estado,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        
+        if Nombre_Cliente != '' and Fecha != '' and Valor_Cotizacion == 'S/0 - S/500' and Estado != None and Tipo_Joya != None:
+            cur = mysql.connection.cursor()
+            cur.execute("CALL realizarbusqueda_cotizaciones25(%s,%s,%s,%s)", (Nombre_Cliente,Fecha,Estado,Tipo_Joya))
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+        
+        if Nombre_Cliente == '' and Fecha == '' and Valor_Cotizacion == None and Estado == None and Tipo_Joya == None:
+            cur = mysql.connection.cursor()
+            cur.execute('CALL mostrar_cotizaciones()')
+            Cot = cur.fetchall()
+            return render_template('consultar_cotizacion.html', Cotizacion=Cot)
+
+
+@app.route('/Crear_cotizacion.html')
+def CrearCotizacion():
+    return render_template('Crear_cotizacion.html')
+@app.route('/add_cotizacion')
+def add_cotizacion():
+    if request.method == 'POST':
+        Tipo_joya = request.form['Tipo_joya']
+        Tipo_Pureza = request.form['Tipo_Pureza']
+        Nombrejoya = request.form['Nombrejoya']
+        cantidad = request.form['cantidad']
+        preciounitario = request.form['preciounitario']
+        Especificacion = request.form['Especificacion']
+        cur = mysql.connection.cursor()
+        cur.execute("")
+        mysql.connection.commit()
+        return 'received'
+
+
+@app.route('/inicioPedido.html')
+def iniciopedido():
+    return render_template('inicioPedido.html')
+
+@app.route('/InicioVenta.html')
+def InicioVenta():
+    return render_template('InicioVenta.html')
+
+
+@app.route('/inicioCotizacion.html')
+def inicioCotizacion():
+    return render_template('inicioCotizacion.html')
+    
 #Iosif
-@app.route('/Agregarcliente')
+@app.route('/Agregarcliente.html')
 def Agregarcliente():
     return render_template('Agregarcliente.html')
 
@@ -136,27 +394,103 @@ def registrarbusqueda_cliente():
         Nombre = request.form['Nombre']
         ApellidoPat = request.form['ApellidoPat']
         ApellidoMat = request.form['ApellidoMat']
-        
-        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+
+#1 campo
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre == '' and Dni == '':
             cur = mysql.connection.cursor()
-            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoPat,Nombre,Dni))
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s',[ApellidoMat])
             data = cur.fetchall()
             return render_template('Consultarcliente.html', Cliente=data)
-        if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre == '' and Dni == '':
             cur = mysql.connection.cursor()
-            cur.execute(
-                'SELECT * FROM Cliente WHERE Nombre = %s AND Dni = %s', (Nombre, Dni))
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s',[ApellidoPat])
             data = cur.fetchall()
             return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat == '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE Dni = %s',[Dni])
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
         if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni == '':
             cur = mysql.connection.cursor()
             cur.execute('SELECT * FROM Cliente WHERE Nombre = %s',[Nombre])
             data = cur.fetchall()
             return render_template('Consultarcliente.html', Cliente=data)
+
+#2 campos
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre == '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s',(ApellidoMat, ApellidoPat))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND Nombre = %s',(ApellidoMat, Nombre))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+        
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND Nombre = %s',(ApellidoMat, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s',(ApellidoPat, Nombre))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Dni = %s',(ApellidoPat, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE Nombre = %s AND Dni = %s',(Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+#3 campos
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre != '' and Dni == '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s AND Nombre = %s',(ApellidoMat, ApellidoPat, Nombre))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre == '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s AND Dni = %s',(ApellidoMat, ApellidoPat, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat == '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoPat, Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+        if ApellidoMat != '' and ApellidoPat == '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND Nombre = %s AND Dni = %s',(ApellidoMat, Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+#4 Campos    
+
+        if ApellidoMat != '' and ApellidoPat != '' and Nombre != '' and Dni != '':
+            cur = mysql.connection.cursor()
+            cur.execute('SELECT * FROM Cliente WHERE ApellidoMat = %s AND ApellidoPat = %s AND Nombre = %s AND Dni = %s',(ApellidoMat, ApellidoPat, Nombre, Dni))
+            data = cur.fetchall()
+            return render_template('Consultarcliente.html', Cliente=data)
+
+
         else: print(0)
     return 'iosif'
-
-
 
 if __name__ == '__main__':
     app.run(port=3000, debug=True)
