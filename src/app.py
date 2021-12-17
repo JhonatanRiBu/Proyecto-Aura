@@ -70,7 +70,17 @@ def CargarAgregar():
 
 @app.route('/Consultarjoya.html')
 def ConsultarJoya():
-    return render_template('Consultarjoya.html')
+    cur = mysql.connection.cursor()
+    cur.execute('CALL mostrar_joyas()')
+    joyas = cur.fetchall()
+    return render_template('Consultarjoya.html',joyas = joyas)
+    
+
+
+@app.route('/agregarjoya.html')
+def AgregarJoya():
+    return render_template('agregarjoya.html')
+
 
 
 
